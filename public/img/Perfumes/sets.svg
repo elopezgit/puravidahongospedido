@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1D1410"/>
+      <stop offset="1" stop-color="#0C0A09"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E4C87F"/>
+      <stop offset="0.5" stop-color="#C9A962"/>
+      <stop offset="1" stop-color="#A8863B"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="600" fill="url(#bg)"/>
+  <!-- Two bottles side by side (set) -->
+  <rect x="150" y="200" width="120" height="180" rx="20" fill="#1C1713" stroke="url(#gold)" stroke-width="4"/>
+  <rect x="330" y="200" width="120" height="180" rx="20" fill="#1C1713" stroke="url(#gold)" stroke-width="4"/>
+  <rect x="172" y="140" width="76" height="70" rx="8" fill="#1C1713" stroke="url(#gold)" stroke-width="3"/>
+  <rect x="352" y="140" width="76" height="70" rx="8" fill="#1C1713" stroke="url(#gold)" stroke-width="3"/>
+  <rect x="212" y="300" width="0" height="0" fill="none"/>
+  <text x="300" y="430" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="bold" fill="#E4C87F">SET + COMBO</text>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" letter-spacing="4" fill="#C9A962" opacity="0.8">SETS &amp; COMBOS</text>
+</svg>
