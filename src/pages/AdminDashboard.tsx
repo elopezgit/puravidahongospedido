@@ -136,10 +136,10 @@ export default function AdminDashboard() {
     setIsLoading(true);
     setLoginError(false);
 
-    // Usar contraseñas desde variables de entorno (configurables por deploy)
-    const adminPwd = import.meta.env.VITE_ADMIN_PASSWORD;
-    const cocinaPwd = import.meta.env.VITE_COCINA_PASSWORD;
-    const operadorPwd = import.meta.env.VITE_OPERADOR_PASSWORD;
+    // Usar contraseñas desde variables de entorno (con fallback a 123456)
+    const adminPwd = import.meta.env.VITE_ADMIN_PASSWORD || '123456';
+    const cocinaPwd = import.meta.env.VITE_COCINA_PASSWORD || '123456';
+    const operadorPwd = import.meta.env.VITE_OPERADOR_PASSWORD || '123456';
 
     let assignedRole: 'admin' | 'cocina' | 'operador' | null = null;
 
