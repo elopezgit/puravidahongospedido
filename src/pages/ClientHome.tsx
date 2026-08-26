@@ -20,7 +20,7 @@ import Badge from '../components/ui/Badge';
 
 /* ─── Constantes de marca ─── */
 const BRAND = 'AVENTUS';
-const WHATSAPP_NUMBER = '5493816778749';
+const WHATSAPP_NUMBER = '5493815102886';
 const WHATSAPP_MESSAGE = `¡Hola ${BRAND}! Quisiera consultar por un perfume.`;
 const SLUG_DEFAULT = 'aventus';
 
@@ -61,29 +61,51 @@ interface Banner {
 }
 
 /* ─── Constants ─── */
-const CATEGORY_COLORS: Record<string, { from: string; to: string; shadow: string }> = {
-  'Perfumes de Hombre': { from: '#2B1D12', to: '#4A3420', shadow: 'rgba(74,52,32,0.30)' },
-  'Perfumes de Mujer': { from: '#5A2A3C', to: '#7A3B52', shadow: 'rgba(122,59,82,0.30)' },
-  'Árabes & Premium': { from: '#1F2A3A', to: '#31415C', shadow: 'rgba(49,65,92,0.30)' },
-  'Nacionales & Esencia': { from: '#24312B', to: '#37493F', shadow: 'rgba(55,73,63,0.30)' },
-  'Sets & Combos': { from: '#3A2B12', to: '#5C4620', shadow: 'rgba(92,70,32,0.30)' },
-  'Tester & Ofertas': { from: '#2E2B33', to: '#47424F', shadow: 'rgba(71,66,79,0.30)' },
+const CATEGORY_IMAGES: Record<string, string> = {
+  'perfumes arabes': '/img/Categories/arabes.jpg',
+  'perfumes extractos': '/img/Categories/extractos.jpg',
+  'perfumes midore': '/img/Categories/midore.jpg',
+  'desodorantes arabes': '/img/Categories/desodorantes.jpg',
+  'perfumes onlyyou': '/img/Categories/onlyyou.jpg',
+  'perfumes plata': '/img/Categories/plata.jpg',
+  'perfumes miniaturas': '/img/Categories/miniaturas.jpg',
+  'perfumes tubitos': '/img/Categories/tubitos.jpg',
+  'productos de pelo': '/img/Categories/pelo.jpg',
 };
 
+// Normaliza un nombre de categoría para lookup estable (minúsculas, sin tildes)
+const normalizeKey = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+const getCategoryImage = (name: string) => CATEGORY_IMAGES[normalizeKey(name)] || '/img/Perfumes/generico.svg';
+
+// Proporciones del mosaico (estilo Sephora/Douglas): una card héroe, una alta,
+// dos medianas y dos anchas. En escritorio el grid ocupa 4 columnas.
+const CATEGORY_TILE_CLASSES = [
+  'col-span-2 md:col-span-2 md:row-span-2', // Héroe
+  'md:row-span-2',                          // Alta
+  '',                                       // Mediana
+  '',                                       // Mediana
+  'md:col-span-2',                          // Ancha
+  'md:col-span-2',                          // Ancha
+];
+
 const CATEGORY_KEYWORDS_MAP: Record<string, string[]> = {
-  'Perfumes de Hombre': ['Hombre', 'EDP', 'EDT', 'Amaderado', 'Cítrico', 'Ambarado', 'Original'],
-  'Perfumes de Mujer': ['Mujer', 'EDP', 'Floral', 'Dulce', 'Gourmand', 'Oriental', 'Original'],
-  'Árabes & Premium': ['Árabe', 'Lattafa', 'Armaf', 'Afnan', 'Oud', 'Esencia', 'Premium'],
-  'Nacionales & Esencia': ['Nacional', 'Avon', 'Esencia', 'Vainilla', 'Ámbar', 'Económico'],
-  'Sets & Combos': ['Set', 'Combo', 'Dúo', 'Decant', 'Regalo'],
-  'Tester & Ofertas': ['Tester', 'Oferta', 'Flash', 'Display', 'Descuento'],
-  'todas': ['Árabe', 'Original', 'Tester', 'Dulce', 'Amaderado', 'Oud', 'Vainilla', 'Set', 'Esencia'],
+  'perfumes arabes': ['Árabe', 'Lattafa', 'Armaf', 'Afnan', 'Oud', 'Esencia', 'Premium'],
+  'perfumes extractos': ['Extracto', 'Esencia', 'Concentrado', 'Eau de Parfum', 'Intense'],
+  'perfumes midore': ['Midoré', 'Midore', 'Extracto', 'Económico', 'Premium'],
+  'desodorantes arabes': ['Desodorante', 'Roll-on', 'Body spray', 'Árabe'],
+  'perfumes onlyyou': ['ONLYYOU', 'Only You', 'Dulce', 'Seductor'],
+  'perfumes plata': ['PLATA', 'Plata', 'Elegancia', 'Premium'],
+  'perfumes miniaturas': ['Miniatura', 'Decant', '10ml', 'Viaje', 'Regalo'],
+  'perfumes tubitos': ['Tubito', 'Tubo', 'Bolsillo', 'Portátil'],
+  'productos de pelo': ['Pelo', 'Capilar', 'Aceite', 'Bruma', 'Cabello'],
+  'todas': ['Árabe', 'Original', 'Extracto', 'Dulce', 'Oud', 'Vainilla', 'Esencia', 'Miniatura', 'Premium'],
 };
 
 const FALLBACK_BANNERS: Banner[] = [
-  { id: '1', image_url: '/img/Banner/banner1.svg', title: 'EL PARAÍSO DE LOS PERFUMES', subtitle: '8 años junto a vos 🤍' },
-  { id: '2', image_url: '/img/Banner/banner2.svg', title: 'PERFUMES ÁRABES PREMIUM', subtitle: 'Lattafa · Armaf · Afnan · Al Haramain' },
-  { id: '3', image_url: '/img/Banner/banner3.svg', title: 'ENVÍOS A TODO EL PAÍS', subtitle: 'Ventas por mayor y menor · WhatsApp' },
+  { id: '1', image_url: '/img/Banner/banner1.jpg', title: 'EL PARAÍSO DE LOS PERFUMES', subtitle: '8 años junto a vos 🤍' },
+  { id: '2', image_url: '/img/Banner/banner2.jpg', title: 'PERFUMES ÁRABES PREMIUM', subtitle: 'Lattafa · Armaf · Afnan · Al Haramain' },
+  { id: '3', image_url: '/img/Banner/banner3.jpg', title: 'ENVÍOS A TODO EL PAÍS', subtitle: 'Ventas por mayor y menor · WhatsApp' },
 ];
 
 export default function ClientHome() {
@@ -211,21 +233,25 @@ export default function ClientHome() {
     ? 'todas'
     : categories.find(c => c.id === activeCategory)?.name || 'todas';
 
-  const availableKeywords = CATEGORY_KEYWORDS_MAP[activeCategoryName] || CATEGORY_KEYWORDS_MAP['todas'];
+  const availableKeywords = CATEGORY_KEYWORDS_MAP[activeCategoryName === 'todas' ? 'todas' : normalizeKey(activeCategoryName)] || CATEGORY_KEYWORDS_MAP['todas'];
 
   const filteredProducts = products.filter(p => {
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase()));
+    const searchQ = normalizeKey(searchQuery);
+    const kw = normalizeKey(selectedKeyword);
+    
+    const pName = normalizeKey(p.name);
+    const pDesc = p.description ? normalizeKey(p.description) : '';
+    const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
+
+    const matchesSearch = pName.includes(searchQ) || pDesc.includes(searchQ);
     const matchesCategory = activeCategory === 'todas' || p.category_id === activeCategory;
     const matchesKeyword = selectedKeyword === 'todas' ||
-                          p.name.toLowerCase().includes(selectedKeyword.toLowerCase()) ||
-                          (p.description && p.description.toLowerCase().includes(selectedKeyword.toLowerCase()));
+                          pName.includes(kw) ||
+                          pDesc.includes(kw) ||
+                          catName.includes(kw);
+                          
     return matchesSearch && matchesCategory && matchesKeyword;
   });
-
-  const getCategoryStyle = (catName: string) => {
-    return CATEGORY_COLORS[catName] || { from: '#2B1D12', to: '#4A3420', shadow: 'rgba(74,52,32,0.30)' };
-  };
 
   const getProductQuantity = (productId: string) => {
     return items.filter(i => i.id === productId).reduce((acc, curr) => acc + curr.quantity, 0);
@@ -544,64 +570,70 @@ export default function ClientHome() {
           </section>
         )}
 
-        {/* ═══════ CATEGORY SELECTOR ═══════ */}
+        {/* ═══════ CATEGORY SELECTOR — Mosaico Premium ═══════ */}
         {!searchQuery && (
-          <section className="px-4 mb-6">
-            <h2 className="text-base font-black text-stone-900 mb-3 tracking-tight uppercase flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#C9A962]" aria-hidden="true"></span>
-              Categorías Oficiales
-            </h2>
-
-            <div className="flex overflow-x-auto hide-scrollbar gap-3 pb-2 -mx-4 px-4 snap-x snap-mandatory">
-              <motion.button
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: 0 }}
+          <section className="px-4 mb-8">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-base font-black text-stone-900 tracking-tight uppercase flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#C9A962]" aria-hidden="true"></span>
+                Categorías Oficiales
+              </h2>
+              <button
                 onClick={() => handleSelectCategory('todas')}
-                aria-label="Seleccionar todas las categorías"
-                className="snap-start shrink-0 focus-ring rounded-2xl"
+                aria-label="Ver todos los productos"
+                className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-black uppercase tracking-wider border transition-all focus-ring ${
+                  activeCategory === 'todas'
+                    ? 'bg-gradient-to-r from-[#A8863B] to-[#C9A962] text-white border-[#C9A962] shadow-sm'
+                    : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                }`}
               >
-                <div className={`w-20 h-28 rounded-2xl flex flex-col items-center justify-center gap-1.5 transition-all duration-200 border ${activeCategory === 'todas' ? 'bg-gradient-to-br from-[#A8863B] to-[#C9A962] text-white border-[#C9A962] shadow-md scale-105' : 'bg-white border-stone-200 text-stone-700 hover:border-[#C9A962] shadow-sm'}`}>
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${activeCategory === 'todas' ? 'bg-black/20 text-white' : 'bg-stone-100 text-[#A8863B]'}`}>
-                    <Star size={20} aria-hidden="true" />
-                  </div>
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider">Todas</span>
-                </div>
-              </motion.button>
+                <Star size={12} aria-hidden="true" />
+                Ver todas
+              </button>
+            </div>
 
+            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[170px] gap-3 md:gap-4">
               {categories.map((cat, i) => {
-                const colors = getCategoryStyle(cat.name);
                 const isActive = activeCategory === cat.id;
                 const productCount = products.filter(p => p.category_id === cat.id).length;
+                const tileClass = CATEGORY_TILE_CLASSES[i % CATEGORY_TILE_CLASSES.length];
                 return (
                   <motion.button
                     key={cat.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.05 * (i + 1) }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.96 }}
                     onClick={() => handleSelectCategory(cat.id)}
                     aria-label={`Categoría ${cat.name}`}
-                    className="snap-start shrink-0 focus-ring rounded-2xl"
+                    className={`group relative overflow-hidden rounded-2xl shadow-sm transition-all duration-300 focus-ring ${tileClass} ${
+                      isActive
+                        ? 'ring-2 ring-[#C9A962] ring-offset-2 ring-offset-[#FBF8F3] shadow-xl'
+                        : 'hover:shadow-lg hover:-translate-y-0.5'
+                    }`}
                   >
-                    <div
-                      className={`w-36 h-28 rounded-2xl p-4 flex flex-col justify-between relative overflow-hidden transition-all duration-200 border ${isActive ? 'ring-2 ring-[#C9A962] ring-offset-2 ring-offset-[#FBF8F3] shadow-md scale-[1.03]' : 'border-stone-200/80 shadow-sm hover:shadow-md'}`}
-                      style={{ background: `linear-gradient(135deg, ${colors.from}, ${colors.to})` }}
-                    >
-                      <div className="absolute -right-4 -top-4 text-6xl opacity-20 select-none" aria-hidden="true">
-                        {cat.icon}
-                      </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
-                      <div className="relative z-10 flex flex-col h-full justify-between">
-                        <div className="w-10 h-10 rounded-xl bg-black/25 backdrop-blur-sm flex items-center justify-center text-2xl border border-white/20 shadow-inner">
-                          {cat.icon}
-                        </div>
-                        <div className="text-left">
-                          <span className="block text-sm font-black text-white drop-shadow-sm leading-tight uppercase">{cat.name}</span>
-                          <span className="text-[10px] text-white/90 font-semibold">{productCount} productos</span>
-                        </div>
-                      </div>
+                    <img
+                      src={getCategoryImage(cat.name)}
+                      alt={cat.name}
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" aria-hidden="true" />
+
+                    <span className="absolute top-2.5 right-2.5 z-10 bg-white/95 text-stone-900 font-black text-[10px] px-2 py-0.5 rounded-full shadow-sm uppercase tracking-wide">
+                      {productCount} prod.
+                    </span>
+
+                    <div className="absolute inset-x-0 bottom-0 z-10 p-3.5 text-left">
+                      <span className="block font-serif font-black text-white text-lg leading-tight drop-shadow-lg">
+                        {cat.name}
+                      </span>
+                      <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-bold text-[#E4C87F]">
+                        Explorar <ChevronRight size={12} strokeWidth={3} aria-hidden="true" />
+                      </span>
                     </div>
+
+                    <div className="absolute inset-0 bg-[#C9A962]/0 group-hover:bg-[#C9A962]/10 transition-colors duration-300" aria-hidden="true" />
                   </motion.button>
                 );
               })}
@@ -664,7 +696,12 @@ export default function ClientHome() {
             return (
               <div key={category.id} className="mb-10">
                 <h2 className="text-lg font-black text-stone-900 mb-3.5 flex items-center gap-2.5 uppercase tracking-wide">
-                  <span className="w-8 h-8 rounded-xl bg-white border border-stone-200 shadow-sm flex items-center justify-center text-lg">{category.icon}</span>
+                  <img
+                    src={getCategoryImage(category.name)}
+                    alt={category.name}
+                    className="w-9 h-9 rounded-xl object-cover border border-stone-200 shadow-sm"
+                    loading="lazy"
+                  />
                   <span>{category.name}</span>
                 </h2>
 
@@ -736,8 +773,7 @@ export default function ClientHome() {
                         </div>
 
                         <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 bg-stone-100 rounded-xl relative overflow-hidden shadow-inner border border-stone-200 group-hover:border-[#C9A962]/40 transition-all flex flex-col justify-between p-2">
-                          <div className="z-10 flex justify-between items-center w-full">
-                            <span className="text-sm select-none">{category.icon}</span>
+                          <div className="z-10 flex justify-end items-center w-full">
                             <span className="bg-white/95 text-[#A8863B] font-black text-[9px] px-1.5 py-0.5 rounded border border-stone-200 tracking-wider uppercase shadow-sm">
                               ORIGINAL
                             </span>

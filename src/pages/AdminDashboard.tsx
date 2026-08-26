@@ -11,7 +11,7 @@ import { supabase } from '../lib/supabase';
 import { getEmpresaData } from '../lib/getEmpresa';
 import {
   LayoutDashboard, ShoppingBag, Image as ImageIcon, Settings,
-  LockKeyhole, LogOut, BarChart3, Store, Menu, X, ChevronLeft,
+  LogOut, BarChart3, Store, Menu, X, ChevronLeft,
   Gem, Home, Clock, AlertCircle,
   Phone, MapPin, Copy, Save, DollarSign, ShoppingCart, Users, Activity, Globe
 } from 'lucide-react';
@@ -181,8 +181,8 @@ export default function AdminDashboard() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-stone-900 via-slate-900 to-stone-950 flex items-center justify-center p-4">
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl w-full max-w-sm text-center">
-          <div className="w-16 h-16 bg-[#C9A962]/15 text-[#C9A962] rounded-full flex items-center justify-center mx-auto mb-6">
-            <LockKeyhole size={32} />
+          <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden border-2 border-[#C9A962]/30 shadow-[0_0_15px_rgba(201,169,98,0.2)]">
+            <img src="/img/logo/aventus_perfumeria.jpg" alt="Aventus Logo" className="w-full h-full object-cover" />
           </div>
           <h2 className="text-2xl font-black text-white mb-1">Acceso Restringido</h2>
           <p className="text-stone-400 text-sm mb-8">Administración de {empresaSlug}</p>

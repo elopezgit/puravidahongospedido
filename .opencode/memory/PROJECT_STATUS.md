@@ -1,9 +1,9 @@
 # Estado del Proyecto — AVENTUS Perfumería
 
-## Estado general: 🟢 En curso (adaptación completada, validación final pendiente)
+## Estado general: 🟢 En curso (rediseño premium + 9 categorías reales + seed en producción; falta lista real de productos/precios)
 
 ## Progreso
-- **Completado**: ~95% (adaptación white-label; falta seed en prod + fotos/precios reales)
+- **Completado**: ~95% (adaptación white-label; rediseño premium; 9 categorías reales aplicadas y seed ejecutado en producción; falta lista real de productos/precios del dueño)
 - **Sprint actual**: Lanzamiento AVENTUS
 - **Velocidad del equipo**: N/A (proyecto individual)
 
@@ -29,5 +29,5 @@
 |---|---|---|
 | Build verde (`npm run build`) | 19/08/2026 | Ninguna |
 | Auditoría de residuos (grep mrcerdo/chorizo/suplement en src) | 19/08/2026 | Ninguna |
-| Ejecutar seed_aventus.sql en Supabase | Pendiente dueño | Credenciales Supabase |
+| Ejecutar seed_aventus.sql en Supabase | 19/08/2026 | ✅ (runner PostgREST: 9 categorías reales + 3 banners + 11 productos de referencia) |
 | Fotos y precios reales de productos | Pendiente dueño | Lista oficial |

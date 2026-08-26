@@ -4,17 +4,17 @@ Plataforma oficial de E-Commerce y Punto de Venta (POS) para **AVENTUS Perfumer�
 
 ## Características Principales
 
-- **Catálogo Premium de Perfumería**: 38 productos en 6 categorías (Perfumes de Hombre, Perfumes de Mujer, Árabes & Premium, Nacionales & Esencia, Sets & Combos, Tester & Ofertas) con precios en ARS, códigos propios (HOM-, MUJ-, ARA-, NAC-, SET-, TES-) e imágenes de marca.
-- **Identidad AVENTUS**: Paleta oro champagne (#C9A962) + negro cálido + marfil, tipografías Playfair Display + Outfit, logo oficial e imágenes SVG propias.
+- **Catálogo Premium de Perfumería**: **9 categorías reales del negocio** (Perfumes Árabes, Perfumes Extractos, Perfumes Midoré, Desodorantes Árabes, Perfumes ONLYYOU, Perfumes PLATA, Perfumes Miniaturas, Perfumes Tubitos, Productos de Pelo) con mosaico HD, productos de referencia con precios en ARS e imágenes de marca. El catálogo definitivo de productos/precios se carga con la lista real del dueño.
+- **Identidad AVENTUS**: Paleta oro champagne (#C9A962) + negro cálido + marfil, tipografías Playfair Display + Outfit, logo oficial del cliente e imágenes HD propias (banners y categorías).
 - **Interfaz Estilo PedidosYa Light**: Navegación ágil, tarjetas claras, buscador rápido por palabras clave (#Árabes, #Tester, #Original) y carrito flotante interactivo.
-- **Seguimiento en Vivo y Pedidos por WhatsApp**: Pedidos integrados a WhatsApp (+54 9 381 677-8749) y seguimiento de estado en tiempo real (Pendiente → Armando Pedido → Entregado).
+- **Seguimiento en Vivo y Pedidos por WhatsApp**: Pedidos integrados a WhatsApp (+54 381 510-2886) y seguimiento de estado en tiempo real (Pendiente → Armando Pedido → Entregado).
 - **Punto de Venta (POS) Integrado**: Gestión operativa para mostrador con búsqueda rápida por código de producto.
 - **Multi-Tenant**: Arquitectura por slug (`/aventus`, `/admin/aventus`) que permite convivir con otras empresas en la misma base.
 - **Mayorista y Minorista**: Productos con enfoque de reventa (badges MAYORISTA) y venta al público general.
 
 ## Datos del Negocio
 
-- **WhatsApp**: +54 9 381 677-8749
+- **WhatsApp**: +54 381 510-2886
 - **Instagram**: [@aventus.perfumeria](https://www.instagram.com/aventus.perfumeria)
 - **Facebook**: Perfumería Aventus
 - **Sucursales**: San Martín 629 (Galería Gran Vía, local 34) y Buenos Aires 61 (Galería Mercado, Showroom isla 3) — San Miguel de Tucumán
@@ -32,7 +32,7 @@ Plataforma oficial de E-Commerce y Punto de Venta (POS) para **AVENTUS Perfumer�
 
 ```sql
 -- ✅ BÁSICO: agregar AVENTUS como empresa nueva (no toca otros clientes)
--- 1. Seed de AVENTUS (empresa + categorías + banners + 38 productos)
+-- 1. Seed de AVENTUS (empresa + 9 categorías reales + banners + productos de referencia)
 sql/seed_aventus.sql
 
 -- 2. OPCIONAL: habilita guardar Alias/CBU en el panel admin
