@@ -3,6 +3,7 @@ import { supabase } from '../../lib/supabase';
 import { getEmpresaId } from '../../lib/getEmpresa';
 import { useToast } from '../../hooks/useToast';
 import { filterAventusCategories, filterAventusProducts } from '../../lib/defaultCatalog';
+import { matchesSearchQuery } from '../../utils/searchUtils';
 import { Trash2, Edit, Plus, Upload } from 'lucide-react';
 
 interface Product {
@@ -122,9 +123,7 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
 
   // Filter and Sort Logic
   const filteredProducts = products.filter(p => {
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          (p.description && p.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
-                          (p.code && p.code.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
     const matchesCategory = filterCategory ? p.category_id === filterCategory : true;
     return matchesSearch && matchesCategory;
   }).sort((a, b) => {

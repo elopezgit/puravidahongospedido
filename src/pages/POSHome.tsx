@@ -4,6 +4,7 @@ import { getEmpresaId } from '../lib/getEmpresa';
 import { filterAventusCategories, filterAventusProducts } from '../lib/defaultCatalog';
 import { useCart } from '../lib/CartContext';
 import { useToast } from '../hooks/useToast';
+import { matchesSearchQuery } from '../utils/searchUtils';
 import { Search, Plus, Minus, Trash2, Wallet, CreditCard, Send, Package, Sparkles, X, CheckCircle } from 'lucide-react';
 import { ProductCardSkeleton } from '../components/ui/Skeleton';
 import EmptyState from '../components/ui/EmptyState';
@@ -77,7 +78,7 @@ export default function POSHome({ empresaSlug }: { empresaSlug: string }) {
   }, [empresaSlug]);
 
   const filteredProducts = products.filter(p => {
-    const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
     const matchesCategory = activeCategory === 'todas' || p.category_id === activeCategory;
     return matchesSearch && matchesCategory;
   });

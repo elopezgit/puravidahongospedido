@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { Search, MapPin, Plus, Minus, Star, ChevronRight, RotateCcw } from 'lucide-react';
 import { useCart } from '../lib/CartContext';
+import { normalizeText, matchesSearchQuery } from '../utils/searchUtils';
 import CartModal from '../components/client/CartModal';
 import ProductModal from '../components/client/ProductModal';
 import OrderTrackerModal from '../components/client/OrderTrackerModal';
@@ -50,6 +51,7 @@ interface Product {
   image_url?: string;
   is_active: boolean;
   sort_order?: number;
+  code?: string;
 }
 
 interface Banner {
@@ -74,7 +76,7 @@ const CATEGORY_IMAGES: Record<string, string> = {
 };
 
 // Normaliza un nombre de categoría para lookup estable (minúsculas, sin tildes)
-const normalizeKey = (s: string) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+const normalizeKey = normalizeText;
 
 const getCategoryImage = (name: string) => CATEGORY_IMAGES[normalizeKey(name)] || '/img/Perfumes/generico.svg';
 
@@ -236,14 +238,12 @@ export default function ClientHome() {
   const availableKeywords = CATEGORY_KEYWORDS_MAP[activeCategoryName === 'todas' ? 'todas' : normalizeKey(activeCategoryName)] || CATEGORY_KEYWORDS_MAP['todas'];
 
   const filteredProducts = products.filter(p => {
-    const searchQ = normalizeKey(searchQuery);
     const kw = normalizeKey(selectedKeyword);
-    
     const pName = normalizeKey(p.name);
     const pDesc = p.description ? normalizeKey(p.description) : '';
     const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
 
-    const matchesSearch = pName.includes(searchQ) || pDesc.includes(searchQ);
+    const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
     const matchesCategory = activeCategory === 'todas' || p.category_id === activeCategory;
     const matchesKeyword = selectedKeyword === 'todas' ||
                           pName.includes(kw) ||
@@ -773,19 +773,12 @@ export default function ClientHome() {
                         </div>
 
                         <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 bg-stone-100 rounded-xl relative overflow-hidden shadow-inner border border-stone-200 group-hover:border-[#C9A962]/40 transition-all flex flex-col justify-between p-2">
-                          <div className="z-10 flex justify-end items-center w-full">
-                            <span className="bg-white/95 text-[#A8863B] font-black text-[9px] px-1.5 py-0.5 rounded border border-stone-200 tracking-wider uppercase shadow-sm">
-                              ORIGINAL
-                            </span>
-                          </div>
-
                           <img
                             src={product.image_url || '/img/Perfumes/generico.svg'}
                             alt={product.name}
-                            className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-stone-900/65 via-transparent to-stone-900/10 pointer-events-none" />
 
                           {/* Plus button only when not in cart (otherwise quantity selector is shown) */}
                           {qty === 0 && (
