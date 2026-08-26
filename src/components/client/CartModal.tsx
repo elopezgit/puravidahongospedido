@@ -19,6 +19,8 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
 
   const [customerName, setCustomerName] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
+  const [customerEmail, setCustomerEmail] = useState('');
+  const [customerBirthDate, setCustomerBirthDate] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [comment, setComment] = useState('');
   const [paymentMethod, setPaymentMethod] = useState<'efectivo' | 'transferencia'>('efectivo');
@@ -50,6 +52,8 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
           empresa_id: empresaId,
           customer_name: customerName,
           customer_phone: customerPhone,
+          customer_email: customerEmail || null,
+          customer_birth_date: customerBirthDate || null,
           delivery_address: deliveryAddress,
           comment: fullComment,
           total: total,
@@ -65,6 +69,8 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
       wpMessage += `Orden #${orderData.id.split('-')[0].toUpperCase()}\n\n`;
       wpMessage += `*Cliente:* ${customerName}\n`;
       wpMessage += `*Teléfono:* ${customerPhone}\n`;
+      if (customerEmail) wpMessage += `*Email:* ${customerEmail}\n`;
+      if (customerBirthDate) wpMessage += `*Fecha Nac.:* ${new Date(customerBirthDate).toLocaleDateString('es-AR')}\n`;
       if (deliveryAddress) wpMessage += `*Dirección:* ${deliveryAddress}\n`;
       wpMessage += `\n*Detalle del pedido:*\n`;
       items.forEach(item => {
@@ -212,6 +218,27 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
                           onChange={e => setCustomerPhone(e.target.value)}
                           className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
                           placeholder="381 123 4567"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-email">Email (Opcional)</label>
+                        <input
+                          id="customer-email"
+                          type="email"
+                          value={customerEmail}
+                          onChange={e => setCustomerEmail(e.target.value)}
+                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
+                          placeholder="juan@ejemplo.com"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-birth">F. Nacimiento (Opcional)</label>
+                        <input
+                          id="customer-birth"
+                          type="date"
+                          value={customerBirthDate}
+                          onChange={e => setCustomerBirthDate(e.target.value)}
+                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
                         />
                       </div>
                     </div>

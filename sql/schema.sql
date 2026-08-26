@@ -60,6 +60,8 @@ create table orders (
   empresa_id uuid references empresas(id) on delete cascade not null,
   customer_name text not null,
   customer_phone text not null,
+  customer_email text,
+  customer_birth_date date,
   delivery_address text,
   comment text,
   total numeric not null,

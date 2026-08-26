@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../../lib/supabase';
 import { useToast } from '../../hooks/useToast';
-import { Clock, MapPin, Phone, User, MessageSquare, Package, CheckCircle, X, Printer, Edit, Trash2, Save, Plus, Minus, Eye } from 'lucide-react';
+import { Clock, MapPin, Phone, User, MessageSquare, Package, CheckCircle, X, Printer, Edit, Trash2, Save, Plus, Minus, Eye, Mail, Calendar } from 'lucide-react';
 
 interface OrderDetailModalProps {
   order: any;
@@ -21,6 +21,8 @@ export default function OrderDetailModal({ order, onClose, onStatusChange, onDel
   const [editedData, setEditedData] = useState({
     customer_name: order.customer_name,
     customer_phone: order.customer_phone,
+    customer_email: order.customer_email || '',
+    customer_birth_date: order.customer_birth_date || '',
     delivery_address: order.delivery_address,
     comment: order.comment
   });
@@ -228,6 +230,22 @@ export default function OrderDetailModal({ order, onClose, onStatusChange, onDel
                   <input type="text" value={editedData.customer_phone} onChange={e => setEditedData({...editedData, customer_phone: e.target.value})} className="w-full border border-slate-300 rounded p-1 outline-none focus:border-primary" />
                 ) : (
                   <div className="font-bold text-slate-800 flex items-center gap-2"><Phone size={16} className="text-slate-400" /> {order.customer_phone}</div>
+                )}
+              </div>
+              <div>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">Email</span>
+                {isEditing ? (
+                  <input type="email" value={editedData.customer_email || ''} onChange={e => setEditedData({...editedData, customer_email: e.target.value})} className="w-full border border-slate-300 rounded p-1 outline-none focus:border-primary" />
+                ) : (
+                  <div className="font-bold text-slate-800 flex items-center gap-2"><Mail size={16} className="text-slate-400" /> {order.customer_email || 'No especificado'}</div>
+                )}
+              </div>
+              <div>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">F. Nacimiento</span>
+                {isEditing ? (
+                  <input type="date" value={editedData.customer_birth_date || ''} onChange={e => setEditedData({...editedData, customer_birth_date: e.target.value})} className="w-full border border-slate-300 rounded p-1 outline-none focus:border-primary" />
+                ) : (
+                  <div className="font-bold text-slate-800 flex items-center gap-2"><Calendar size={16} className="text-slate-400" /> {order.customer_birth_date ? new Date(order.customer_birth_date + 'T00:00:00').toLocaleDateString('es-AR') : 'No especificada'}</div>
                 )}
               </div>
               <div className="sm:col-span-2">

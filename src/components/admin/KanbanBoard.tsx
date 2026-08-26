@@ -11,6 +11,8 @@ interface Order {
   id: string;
   customer_name: string;
   customer_phone: string;
+  customer_email?: string;
+  customer_birth_date?: string;
   customer_address?: string;
   delivery_address?: string;
   total_price?: number;

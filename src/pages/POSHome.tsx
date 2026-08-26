@@ -112,6 +112,8 @@ export default function POSHome({ empresaSlug }: { empresaSlug: string }) {
         empresa_id: empresaId,
         customer_name: 'Pedido en Caja',
         customer_phone: '0000000',
+        customer_email: null,
+        customer_birth_date: null,
         delivery_address: 'En local',
         comment: finalComment,
         total: total,
