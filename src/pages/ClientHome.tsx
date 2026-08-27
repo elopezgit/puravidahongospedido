@@ -131,6 +131,8 @@ export default function ClientHome() {
   const [activeCategory, setActiveCategory] = useState<string | 'todas'>('todas');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedKeyword, setSelectedKeyword] = useState<string>('todas');
+  const [selectedGender, setSelectedGender] = useState<string>('todos'); // 'todos', 'Hombre', 'Mujer', 'Unisex'
+  const [selectedBrand, setSelectedBrand] = useState<string>('todas');
   const [bannerIndex, setBannerIndex] = useState(0);
 
   /* ─── Cart ─── */
@@ -256,9 +258,28 @@ export default function ClientHome() {
         pName.includes(kw) ||
         pDesc.includes(kw) ||
         catName.includes(kw);
+
+    // Gender inference
+    const productGender = (p as any).gender || (
+      (pName.includes('femme') || pName.includes('women') || pName.includes('mujer') || pName.includes('yara') || pName.includes('miss')) ? 'Mujer' :
+      (pName.includes('homme') || pName.includes('men ') || pName.includes('hombre') || pName.includes('club de nuit intense man') || pName.includes('asad') || pName.includes('hawas')) ? 'Hombre' : 'Unisex'
+    );
+    const matchesGender = selectedGender === 'todos' || productGender === selectedGender;
+
+    // Brand inference
+    let productBrand = 'Otras';
+    if (p.name.includes('—')) productBrand = p.name.split('—')[0].trim();
+    else if (p.name.includes('-')) productBrand = p.name.split('-')[0].trim();
+    const matchesBrand = selectedBrand === 'todas' || productBrand === selectedBrand;
                           
-    return matchesSearch && matchesCategory && matchesKeyword;
+    return matchesSearch && matchesCategory && matchesKeyword && matchesGender && matchesBrand;
   });
+
+  const availableBrands = Array.from(new Set(products.map(p => {
+    if (p.name.includes('—')) return p.name.split('—')[0].trim();
+    if (p.name.includes('-')) return p.name.split('-')[0].trim();
+    return 'Otras';
+  }))).filter(b => b !== 'Otras').sort();
 
   const getProductQuantity = (productId: string) => {
     return items.filter(i => i.id === productId).reduce((acc, curr) => acc + curr.quantity, 0);
@@ -648,48 +669,135 @@ export default function ClientHome() {
           </section>
         )}
 
-        {/* ═══════ KEYWORDS QUICK FILTER ═══════ */}
-        <section className="px-4 mb-8">
+        {/* ═══════ ADVANCED FILTERS ═══════ */}
+        <section className="px-4 mb-8 space-y-4">
+          
+          {/* Brand Filter */}
           <div>
             <div className="flex items-center justify-between mb-2">
               <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                Búsqueda Rápida
+                Filtrar por Marca
               </span>
-              {selectedKeyword !== 'todas' && (
+              {selectedBrand !== 'todas' && (
                 <button
-                  onClick={() => setSelectedKeyword('todas')}
+                  onClick={() => setSelectedBrand('todas')}
                   className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
                 >
-                  Limpiar filtro
+                  Limpiar marca
                 </button>
               )}
             </div>
             <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4">
               <button
-                onClick={() => setSelectedKeyword('todas')}
-                aria-label="Mostrar todos los productos"
+                onClick={() => setSelectedBrand('todas')}
                 className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                  selectedKeyword === 'todas'
+                  selectedBrand === 'todas'
                     ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
                     : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
                 }`}
               >
-                # Todos
+                Todas las Marcas
               </button>
-              {availableKeywords.map(kw => (
+              {availableBrands.map(brand => (
                 <button
-                  key={kw}
-                  onClick={() => setSelectedKeyword(selectedKeyword === kw ? 'todas' : kw)}
-                  aria-label={`Filtrar por ${kw}`}
+                  key={brand}
+                  onClick={() => setSelectedBrand(selectedBrand === brand ? 'todas' : brand)}
                   className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                    selectedKeyword === kw
+                    selectedBrand === brand
                       ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
                       : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
                   }`}
                 >
-                  #{kw}
+                  {brand}
                 </button>
               ))}
+            </div>
+          </div>
+
+          {/* Gender & Keyword Filters Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Gender Filter */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
+                  Género
+                </span>
+                {selectedGender !== 'todos' && (
+                  <button
+                    onClick={() => setSelectedGender('todos')}
+                    className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
+                  >
+                    Limpiar género
+                  </button>
+                )}
+              </div>
+              <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4 md:mx-0 md:px-0">
+                <button
+                  onClick={() => setSelectedGender('todos')}
+                  className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
+                    selectedGender === 'todos'
+                      ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
+                      : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                  }`}
+                >
+                  Todos
+                </button>
+                {['Hombre', 'Mujer', 'Unisex'].map(gender => (
+                  <button
+                    key={gender}
+                    onClick={() => setSelectedGender(selectedGender === gender ? 'todos' : gender)}
+                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
+                      selectedGender === gender
+                        ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
+                        : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                    }`}
+                  >
+                    {gender}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Keyword Filter */}
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
+                  Tags Populares
+                </span>
+                {selectedKeyword !== 'todas' && (
+                  <button
+                    onClick={() => setSelectedKeyword('todas')}
+                    className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
+                  >
+                    Limpiar tag
+                  </button>
+                )}
+              </div>
+              <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4 md:mx-0 md:px-0">
+                <button
+                  onClick={() => setSelectedKeyword('todas')}
+                  className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
+                    selectedKeyword === 'todas'
+                      ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
+                      : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                  }`}
+                >
+                  # Todos
+                </button>
+                {availableKeywords.map(kw => (
+                  <button
+                    key={kw}
+                    onClick={() => setSelectedKeyword(selectedKeyword === kw ? 'todas' : kw)}
+                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
+                      selectedKeyword === kw
+                        ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
+                        : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                    }`}
+                  >
+                    #{kw}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </section>
