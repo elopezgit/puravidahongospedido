@@ -79,7 +79,12 @@ export default function POSHome({ empresaSlug }: { empresaSlug: string }) {
 
   const filteredProducts = products.filter(p => {
     const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
-    const matchesCategory = activeCategory === 'todas' || p.category_id === activeCategory;
+    
+    // When searching manually, ignore category filter to perform a global search
+    const matchesCategory = searchQuery 
+      ? true 
+      : activeCategory === 'todas' || p.category_id === activeCategory;
+      
     return matchesSearch && matchesCategory;
   });
 

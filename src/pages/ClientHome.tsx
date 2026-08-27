@@ -244,11 +244,18 @@ export default function ClientHome() {
     const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
 
     const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
-    const matchesCategory = activeCategory === 'todas' || p.category_id === activeCategory;
-    const matchesKeyword = selectedKeyword === 'todas' ||
-                          pName.includes(kw) ||
-                          pDesc.includes(kw) ||
-                          catName.includes(kw);
+    
+    // When searching manually, ignore category and keyword filters to perform a global search
+    const matchesCategory = searchQuery 
+      ? true 
+      : activeCategory === 'todas' || p.category_id === activeCategory;
+      
+    const matchesKeyword = searchQuery 
+      ? true 
+      : selectedKeyword === 'todas' ||
+        pName.includes(kw) ||
+        pDesc.includes(kw) ||
+        catName.includes(kw);
                           
     return matchesSearch && matchesCategory && matchesKeyword;
   });
