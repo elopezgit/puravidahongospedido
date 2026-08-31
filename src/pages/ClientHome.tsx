@@ -620,48 +620,38 @@ export default function ClientHome() {
               </button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[150px] md:auto-rows-[170px] gap-3 md:gap-4">
+            <div className="flex gap-5 md:gap-8 overflow-x-auto hide-scrollbar pb-2 pt-2 -mx-4 px-4 md:mx-0 md:px-0">
               {categories.map((cat, i) => {
                 const isActive = activeCategory === cat.id;
-                const productCount = products.filter(p => p.category_id === cat.id).length;
-                const tileClass = CATEGORY_TILE_CLASSES[i % CATEGORY_TILE_CLASSES.length];
+                
                 return (
                   <motion.button
                     key={cat.id}
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.05 * (i + 1) }}
-                    whileTap={{ scale: 0.96 }}
+                    transition={{ duration: 0.3, delay: 0.05 * (i + 1) }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => handleSelectCategory(cat.id)}
                     aria-label={`Categoría ${cat.name}`}
-                    className={`group relative overflow-hidden rounded-2xl shadow-sm transition-all duration-300 focus-ring ${tileClass} ${
-                      isActive
-                        ? 'ring-2 ring-[#C9A962] ring-offset-2 ring-offset-[#FBF8F3] shadow-xl'
-                        : 'hover:shadow-lg hover:-translate-y-0.5'
-                    }`}
+                    className="flex flex-col items-center gap-2.5 shrink-0 group focus-ring"
                   >
-                    <img
-                      src={getCategoryImage(cat.name)}
-                      alt={cat.name}
-                      loading="lazy"
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" aria-hidden="true" />
-
-                    <span className="absolute top-2.5 right-2.5 z-10 bg-white/95 text-stone-900 font-black text-[10px] px-2 py-0.5 rounded-full shadow-sm uppercase tracking-wide">
-                      {productCount} prod.
-                    </span>
-
-                    <div className="absolute inset-x-0 bottom-0 z-10 p-3.5 text-left">
-                      <span className="block font-serif font-black text-white text-lg leading-tight drop-shadow-lg">
-                        {cat.name}
-                      </span>
-                      <span className="mt-0.5 inline-flex items-center gap-1 text-[11px] font-bold text-[#E4C87F]">
-                        Explorar <ChevronRight size={12} strokeWidth={3} aria-hidden="true" />
-                      </span>
+                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden transition-all duration-300 flex items-center justify-center bg-stone-100 ${
+                      isActive 
+                        ? 'border-2 border-[#C9A962] shadow-md ring-4 ring-[#C9A962]/20 scale-105' 
+                        : 'border border-stone-200 group-hover:border-stone-300 shadow-sm'
+                    }`}>
+                      <img
+                        src={getCategoryImage(cat.name)}
+                        alt={cat.name}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     </div>
-
-                    <div className="absolute inset-0 bg-[#C9A962]/0 group-hover:bg-[#C9A962]/10 transition-colors duration-300" aria-hidden="true" />
+                    <span className={`text-[12px] md:text-[13px] font-bold text-center w-20 md:w-24 leading-tight transition-colors ${
+                      isActive ? 'text-[#A8863B]' : 'text-stone-800 group-hover:text-stone-900'
+                    }`}>
+                      {cat.name}
+                    </span>
                   </motion.button>
                 );
               })}
