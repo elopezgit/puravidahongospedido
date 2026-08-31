@@ -6,7 +6,7 @@ export interface DefaultCategory {
 }
 
 export interface DefaultProduct {
-  id: string;
+  id?: string;
   name: string;
   description: string;
   price: number;

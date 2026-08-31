@@ -80,16 +80,6 @@ const normalizeKey = normalizeText;
 
 const getCategoryImage = (name: string) => CATEGORY_IMAGES[normalizeKey(name)] || '/img/Perfumes/generico.svg';
 
-// Proporciones del mosaico (estilo Sephora/Douglas): una card héroe, una alta,
-// dos medianas y dos anchas. En escritorio el grid ocupa 4 columnas.
-const CATEGORY_TILE_CLASSES = [
-  'col-span-2 md:col-span-2 md:row-span-2', // Héroe
-  'md:row-span-2',                          // Alta
-  '',                                       // Mediana
-  '',                                       // Mediana
-  'md:col-span-2',                          // Ancha
-  'md:col-span-2',                          // Ancha
-];
 
 const CATEGORY_KEYWORDS_MAP: Record<string, string[]> = {
   'perfumes arabes': ['Árabe', 'Lattafa', 'Armaf', 'Afnan', 'Oud', 'Esencia', 'Premium'],
