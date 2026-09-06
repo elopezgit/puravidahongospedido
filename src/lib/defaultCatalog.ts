@@ -32,17 +32,37 @@ export interface DefaultProduct {
 }
 
 export const DEFAULT_AVENTUS_CATEGORIES: DefaultCategory[] = [
-    { id: 'cat-arabes', name: 'Perfumes Árabes', icon: '🕌', description: 'Fragancias árabes premium' },
-    { id: 'cat-extractos', name: 'Perfumes Extractos', icon: '⚗️', description: 'Esencias y extractos de alta concentración' },
-    { id: 'cat-midore', name: 'Perfumes Midoré', icon: '🛢️', description: 'Línea Midoré' },
-    { id: 'cat-desodorantes', name: 'Desodorantes Árabes', icon: '💨', description: 'Desodorantes árabes' },
-    { id: 'cat-onlyyou', name: 'Perfumes ONLYYOU', icon: '💛', description: 'Fragancias ONLYYOU' },
-    { id: 'cat-plata', name: 'Perfumes PLATA', icon: '🥈', description: 'Perfumes PLATA' },
-    { id: 'cat-miniaturas', name: 'Perfumes Miniaturas', icon: '🍾', description: 'Miniaturas y decants' },
-    { id: 'cat-miniaturas-50', name: 'Perfumes Miniaturas 50 ML', icon: '🍾', description: 'Miniaturas de 50 ML' },
-    { id: 'cat-tubitos', name: 'Perfumes Tubitos', icon: '🧴', description: 'Perfumes en tubitos' },
-    { id: 'cat-pelo', name: 'Productos de Pelo', icon: '💇', description: 'Cuidado capilar' }
-  ];
+  {
+    "id": "cat-arabes",
+    "name": "Perfumes Árabes",
+    "icon": "🕌",
+    "description": "Fragancias árabes premium"
+  },
+  {
+    "id": "cat-inspiraciones",
+    "name": "Inspiraciones & Extractos",
+    "icon": "💎",
+    "description": "Esencias, Midoré, Only You y Plata"
+  },
+  {
+    "id": "cat-decants",
+    "name": "Miniaturas & Decants",
+    "icon": "🍾",
+    "description": "Perfumes de bolsillo y muestras"
+  },
+  {
+    "id": "cat-desodorantes",
+    "name": "Desodorantes & Splash",
+    "icon": "💨",
+    "description": "Cuidado personal"
+  },
+  {
+    "id": "cat-pelo",
+    "name": "Cuidado Capilar",
+    "icon": "💆",
+    "description": "Productos para el cabello"
+  }
+];
 
   
 
@@ -988,7 +1008,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "CHERRY LUXE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -998,7 +1018,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "BEARY LOVE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1008,7 +1028,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "PACIFIDREAM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1018,7 +1038,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "TITANS SPLASH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1028,7 +1048,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "PINK SUGAR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1038,7 +1058,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "COTTON CANDY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1048,7 +1068,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "BERRY BLAST",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1058,7 +1078,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "SWEET CARAMEL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1068,7 +1088,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "UNICORN VANILLA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1078,7 +1098,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "BUBBLE GUMM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1088,7 +1108,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "CHOCOLATE FUDGE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1098,7 +1118,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "COOKIES DREAM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 24000,
@@ -1108,7 +1128,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CAROLINA HERRERA 212 VIP",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1118,7 +1138,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CAROLINA HERRERA LA BOMBA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1128,7 +1148,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CAROLINA HERRERA 212 VIP ROSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1138,7 +1158,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CAROLINA HERRERA 212 HÉROES RED",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1148,7 +1168,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CAROLINA HERRERA 212 HÉROES ROSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1158,7 +1178,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "BVLGARI OMNIA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1168,7 +1188,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE OLYMPEA BLOSSOM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1178,7 +1198,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE OLYMPEA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1188,7 +1208,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "YVES SAINT LAURENT BLACK OPIUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1198,7 +1218,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "VALENTINO DONNA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1208,7 +1228,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "BRITNEY SPEARS RAINBOW FANTASY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1218,7 +1238,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "TOY GIRL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1228,7 +1248,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "GOOD GIRL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1238,7 +1258,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "LADY MILLION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1248,7 +1268,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MILLION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1258,7 +1278,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MILLION PRIVE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1268,7 +1288,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE INVICTUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1278,7 +1298,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE INVICTUS VICTORY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1288,7 +1308,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE INVICTUS VICTORY ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1298,7 +1318,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE INVICTUS INTENSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1308,7 +1328,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE INVICTUS LEGEND",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1318,7 +1338,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE EU DE PARFUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1328,7 +1348,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM GOLD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1338,7 +1358,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM INTENSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1348,7 +1368,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1358,7 +1378,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM CLÁSICO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1368,7 +1388,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1378,7 +1398,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PACO RABANNE PHANTOM PARFUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1388,7 +1408,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "CALVIN KLEIN EUPHORIA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1398,7 +1418,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "MOSCHINO TOY 2",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1408,7 +1428,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "AZZARO WANTED BY NIGHT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1418,7 +1438,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "AZZARO WANTED  EAU DE TOILETTE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1428,7 +1448,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "AZZARO THE MOST WANTED PARFUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1438,7 +1458,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "AZZARO THE MOST WANTED INTENSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1448,7 +1468,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "AZZARO WANTED",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1458,7 +1478,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE BEAU GARDEN  PARADISE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1468,7 +1488,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE MALE  ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1478,7 +1498,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE  MALE LE  PARFUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1488,7 +1508,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE MALE ULTRA ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1498,7 +1518,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE MALE LOVER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1508,7 +1528,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE BEAU",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1518,7 +1538,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER LE  MALE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 30000,
@@ -1528,7 +1548,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "BILLIE EILISH — EILISH N1",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 45000,
@@ -1538,7 +1558,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "BILLIE EILISH — EILISH N2",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 45000,
@@ -1548,7 +1568,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "BILLIE EILISH — EILISH N3",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 45000,
@@ -1558,7 +1578,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-onlyyou",
+    "category_id": "cat-inspiraciones",
     "name": "PARIS CÓRNER — MAWJ APPLETING",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 45000,
@@ -2018,7 +2038,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "AMORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2028,7 +2048,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "ANGEL Y DIABLO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2038,7 +2058,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "DYD LIGHT BLUE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2048,7 +2068,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "RICH MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2058,7 +2078,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "GOOD BLACK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2068,7 +2088,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "PARIS MILTON",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2078,7 +2098,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "N5 MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2088,7 +2108,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "FLOWER AIR MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2098,7 +2118,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "ODANZA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2108,7 +2128,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MH MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2118,7 +2138,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "LADY MILLION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2128,7 +2148,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "CHANCE MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2138,7 +2158,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "OLIMPEAS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2148,7 +2168,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "LA VIDA ES BELLA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2158,7 +2178,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2168,7 +2188,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 SEX MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2178,7 +2198,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "HELLOWOMAN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2188,7 +2208,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "SUPERVIOLETA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2198,7 +2218,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "COOL MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2208,7 +2228,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 HEROS MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2218,7 +2238,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 SEX MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2228,7 +2248,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 CLASSIC MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2238,7 +2258,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 VIP MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2248,7 +2268,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MIDORE MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2258,7 +2278,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "BLACK MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2268,7 +2288,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "FAHRENHEIT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2278,7 +2298,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "XS MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2288,7 +2308,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "ARMANI CODE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2298,7 +2318,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2308,7 +2328,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "SALVAGE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2318,7 +2338,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MIDORE KZO AIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2328,7 +2348,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "CLASSIC MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2338,7 +2358,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "BLUE MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2348,7 +2368,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "RED MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2358,7 +2378,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MIDORE HERRERO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2368,7 +2388,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "AQUA DI MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2378,7 +2398,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "213 HEROS FEM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2388,7 +2408,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MIDORE IRRESISTIBLE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2398,7 +2418,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "VERSACE CRYSTAL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2408,7 +2428,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "RALF",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2418,7 +2438,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MIDORE GIRL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2428,7 +2448,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "THE FORD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2438,7 +2458,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "BROSS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2448,7 +2468,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "COCODRILE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2458,7 +2478,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "MH MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2468,7 +2488,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "AQUA DI MIDORE FOR MEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2478,7 +2498,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-midore",
+    "category_id": "cat-inspiraciones",
     "name": "SPORT MIDORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2488,7 +2508,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "LA VIDA ES BELLA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2498,7 +2518,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "SI GIORGIO ARMANI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2508,7 +2528,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "ISSEY MIYAKE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2518,7 +2538,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "OLIMPEA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2528,7 +2548,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "PURÉ XS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2538,7 +2558,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "JEAN PAUL GAULTIER DIVINE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2548,7 +2568,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "DIOR ADDICT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2558,7 +2578,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "MOSCHINO BUBBLE GUMM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2568,7 +2588,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-plata",
+    "category_id": "cat-inspiraciones",
     "name": "LUNA NIÑA RICCI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2578,7 +2598,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "VERSACE CRYSTAL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2588,7 +2608,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "POISON",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2598,7 +2618,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "I DONT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2608,7 +2628,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "TOM FORD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2618,7 +2638,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "SI ARMANI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2628,7 +2648,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "SI PASIÓN ARMANI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2638,7 +2658,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "FAME SILVER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2648,7 +2668,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "FAME GOLD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2658,7 +2678,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "FAME ROSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2668,7 +2688,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "JOY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2678,7 +2698,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "OLYMPEA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2688,7 +2708,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "TOM FORD BOSS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2698,7 +2718,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas",
+    "category_id": "cat-decants",
     "name": "VERSACE EROS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 10000,
@@ -2708,7 +2728,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "YARA PINK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2718,7 +2738,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "ERBA PURA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2728,7 +2748,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "ASAD CLÁSICO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2738,7 +2758,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "ASAD ZANZÍBAR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2748,7 +2768,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "ASAD BOURBON",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2758,7 +2778,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "YARA TOUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2768,7 +2788,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "YARA MOI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2778,7 +2798,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-miniaturas-50",
+    "category_id": "cat-decants",
     "name": "YARA PINK ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -2788,7 +2808,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "MANDARÍN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2798,7 +2818,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "KHAMRAH CLÁSICO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2808,7 +2828,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "KHAMRAH DUKHAN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2818,7 +2838,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "KHAMRAH QAWA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2828,7 +2848,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "ERBA PURA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2838,7 +2858,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "9 PM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2848,7 +2868,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "SPECTRA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2858,7 +2878,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "QAED AL FURSAN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2868,7 +2888,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "FAKHAR BLACK SILVER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2878,7 +2898,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "HIS CONFESSION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2888,7 +2908,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "ISLAND BLISS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2898,7 +2918,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "GIVE GOURMAND",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2908,7 +2928,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "MUSAMAM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2918,7 +2938,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "ECLAIRE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2928,7 +2948,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "YARA MOI",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2938,7 +2958,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-tubitos",
+    "category_id": "cat-decants",
     "name": "YARA CANDY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 2500,
@@ -2998,7 +3018,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "9PM NIGHT OUD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3008,7 +3028,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ALTHAIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3018,7 +3038,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "AMBER OUD AQUA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3028,7 +3048,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ANGHAM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3038,7 +3058,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ANGEL FANTASM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3048,7 +3068,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ASAD ZANZÍBAR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3058,7 +3078,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BURBERRY HER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3068,7 +3088,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CHER DIECIOCHO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3078,7 +3098,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CHOCO OVERDOSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3088,7 +3108,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CLUB DE NUIT BLING",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3098,7 +3118,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "DEVOTION INTENSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3108,7 +3128,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "DEVOTION POUR HOMME",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3118,7 +3138,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ECLAIRE PISTACHE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3128,7 +3148,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "FAME IN LOVE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3138,7 +3158,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "GO MANGO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3148,7 +3168,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "GODDESS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3158,7 +3178,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LE MALE ELIXIR ABSOLU",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3168,7 +3188,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LIBRE BERRY. CRUSH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3178,7 +3198,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LIQUID BRUN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3188,7 +3208,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LOST CHERRY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3198,7 +3218,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MANDARÍN SKY ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3208,7 +3228,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MARSHMALLOW BLUSH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3218,7 +3238,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MYSLF L",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3228,7 +3248,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "NOBLE BLUSH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3238,7 +3258,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "POWER OF YOU",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3248,7 +3268,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "STRONGER WITH YOU SANDALWOOD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3258,7 +3278,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "THE MOST WANTED INTENSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3268,7 +3288,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "TORINO 21",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3278,7 +3298,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "VALENTINO BORN IN ROMA EXTRAVAGANZA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3288,7 +3308,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "VALENTINO BORN IN ROMA PURPLE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3298,7 +3318,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "VALENTINO UOMO BORN IN ROMA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3308,7 +3328,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "VANILLA FRAK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3318,7 +3338,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "Y ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3328,7 +3348,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "VALENTINO DONNA BORN IN ROMA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3338,7 +3358,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212 HÉROES",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3348,7 +3368,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212 NEW YORK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3358,7 +3378,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212 SEXY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3368,7 +3388,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212 VIP",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3378,7 +3398,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212VIP ROSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3388,7 +3408,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "AMOR AMOR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3398,7 +3418,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BE DELICIOUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3408,7 +3428,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CLOUD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3418,7 +3438,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "FAME",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3428,7 +3448,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "FLOWER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3438,7 +3458,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "GOOD GIRLS BLUSH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3448,7 +3468,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "J'ADORE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3458,7 +3478,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "L'INTERDIT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3468,7 +3488,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LA BOMBA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3478,7 +3498,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LA VIDA ES BELLA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3488,7 +3508,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LADY MILLION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3498,7 +3518,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LIBRE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3508,7 +3528,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LIGHT BLUE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3518,7 +3538,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MISS DIOR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3528,7 +3548,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MY WAY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3538,7 +3558,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "OLYMPEA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3548,7 +3568,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "RALPH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3558,7 +3578,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "SCANDAL",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3568,7 +3588,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "TOY 2 BUBBLE GUM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3578,7 +3598,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "212 VIP BLACK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3588,7 +3608,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "AQUA DI GIO PROFUMO",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3598,7 +3618,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BAD BOY DAZZILING GARDEN",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3608,7 +3628,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BORN IN ROMA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3618,7 +3638,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CREED AVENTUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3628,7 +3648,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "EROS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3638,7 +3658,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "FAHRENHEIT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3648,7 +3668,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "INVICTUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3658,7 +3678,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "INVICTUS AQUA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3668,7 +3688,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "INVICTUS LEGEND",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3678,7 +3698,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "INVICTUS VICTORY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3688,7 +3708,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "INVICTUS VICTORY ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3698,7 +3718,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "KENZO HOMME",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3708,7 +3728,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "L'EAU D'ISSEY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3718,7 +3738,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "LE MALE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3728,7 +3748,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "MYSLF",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3738,7 +3758,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "OMBRE NOMADE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3748,7 +3768,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MILLION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3758,7 +3778,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MILLION ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3768,7 +3788,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ONE MILLION LUCKY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3778,7 +3798,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "POLO BLUE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3788,7 +3808,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "POLO RED",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3798,7 +3818,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "POWER OF SEDUCTION",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3808,7 +3828,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "SAUVAGE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3818,7 +3838,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "THE  MOST WANTED",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3828,7 +3848,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "TOMMY HILFIGER",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3838,7 +3858,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "TOY BOY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3848,7 +3868,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ULTRA MALE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3858,7 +3878,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "WANTED",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3868,7 +3888,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CK ONE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3878,7 +3898,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BACCARAT ROUGE 540",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3888,7 +3908,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ECLAIRE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3898,7 +3918,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "OPULENT MUSK",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3908,7 +3928,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "YARA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3918,7 +3938,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "YARA. CANDY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3928,7 +3948,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "YARA ELIXIR",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3938,7 +3958,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "YARA TOUS",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3948,7 +3968,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "9PM",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3958,7 +3978,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ASAD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3968,7 +3988,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "BHARARA KING",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3978,7 +3998,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "CLUB DE NUIT",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3988,7 +4008,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ACCENTO OVERDOSE",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -3998,7 +4018,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "AMBER GOLD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4008,7 +4028,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ARABIANS TONKA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4018,7 +4038,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "ERBA PURA",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4028,7 +4048,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "KHAMRAH",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4038,7 +4058,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "OUD FOR GLORY",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4048,7 +4068,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "OUD MOOD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4058,7 +4078,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "SUBLIME",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,
@@ -4068,7 +4088,7 @@ export const DEFAULT_AVENTUS_PRODUCTS: DefaultProduct[] = [
     "is_active": true
   },
   {
-    "category_id": "cat-extractos",
+    "category_id": "cat-inspiraciones",
     "name": "AMBER OUD",
     "description": "Excelente fragancia. Ideal para toda ocasión.",
     "price": 15000,

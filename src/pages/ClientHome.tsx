@@ -65,14 +65,10 @@ interface Banner {
 /* ─── Constants ─── */
 const CATEGORY_IMAGES: Record<string, string> = {
   'perfumes arabes': '/img/Categories/arabes.jpg',
-  'perfumes extractos': '/img/Categories/extractos.jpg',
-  'perfumes midore': '/img/Categories/midore.jpg',
-  'desodorantes arabes': '/img/Categories/desodorantes.jpg',
-  'perfumes onlyyou': '/img/Categories/onlyyou.jpg',
-  'perfumes plata': '/img/Categories/plata.jpg',
-  'perfumes miniaturas': '/img/Categories/miniaturas.jpg',
-  'perfumes tubitos': '/img/Categories/tubitos.jpg',
-  'productos de pelo': '/img/Categories/pelo.jpg',
+  'inspiraciones & extractos': '/img/Categories/extractos.jpg',
+  'miniaturas & decants': '/img/Categories/miniaturas.jpg',
+  'desodorantes & splash': '/img/Categories/desodorantes.jpg',
+  'cuidado capilar': '/img/Categories/pelo.jpg',
 };
 
 // Normaliza un nombre de categoría para lookup estable (minúsculas, sin tildes)
@@ -82,16 +78,12 @@ const getCategoryImage = (name: string) => CATEGORY_IMAGES[normalizeKey(name)] |
 
 
 const CATEGORY_KEYWORDS_MAP: Record<string, string[]> = {
-  'perfumes arabes': ['Árabe', 'Lattafa', 'Armaf', 'Afnan', 'Oud', 'Esencia', 'Premium'],
-  'perfumes extractos': ['Extracto', 'Esencia', 'Concentrado', 'Eau de Parfum', 'Intense'],
-  'perfumes midore': ['Midoré', 'Midore', 'Extracto', 'Económico', 'Premium'],
-  'desodorantes arabes': ['Desodorante', 'Roll-on', 'Body spray', 'Árabe'],
-  'perfumes onlyyou': ['ONLYYOU', 'Only You', 'Dulce', 'Seductor'],
-  'perfumes plata': ['PLATA', 'Plata', 'Elegancia', 'Premium'],
-  'perfumes miniaturas': ['Miniatura', 'Decant', '10ml', 'Viaje', 'Regalo'],
-  'perfumes tubitos': ['Tubito', 'Tubo', 'Bolsillo', 'Portátil'],
-  'productos de pelo': ['Pelo', 'Capilar', 'Aceite', 'Bruma', 'Cabello'],
-  'todas': ['Árabe', 'Original', 'Extracto', 'Dulce', 'Oud', 'Vainilla', 'Esencia', 'Miniatura', 'Premium'],
+  'perfumes arabes': ['Lattafa', 'Armaf', 'Afnan', 'Oud', 'Premium'],
+  'inspiraciones & extractos': ['Extracto', 'Midoré', 'Only You', 'Plata', 'Intense'],
+  'miniaturas & decants': ['Miniatura', 'Decant', 'Tubito', 'Viaje', 'Bolsillo'],
+  'desodorantes & splash': ['Desodorante', 'Roll-on', 'Body spray', 'Árabe'],
+  'cuidado capilar': ['Pelo', 'Aceite', 'Bruma', 'Cabello'],
+  'todas': ['Árabe', 'Extracto', 'Midoré', 'Decant', 'Oud', 'Premium'],
 };
 
 const FALLBACK_BANNERS: Banner[] = [
@@ -393,7 +385,7 @@ export default function ClientHome() {
         <header className="bg-white/95 pt-6 pb-5 px-4 border-b border-stone-200">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-3.5 mb-4">
-              <div className="w-13 h-13 rounded-2xl bg-stone-200 animate-pulse" />
+              <div className="w-[52px] h-[52px] rounded-2xl bg-stone-200 animate-pulse" />
               <div className="space-y-2">
                 <div className="h-5 w-32 bg-stone-200 rounded animate-pulse" />
                 <div className="h-3 w-48 bg-stone-200 rounded animate-pulse" />
@@ -428,7 +420,7 @@ export default function ClientHome() {
         <div className="max-w-6xl mx-auto">
           <div className="flex justify-between items-center mb-4">
             <div className="flex items-center gap-3.5">
-               <div className="w-13 h-13 bg-white rounded-2xl border-2 border-[#C9A962] flex items-center justify-center shadow-sm overflow-hidden shrink-0 transition-transform hover:scale-105">
+               <div className="w-[52px] h-[52px] bg-white rounded-2xl border-2 border-[#C9A962] flex items-center justify-center shadow-sm overflow-hidden shrink-0 transition-transform hover:scale-105">
                   <img src="/img/logo/aventus_perfumeria.jpg" alt="AVENTUS Perfumería Logo" className="w-full h-full object-cover" />
                </div>
                <div>
