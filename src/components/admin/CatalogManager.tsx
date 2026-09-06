@@ -133,37 +133,37 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
   });
 
   return (
-    <div className="p-8">
-      <header className="mb-8 flex justify-between items-center">
+    <div className="p-6 md:p-10 max-w-[1600px] mx-auto animate-fade-in">
+      <header className="mb-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
         <div>
-          <h2 className="text-3xl font-bold text-slate-800">Gestión de Catálogo</h2>
-          <p className="text-slate-500 mt-1">Administra tus productos y categorías.</p>
+          <h2 className="text-3xl font-black text-stone-900 font-display tracking-tight">Gestión de Catálogo</h2>
+          <p className="text-stone-500 mt-1 font-medium">Administra tus productos y categorías de forma centralizada.</p>
         </div>
         <button 
           onClick={() => {
             setFormData({ id: '', name: '', description: '', price: '', category_id: '', image_url: '', code: '', is_active: true });
             setIsModalOpen(true);
           }}
-          className="bg-primary hover:bg-primary-hover text-white px-4 py-2 rounded-lg shadow-sm font-medium transition-colors flex items-center gap-2"
+          className="bg-stone-900 hover:bg-black text-white px-5 py-2.5 rounded-xl shadow-luxury hover:shadow-luxury-hover font-bold transition-all hover:-translate-y-0.5 active:scale-95 flex items-center justify-center gap-2 focus-ring shrink-0"
         >
-          <Plus size={20} />
+          <Plus size={18} strokeWidth={3} />
           Nuevo Producto
         </button>
       </header>
       
       {/* Filters Toolbar */}
-      <div className="bg-white p-4 rounded-xl shadow-sm border border-slate-200 mb-6 flex flex-col md:flex-row gap-4">
+      <div className="glass-card rounded-2xl p-4 mb-8 flex flex-col md:flex-row gap-4 relative z-10">
         <input 
           type="text" 
-          placeholder="Buscar producto..." 
+          placeholder="Buscar por nombre o código..." 
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="flex-1 p-2 border border-slate-200 rounded-lg text-slate-800 focus:outline-none focus:border-primary"
+          className="flex-1 p-3 border border-stone-200/60 rounded-xl text-stone-800 bg-white/50 focus:outline-none focus:border-[#C9A962] focus:ring-2 focus:ring-[#C9A962]/20 transition-all font-medium placeholder:text-stone-400"
         />
         <select 
           value={filterCategory} 
           onChange={e => setFilterCategory(e.target.value)}
-          className="p-2 border border-slate-200 rounded-lg text-slate-800 bg-white min-w-[200px]"
+          className="p-3 border border-stone-200/60 rounded-xl text-stone-800 bg-white/80 focus:outline-none focus:border-[#C9A962] min-w-[220px] font-medium cursor-pointer"
         >
           <option value="">Todas las Categorías</option>
           {categories.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}
@@ -171,7 +171,7 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
         <select 
           value={sortBy} 
           onChange={e => setSortBy(e.target.value)}
-          className="p-2 border border-slate-200 rounded-lg text-slate-800 bg-white"
+          className="p-3 border border-stone-200/60 rounded-xl text-stone-800 bg-white/80 focus:outline-none focus:border-[#C9A962] min-w-[220px] font-medium cursor-pointer"
         >
           <option value="name_asc">Nombre (A-Z)</option>
           <option value="price_asc">Precio (Menor a Mayor)</option>
@@ -179,25 +179,26 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
         </select>
       </div>
       
-      <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-        <table className="w-full text-left">
-          <thead className="bg-slate-50 border-b border-slate-200 text-slate-500 text-sm">
-            <tr>
-              <th className="p-4 font-medium">Producto</th>
-              <th className="p-4 font-medium">Categoría</th>
-              <th className="p-4 font-medium">Precio</th>
-              <th className="p-4 font-medium">Estado</th>
-              <th className="p-4 font-medium text-right">Acciones</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-slate-100">
-            {filteredProducts.map(product => {
-              const cat = categories.find(c => c.id === product.category_id);
-              return (
-                <tr key={product.id} className="hover:bg-slate-50 transition-colors">
-                  <td className="p-4 flex items-center gap-3">
-                    {product.image_url ? (
-                      <img src={product.image_url} alt={product.name} className="w-10 h-10 rounded-lg object-cover bg-slate-200 shrink-0" />
+      <div className="glass-card rounded-3xl overflow-hidden border-stone-200/60 mb-10">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse">
+            <thead className="bg-stone-900 text-stone-200 text-xs uppercase tracking-widest font-bold">
+              <tr>
+                <th className="p-5 font-bold">Producto</th>
+                <th className="p-5 font-bold hidden sm:table-cell">Categoría</th>
+                <th className="p-5 font-bold">Precio</th>
+                <th className="p-5 font-bold hidden md:table-cell">Estado</th>
+                <th className="p-5 font-bold text-right">Acciones</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-stone-200/50 bg-white/40">
+              {filteredProducts.map(product => {
+                const cat = categories.find(c => c.id === product.category_id);
+                return (
+                  <tr key={product.id} className="hover:bg-white/80 transition-colors group">
+                    <td className="p-4 flex items-center gap-4">
+                      {product.image_url ? (
+                        <img src={product.image_url} alt={product.name} className="w-12 h-12 rounded-xl object-cover bg-stone-100 shrink-0 border border-stone-200/60 shadow-sm group-hover:scale-105 transition-transform" />
                     ) : (
                       <div className="w-10 h-10 rounded-lg bg-slate-200 shrink-0 flex items-center justify-center text-slate-400 text-xs">Sin foto</div>
                     )}
@@ -231,6 +232,7 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
             )}
           </tbody>
         </table>
+        </div>
       </div>
 
       {isModalOpen && (

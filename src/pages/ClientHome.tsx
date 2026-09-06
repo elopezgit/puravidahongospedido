@@ -625,10 +625,10 @@ export default function ClientHome() {
                     aria-label={`Categoría ${cat.name}`}
                     className="flex flex-col items-center gap-2.5 shrink-0 group focus-ring"
                   >
-                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden transition-all duration-300 flex items-center justify-center bg-stone-100 ${
+                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden transition-all duration-500 flex items-center justify-center bg-white ${
                       isActive 
-                        ? 'border-2 border-[#C9A962] shadow-md ring-4 ring-[#C9A962]/20 scale-105' 
-                        : 'border border-stone-200 group-hover:border-stone-300 shadow-sm'
+                        ? 'border-[1.5px] border-[#C9A962] shadow-luxury ring-4 ring-[#C9A962]/10 scale-105' 
+                        : 'border border-stone-200/60 group-hover:border-[#C9A962]/40 shadow-sm group-hover:shadow-luxury-hover group-hover:-translate-y-1'
                     }`}>
                       <img
                         src={getCategoryImage(cat.name)}
@@ -811,7 +811,7 @@ export default function ClientHome() {
                         transition={{ delay: idx * 0.03 }}
                         key={product.id}
                         onClick={() => setSelectedProduct(product)}
-                        className="bg-white rounded-2xl border border-stone-200/90 hover:border-[#C9A962]/60 p-3.5 flex gap-4 relative cursor-pointer active:scale-[0.99] transition-all duration-200 shadow-sm hover:shadow-md group focus-ring"
+                        className="glass-card rounded-3xl p-4 flex gap-5 relative cursor-pointer active:scale-[0.98] transition-all duration-500 hover:-translate-y-1 hover:shadow-luxury-hover hover:border-[#C9A962]/30 group focus-ring animate-fade-in"
                         role="button"
                         tabIndex={0}
                         aria-label={`${product.name} - $${product.price.toLocaleString('es-AR')}`}
@@ -867,7 +867,7 @@ export default function ClientHome() {
                           )}
                         </div>
 
-                        <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 bg-stone-100 rounded-xl relative overflow-hidden shadow-inner border border-stone-200 group-hover:border-[#C9A962]/40 transition-all flex flex-col justify-between p-2">
+                        <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 bg-stone-50 rounded-2xl relative overflow-hidden border border-stone-200/50 group-hover:border-[#C9A962]/30 transition-all flex flex-col justify-between p-2 shadow-sm">
                           <img
                             src={product.image_url || '/img/Perfumes/generico.svg'}
                             alt={product.name}

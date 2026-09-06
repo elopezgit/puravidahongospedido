@@ -238,16 +238,16 @@ export default function AdminDashboard() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-[#FAF8F5] flex">
+      <div className="min-h-screen bg-[#FBF8F3] flex selection:bg-[#C9A962]/25">
         
         {/* ═══ SIDEBAR ═══ */}
         <aside
           className={`
             fixed lg:static inset-y-0 left-0 z-50
-            bg-gradient-to-b from-stone-900 via-slate-900 to-stone-950
-            text-stone-100 p-6 flex flex-col shadow-2xl
-            transition-all duration-300 ease-in-out
-            ${sidebarOpen ? 'w-64 translate-x-0' : 'w-0 -translate-x-full lg:w-16 lg:translate-x-0 lg:px-2'}
+            bg-stone-950
+            text-stone-300 p-6 flex flex-col shadow-[10px_0_40px_rgba(0,0,0,0.1)]
+            transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+            ${sidebarOpen ? 'w-64 translate-x-0' : 'w-0 -translate-x-full lg:w-20 lg:translate-x-0 lg:px-2'}
           `}
         >
           <button
