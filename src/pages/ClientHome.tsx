@@ -227,7 +227,25 @@ export default function ClientHome() {
     const pDesc = p.description ? normalizeKey(p.description) : '';
     const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
 
-    const matchesSearch = matchesSearchQuery(searchQuery, [p.name, p.description, p.code]);
+    // Gender inference
+    const productGender = (p as any).gender || (
+      (pName.includes('femme') || pName.includes('women') || pName.includes('mujer') || pName.includes('yara') || pName.includes('miss')) ? 'Mujer' :
+      (pName.includes('homme') || pName.includes('men ') || pName.includes('hombre') || pName.includes('club de nuit intense man') || pName.includes('asad') || pName.includes('hawas')) ? 'Hombre' : 'Unisex'
+    );
+
+    // Brand inference
+    let productBrand = 'Otras';
+    if (p.name.includes('—')) productBrand = p.name.split('—')[0].trim();
+    else if (p.name.includes('-')) productBrand = p.name.split('-')[0].trim();
+
+    const matchesSearch = matchesSearchQuery(searchQuery, [
+      p.name, 
+      p.description, 
+      p.code, 
+      catName, 
+      productBrand, 
+      productGender
+    ]);
     
     // When searching manually, ignore category and keyword filters to perform a global search
     const matchesCategory = searchQuery 
@@ -241,17 +259,7 @@ export default function ClientHome() {
         pDesc.includes(kw) ||
         catName.includes(kw);
 
-    // Gender inference
-    const productGender = (p as any).gender || (
-      (pName.includes('femme') || pName.includes('women') || pName.includes('mujer') || pName.includes('yara') || pName.includes('miss')) ? 'Mujer' :
-      (pName.includes('homme') || pName.includes('men ') || pName.includes('hombre') || pName.includes('club de nuit intense man') || pName.includes('asad') || pName.includes('hawas')) ? 'Hombre' : 'Unisex'
-    );
     const matchesGender = selectedGender === 'todos' || productGender === selectedGender;
-
-    // Brand inference
-    let productBrand = 'Otras';
-    if (p.name.includes('—')) productBrand = p.name.split('—')[0].trim();
-    else if (p.name.includes('-')) productBrand = p.name.split('-')[0].trim();
     const matchesBrand = selectedBrand === 'todas' || productBrand === selectedBrand;
                           
     return matchesSearch && matchesCategory && matchesKeyword && matchesGender && matchesBrand;
