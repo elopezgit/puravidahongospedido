@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode, useEffect, useCallback } from 'react';
+import { createContext, useContext, useState, useRef, ReactNode, useEffect, useCallback } from 'react';
 
 export interface CartItem {
   id: string;
@@ -19,22 +19,30 @@ interface CartContextType {
   isCartOpen: boolean;
   setIsCartOpen: (open: boolean) => void;
   itemCount: number;
+  /**
+   * Aísla el carrito por tenant. Cada empresa usa su propia clave en
+   * localStorage, así los pedidos de un cliente nunca se mezclan con otro.
+   */
+  setCartScope: (scope: string) => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-/* ─── Persistencia en localStorage ─── */
-const STORAGE_KEY = 'aventus_cart';
+/* ─── Persistencia en localStorage (aislada por tenant) ─── */
+const DEFAULT_SCOPE = 'puravidahongos';
 
-function saveCart(items: CartItem[]) {
+const storageKey = (scope: string) => `cart_${scope || DEFAULT_SCOPE}`;
+
+function saveCart(scope: string, items: CartItem[]) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
+    localStorage.setItem(storageKey(scope), JSON.stringify(items));
   } catch { /* quota exceeded, silently fail */ }
 }
 
-function loadCart(): CartItem[] {
+function loadCart(scope: string): CartItem[] {
+  const key = storageKey(scope);
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = localStorage.getItem(key);
     if (saved) {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed)) return parsed;
@@ -44,12 +52,23 @@ function loadCart(): CartItem[] {
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>(() => loadCart());
+  const [items, setItems] = useState<CartItem[]>(() => loadCart(DEFAULT_SCOPE));
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const scopeRef = useRef<string>(DEFAULT_SCOPE);
 
-  // Persistir cambios automáticamente
+  // Persistir cambios automáticamente (siempre en la clave del tenant activo)
   useEffect(() => {
-    saveCart(items);
+    saveCart(scopeRef.current, items);
+  }, [items]);
+
+  /** Cambia de tenant: guarda el carrito actual y carga el del nuevo. */
+  const setCartScope = useCallback((scope: string) => {
+    const next = (scope || DEFAULT_SCOPE).trim().toLowerCase() || DEFAULT_SCOPE;
+    if (next === scopeRef.current) return;
+    saveCart(scopeRef.current, items);
+    scopeRef.current = next;
+    setItems(loadCart(next));
+    setIsCartOpen(false);
   }, [items]);
 
   const addToCart = useCallback((product: { id: string; name: string; price: number }, quantity = 1, notes = '') => {
@@ -98,7 +117,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   const clearCart = useCallback(() => {
     setItems([]);
-    try { localStorage.removeItem(STORAGE_KEY); } catch { /* ignore */ }
+    try { localStorage.removeItem(storageKey(scopeRef.current)); } catch { /* ignore */ }
   }, []);
 
   const total = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -116,6 +135,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       isCartOpen,
       setIsCartOpen,
       itemCount,
+      setCartScope,
     }}>
       {children}
     </CartContext.Provider>

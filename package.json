@@ -1,5 +1,5 @@
 {
-  "name": "aventus-perfumeria",
+  "name": "puravidahongos",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,6 +23,7 @@
     "@supabase/supabase-js": "^2.108.2",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.21.0",
+    "puppeteer-core": "^25.12.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "react-router-dom": "^7.18.0"

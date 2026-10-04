@@ -1,6 +1,6 @@
 import React from 'react';
 
-type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'terracotta';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -13,15 +13,17 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
   primary:
-    'bg-gradient-to-r from-[#A8863B] to-[#C9A962] text-white shadow-lg shadow-[#C9A962]/25 hover:brightness-110 border border-white/20',
+    'bg-gradient-to-r from-[#525B38] to-[#41492C] text-white shadow-lg shadow-[#525B38]/25 hover:brightness-110 border border-[#DCE5D0]/30',
+  terracotta:
+    'bg-gradient-to-r from-[#8E5238] to-[#743F29] text-white shadow-lg shadow-[#8E5238]/25 hover:brightness-110 border border-[#F4E3D8]/30',
   secondary:
-    'bg-stone-100 text-stone-800 border border-stone-200 hover:bg-stone-200 hover:border-stone-300 shadow-sm',
+    'bg-[#F4F6F0] text-[#1D2218] border border-[#E1E6DA] hover:bg-[#EAEFE4] hover:border-[#CAD6B8] shadow-sm',
   outline:
-    'bg-transparent text-[#A8863B] border-2 border-[#C9A962] hover:bg-[#C9A962]/10',
+    'bg-transparent text-[#525B38] border-2 border-[#525B38] hover:bg-[#525B38]/10',
   ghost:
-    'bg-transparent text-stone-600 hover:bg-stone-100 border border-transparent',
+    'bg-transparent text-[#545D4B] hover:bg-[#F4F6F0] border border-transparent',
   danger:
-    'bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 hover:border-red-300',
+    'bg-[#FBECEB] text-[#B9382F] border border-[#F5C7C5] hover:bg-[#F8D8D6]',
 };
 
 const SIZE_STYLES: Record<ButtonSize, string> = {
@@ -44,10 +46,10 @@ export default function Button({
   return (
     <button
       className={`
-        inline-flex items-center justify-center font-black uppercase tracking-wide
+        inline-flex items-center justify-center font-bold uppercase tracking-wide
         transition-all duration-200 active:scale-[0.97]
         disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100
-        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A962]/40 focus-visible:ring-offset-2
+        focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525B38]/40 focus-visible:ring-offset-2
         ${VARIANT_STYLES[variant]}
         ${SIZE_STYLES[size]}
         ${fullWidth ? 'w-full' : ''}

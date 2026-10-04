@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { getEmpresaId } from '../../lib/getEmpresa';
-import { filterAventusOrders } from '../../lib/defaultCatalog';
+import { filterTenantOrders } from '../../lib/defaultCatalog';
 import { TrendingUp, TrendingDown, Clock, CheckCircle2, AlertCircle, Users, Calendar, Activity, Receipt, LayoutList, Trophy, ArrowDownToLine, Download } from 'lucide-react';
 
 interface OrderItem {
@@ -96,7 +96,7 @@ export default function AnalyticsDashboard({ empresaSlug }: { empresaSlug: strin
       query = query.gte('created_at', startDate.toISOString()).lte('created_at', endDate.toISOString());
       
       const { data: currentData } = await query;
-      setOrders(filterAventusOrders(currentData || []));
+      setOrders(filterTenantOrders(empresaSlug, currentData || []) as Order[]);
       
       setPrevOrders([]);
       setIsLoading(false);
@@ -109,7 +109,7 @@ export default function AnalyticsDashboard({ empresaSlug }: { empresaSlug: strin
       query = query.gte('created_at', startDate.toISOString());
     }
     const { data: currentData } = await query;
-    setOrders(filterAventusOrders(currentData || []));
+    setOrders(filterTenantOrders(empresaSlug, currentData || []) as Order[]);
 
     // Fetch Previous Period
     if (hasPrevPeriod) {
@@ -118,7 +118,7 @@ export default function AnalyticsDashboard({ empresaSlug }: { empresaSlug: strin
         .eq('empresa_id', eid)
         .gte('created_at', prevStartDate.toISOString())
         .lt('created_at', prevEndDate.toISOString());
-      setPrevOrders(filterAventusOrders(previousData || []));
+      setPrevOrders(filterTenantOrders(empresaSlug, previousData || []) as Order[]);
     } else {
       setPrevOrders([]);
     }

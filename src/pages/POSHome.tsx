@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 import { getEmpresaId } from '../lib/getEmpresa';
-import { filterAventusCategories, filterAventusProducts } from '../lib/defaultCatalog';
+import { filterTenantCategories, filterTenantProducts } from '../lib/defaultCatalog';
 import { useCart } from '../lib/CartContext';
 import { useToast } from '../hooks/useToast';
 import { matchesSearchQuery } from '../utils/searchUtils';
@@ -46,8 +46,11 @@ export default function POSHome({ empresaSlug }: { empresaSlug: string }) {
   const [showSummaryModal, setShowSummaryModal] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
 
-  const { items, addToCart, removeFromCart, updateQuantity, updateItemNotes, total, clearCart } = useCart();
+  const { items, addToCart, removeFromCart, updateQuantity, updateItemNotes, total, clearCart, setCartScope } = useCart();
   const toast = useToast();
+
+  /* ─── Aislamiento del carrito por tenant ─── */
+  useEffect(() => { setCartScope(empresaSlug); }, [empresaSlug, setCartScope]);
 
   useEffect(() => {
     async function loadData() {
@@ -63,11 +66,11 @@ export default function POSHome({ empresaSlug }: { empresaSlug: string }) {
           supabase.from('products').select('*').eq('empresa_id', id).eq('is_active', true),
         ]);
 
-        const loadedCats = filterAventusCategories(cats.data || []);
-        setCategories(loadedCats);
+        const loadedCats = filterTenantCategories(empresaSlug, cats.data || []);
+        setCategories(loadedCats as Category[]);
 
-        const loadedProds = filterAventusProducts(prods.data || []);
-        setProducts(loadedProds);
+        const loadedProds = filterTenantProducts(empresaSlug, prods.data || []);
+        setProducts(loadedProds as Product[]);
       } catch (err: any) {
         setError(err.message);
       } finally {

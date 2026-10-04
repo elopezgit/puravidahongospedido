@@ -1,7 +1,7 @@
-import { useEffect, useState, useRef, useCallback } from 'react';
+import { useEffect, useState, useRef, useCallback, useMemo } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
-import { Search, MapPin, Plus, Minus, Star, ChevronRight, RotateCcw } from 'lucide-react';
+import { Search, MapPin, Plus, Minus, ChevronRight, Sparkles, MessageCircle, SlidersHorizontal, ArrowDownUp, Check, X, ShieldCheck, Droplets, Leaf } from 'lucide-react';
 import { useCart } from '../lib/CartContext';
 import { normalizeText, matchesSearchQuery } from '../utils/searchUtils';
 import CartModal from '../components/client/CartModal';
@@ -10,28 +10,25 @@ import OrderTrackerModal from '../components/client/OrderTrackerModal';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getEmpresaData } from '../lib/getEmpresa';
 import {
-  DEFAULT_AVENTUS_CATEGORIES,
-  DEFAULT_AVENTUS_PRODUCTS,
-  filterAventusCategories,
-  filterAventusProducts
+  filterTenantCategories,
+  filterTenantProducts,
+  DEFAULT_PURAVIDA_PRODUCTS,
+  DEFAULT_PURAVIDA_CATEGORIES
 } from '../lib/defaultCatalog';
-import { ProductCardSkeleton } from '../components/ui/Skeleton';
+import { getTenantTheme } from '../lib/tenantTheme';
 import ErrorRetry from '../components/ui/ErrorRetry';
-import Badge from '../components/ui/Badge';
 
 /* ─── Constantes de marca ─── */
-const BRAND = 'AVENTUS';
-const WHATSAPP_NUMBER = '5493815102886';
-const WHATSAPP_MESSAGE = `¡Hola ${BRAND}! Quisiera consultar por un perfume.`;
-const SLUG_DEFAULT = 'aventus';
+const SLUG_DEFAULT = 'puravidahongos';
 
 /* ─── Interfaces ─── */
 interface Empresa {
   id: string;
   name: string;
   phone: string;
-  instagram_url: string;
-  maps_url: string;
+  instagram_url?: string;
+  maps_url?: string;
+  logo_url?: string;
   alias?: string;
   cbu?: string;
 }
@@ -52,45 +49,65 @@ interface Product {
   is_active: boolean;
   sort_order?: number;
   code?: string;
+  badge?: string;
+  benefits?: string[];
 }
 
 interface Banner {
   id: string;
   image_url: string;
-  link?: string;
   title?: string;
   subtitle?: string;
 }
 
-/* ─── Constants ─── */
-const CATEGORY_IMAGES: Record<string, string> = {
-  'perfumes arabes': '/img/Categories/arabes.jpg',
-  'inspiraciones & extractos': '/img/Categories/extractos.jpg',
-  'miniaturas & decants': '/img/Categories/miniaturas.jpg',
-  'desodorantes & splash': '/img/Categories/desodorantes.jpg',
-  'cuidado capilar': '/img/Categories/pelo.jpg',
-};
+type SortOption = 'featured' | 'price_asc' | 'price_desc' | 'name_asc' | 'name_desc';
 
-// Normaliza un nombre de categoría para lookup estable (minúsculas, sin tildes)
-const normalizeKey = normalizeText;
-
-const getCategoryImage = (name: string) => CATEGORY_IMAGES[normalizeKey(name)] || '/img/Perfumes/generico.svg';
-
-
-const CATEGORY_KEYWORDS_MAP: Record<string, string[]> = {
-  'perfumes arabes': ['Lattafa', 'Armaf', 'Afnan', 'Oud', 'Premium'],
-  'inspiraciones & extractos': ['Extracto', 'Midoré', 'Only You', 'Plata', 'Intense'],
-  'miniaturas & decants': ['Miniatura', 'Decant', 'Tubito', 'Viaje', 'Bolsillo'],
-  'desodorantes & splash': ['Desodorante', 'Roll-on', 'Body spray', 'Árabe'],
-  'cuidado capilar': ['Pelo', 'Aceite', 'Bruma', 'Cabello'],
-  'todas': ['Árabe', 'Extracto', 'Midoré', 'Decant', 'Oud', 'Premium'],
-};
-
-const FALLBACK_BANNERS: Banner[] = [
-  { id: '1', image_url: '/img/Banner/banner1.jpg', title: 'EL PARAÍSO DE LOS PERFUMES', subtitle: '8 años junto a vos 🤍' },
-  { id: '2', image_url: '/img/Banner/banner2.jpg', title: 'PERFUMES ÁRABES PREMIUM', subtitle: 'Lattafa · Armaf · Afnan · Al Haramain' },
-  { id: '3', image_url: '/img/Banner/banner3.jpg', title: 'ENVÍOS A TODO EL PAÍS', subtitle: 'Ventas por mayor y menor · WhatsApp' },
+const SORT_OPTIONS: { id: SortOption; label: string; icon: string }[] = [
+  { id: 'featured', label: 'Recomendados / Más pedidos', icon: '✨' },
+  { id: 'price_asc', label: 'Menor precio primero', icon: '💲' },
+  { id: 'price_desc', label: 'Mayor precio primero', icon: '💎' },
+  { id: 'name_asc', label: 'Nombre: A a la Z', icon: '🔤' },
+  { id: 'name_desc', label: 'Nombre: Z a la A', icon: '🔠' },
 ];
+
+const DEFAULT_BANNERS: Banner[] = [
+  {
+    id: 'b1',
+    image_url: '/img/puravidahongos/banner-melena.jpg',
+    title: 'MELENA DE LEÓN · NEUROGÉNESIS',
+    subtitle: 'Claridad mental, memoria y regeneración neuronal · Extracto triple',
+  },
+  {
+    id: 'b2',
+    image_url: '/img/puravidahongos/banner-reishi.jpg',
+    title: 'REISHI · PAZ & LONGEVIDAD',
+    subtitle: 'Calma adaptógena, modulación inmune y sueño zen reparador',
+  },
+  {
+    id: 'b3',
+    image_url: '/img/puravidahongos/banner-cordyceps.jpg',
+    title: 'CORDYCEPS · ENERGÍA & VITALIDAD',
+    subtitle: 'Oxigenación celular y bio-síntesis de energía ATP sin estimulantes',
+  },
+  {
+    id: 'b4',
+    image_url: '/img/puravidahongos/banner-adaptogenos.jpg',
+    title: 'SINERGIA ADAPTÓGENA PURA',
+    subtitle: 'Extractos botánicos puros del bosque con máxima biodisponibilidad',
+  },
+];
+
+const TARGET_GOALS = [
+  { id: 'all_targets', label: 'Todos los objetivos', value: 'todas' },
+  { id: 'g_foco', label: '🧠 Enfoque & Memoria', value: 'Memoria' },
+  { id: 'g_calma', label: '🌙 Calma & Sueño', value: 'Descanso' },
+  { id: 'g_inmuno', label: '🛡️ Inmunidad Total', value: 'Inmunidad' },
+  { id: 'g_energia', label: '⚡ Energía ATP', value: 'Energía' },
+  { id: 'g_estres', label: '🌿 Antiestrés', value: 'Estrés' },
+  { id: 'g_longevidad', label: '❤️ Longevidad', value: 'Longevidad' },
+];
+
+const normalizeKey = (value: string) => normalizeText(value).trim();
 
 export default function ClientHome() {
   const { empresaSlug } = useParams<{ empresaSlug?: string }>();
@@ -98,32 +115,27 @@ export default function ClientHome() {
 
   /* ─── Data State ─── */
   const [empresa, setEmpresa] = useState<Empresa | null>(null);
-  const [categories, setCategories] = useState<Category[]>(DEFAULT_AVENTUS_CATEGORIES);
-  const [products, setProducts] = useState<Product[]>(DEFAULT_AVENTUS_PRODUCTS as unknown as Product[]);
-  const [banners, setBanners] = useState<Banner[]>([]);
+  const [categories, setCategories] = useState<Category[]>(DEFAULT_PURAVIDA_CATEGORIES);
+  const [products, setProducts] = useState<Product[]>(DEFAULT_PURAVIDA_PRODUCTS as Product[]);
+  const [banners, setBanners] = useState<Banner[]>(DEFAULT_BANNERS);
 
   /* ─── UI State ─── */
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showSplash, setShowSplash] = useState(true);
-  const [lastOrder, setLastOrder] = useState<any[]>([]);
   const [activeOrderId, setActiveOrderId] = useState<string | null>(null);
   const [isTrackerOpen, setIsTrackerOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<string | 'todas'>('todas');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  
+  /* ─── Filtros & Ordenamiento Profesional ─── */
+  const [activeCategory, setActiveCategory] = useState<string | 'todas'>('todas');
   const [selectedKeyword, setSelectedKeyword] = useState<string>('todas');
-  const [selectedGender, setSelectedGender] = useState<string>('todos'); // 'todos', 'Hombre', 'Mujer', 'Unisex'
-  const [selectedBrand, setSelectedBrand] = useState<string>('todas');
+  const [sortBy, setSortBy] = useState<SortOption>('featured');
+  const [isSortModalOpen, setIsSortModalOpen] = useState(false);
   const [bannerIndex, setBannerIndex] = useState(0);
 
-  /* ─── Cart ─── */
-  const { items, setIsCartOpen, addToCart, removeFromCart, updateQuantity, clearCart, itemCount } = useCart();
-
-  /* ─── Derived constants ─── */
-  const displayBanners = banners.length > 0 ? banners : FALLBACK_BANNERS;
-
-  /* ─── Banner Auto-scroll ─── */
+  /* ─── Carousel Auto-scroll ─── */
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -134,7 +146,7 @@ export default function ClientHome() {
         const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
         const maxScroll = scrollWidth - clientWidth;
         const firstChild = scrollRef.current.children[0] as HTMLElement;
-        const cardWidth = firstChild ? firstChild.offsetWidth + 16 : 320;
+        const cardWidth = firstChild ? firstChild.offsetWidth + 12 : 300;
 
         if (scrollLeft >= maxScroll - 10) {
           scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
@@ -142,14 +154,13 @@ export default function ClientHome() {
           scrollRef.current.scrollBy({ left: cardWidth, behavior: 'smooth' });
         }
       }
-    }, 4000);
+    }, 4800);
   }, []);
 
   const stopAutoScroll = useCallback(() => {
     if (scrollIntervalRef.current) clearInterval(scrollIntervalRef.current);
   }, []);
 
-  // Track banner scroll position for dot indicators
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -159,32 +170,47 @@ export default function ClientHome() {
       const maxScroll = scrollWidth - clientWidth;
       if (maxScroll <= 0) return;
       const ratio = scrollLeft / maxScroll;
-      const totalSlides = displayBanners.length - 1;
+      const totalSlides = banners.length - 1;
       setBannerIndex(Math.round(ratio * totalSlides));
     };
 
     el.addEventListener('scroll', handleScroll, { passive: true });
     return () => el.removeEventListener('scroll', handleScroll);
-  }, [banners, displayBanners.length]);
+  }, [banners.length]);
 
   useEffect(() => {
     startAutoScroll();
     return () => stopAutoScroll();
   }, [startAutoScroll, stopAutoScroll]);
 
+  /* ─── Cart ─── */
+  const { items, setIsCartOpen, addToCart, removeFromCart, updateQuantity, itemCount, setCartScope } = useCart();
+
+  /* ─── Aislamiento del carrito por tenant ─── */
+  useEffect(() => { setCartScope(activeSlug); }, [activeSlug, setCartScope]);
+
+  /* ─── Tema del tenant ─── */
+  const theme = getTenantTheme(activeSlug, empresa?.name);
+
+  /* ─── WhatsApp ─── */
+  const rawPhone = empresa?.phone ? empresa.phone.replace(/\D/g, '') : '5493815102886';
+  const whatsappNumber = rawPhone.startsWith('54') ? rawPhone : `549${rawPhone}`;
+  const whatsappMessage = `¡Hola Hongos Pura Vida! 🌿 Quisiera asesoramiento sobre los elixires medicinales.`;
+
   /* ─── Data Fetching ─── */
   const loadData = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const empData = await getEmpresaData(activeSlug);
+      let empData: Empresa | null = null;
+      try {
+        empData = await getEmpresaData(activeSlug);
+      } catch (e) {
+        console.warn('Cargando datos locales de Pura Vida Hongos:', e);
+      }
+
       if (empData) {
         setEmpresa(empData);
-
-        const savedOrder = localStorage.getItem(`lastOrder_${empData.id}`);
-        if (savedOrder) {
-          try { setLastOrder(JSON.parse(savedOrder)); } catch {}
-        }
 
         const activeOrder = localStorage.getItem(`activeOrder_${empData.id}`);
         if (activeOrder) setActiveOrderId(activeOrder);
@@ -195,135 +221,133 @@ export default function ClientHome() {
           supabase.from('banners').select('*').eq('empresa_id', empData.id).eq('is_active', true),
         ]);
 
-        const cleanCategories = filterAventusCategories(cats.data || []);
-        const cleanProducts = filterAventusProducts(prods.data || []);
+        const cleanCategories = filterTenantCategories(activeSlug, cats.data || []);
+        const cleanProducts = filterTenantProducts(activeSlug, prods.data || []);
 
-        if (cleanCategories.length > 0) setCategories(cleanCategories);
-        if (cleanProducts.length > 0) setProducts(cleanProducts as unknown as Product[]);
+        setCategories(cleanCategories);
+        setProducts(cleanProducts as unknown as Product[]);
         if (bans.data && bans.data.length > 0) {
           setBanners(bans.data.sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0)));
         }
+      } else {
+        setEmpresa({
+          id: 'puravida-flagship',
+          name: 'Hongos Pura Vida',
+          phone: '5493815102886',
+          instagram_url: 'https://instagram.com/puravidahongos',
+          logo_url: '/img/logo/puravidahongos_logo.svg'
+        });
+        setCategories(DEFAULT_PURAVIDA_CATEGORIES);
+        setProducts(DEFAULT_PURAVIDA_PRODUCTS as Product[]);
+        setBanners(DEFAULT_BANNERS);
       }
     } catch (err: any) {
+      console.error(err);
       setError(err.message);
     } finally {
       setLoading(false);
-      setTimeout(() => setShowSplash(false), 2600);
+      setTimeout(() => setShowSplash(false), 2000);
     }
   }, [activeSlug]);
 
   useEffect(() => { loadData(); }, [loadData]);
 
-  /* ─── Derived State ─── */
-  const activeCategoryName = activeCategory === 'todas'
-    ? 'todas'
-    : categories.find(c => c.id === activeCategory)?.name || 'todas';
-
-  const availableKeywords = CATEGORY_KEYWORDS_MAP[activeCategoryName === 'todas' ? 'todas' : normalizeKey(activeCategoryName)] || CATEGORY_KEYWORDS_MAP['todas'];
-
-  const filteredProducts = products.filter(p => {
+  /* ─── Filtrado & Ordenamiento Memoizado ─── */
+  const processedProducts = useMemo(() => {
     const kw = normalizeKey(selectedKeyword);
-    const pName = normalizeKey(p.name);
-    const pDesc = p.description ? normalizeKey(p.description) : '';
-    const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
 
-    // Gender inference
-    const productGender = (p as any).gender || (
-      (pName.includes('femme') || pName.includes('women') || pName.includes('mujer') || pName.includes('yara') || pName.includes('miss')) ? 'Mujer' :
-      (pName.includes('homme') || pName.includes('men ') || pName.includes('hombre') || pName.includes('club de nuit intense man') || pName.includes('asad') || pName.includes('hawas')) ? 'Hombre' : 'Unisex'
-    );
+    const filtered = products.filter(p => {
+      const pName = normalizeKey(p.name);
+      const pDesc = p.description ? normalizeKey(p.description) : '';
+      const catName = normalizeKey(categories.find(c => c.id === p.category_id)?.name || '');
 
-    // Brand inference
-    let productBrand = 'Otras';
-    if (p.name.includes('—')) productBrand = p.name.split('—')[0].trim();
-    else if (p.name.includes('-')) productBrand = p.name.split('-')[0].trim();
-
-    const matchesSearch = matchesSearchQuery(searchQuery, [
-      p.name, 
-      p.description, 
-      p.code, 
-      catName, 
-      productBrand, 
-      productGender
-    ]);
-    
-    // When searching manually, ignore category and keyword filters to perform a global search
-    const matchesCategory = searchQuery 
-      ? true 
-      : activeCategory === 'todas' || p.category_id === activeCategory;
+      const matchesSearch = matchesSearchQuery(searchQuery, [
+        p.name, 
+        p.description, 
+        p.code || '', 
+        catName
+      ]);
       
-    const matchesKeyword = searchQuery 
-      ? true 
-      : selectedKeyword === 'todas' ||
-        pName.includes(kw) ||
-        pDesc.includes(kw) ||
-        catName.includes(kw);
+      const matchesCategory = searchQuery 
+        ? true 
+        : activeCategory === 'todas' || p.category_id === activeCategory;
+        
+      const matchesKeyword = searchQuery 
+        ? true 
+        : selectedKeyword === 'todas' ||
+          pName.includes(kw) ||
+          pDesc.includes(kw) ||
+          catName.includes(kw);
 
-    const matchesGender = selectedGender === 'todos' || productGender === selectedGender;
-    const matchesBrand = selectedBrand === 'todas' || productBrand === selectedBrand;
-                          
-    return matchesSearch && matchesCategory && matchesKeyword && matchesGender && matchesBrand;
-  });
+      return matchesSearch && matchesCategory && matchesKeyword;
+    });
 
-  const availableBrands = Array.from(new Set(products.map(p => {
-    if (p.name.includes('—')) return p.name.split('—')[0].trim();
-    if (p.name.includes('-')) return p.name.split('-')[0].trim();
-    return 'Otras';
-  }))).filter(b => b !== 'Otras').sort();
+    return [...filtered].sort((a, b) => {
+      if (sortBy === 'price_asc') return a.price - b.price;
+      if (sortBy === 'price_desc') return b.price - a.price;
+      if (sortBy === 'name_asc') return a.name.localeCompare(b.name, 'es');
+      if (sortBy === 'name_desc') return b.name.localeCompare(a.name, 'es');
+      return (a.sort_order || 0) - (b.sort_order || 0);
+    });
+  }, [products, categories, searchQuery, activeCategory, selectedKeyword, sortBy]);
 
   const getProductQuantity = (productId: string) => {
     return items.filter(i => i.id === productId).reduce((acc, curr) => acc + curr.quantity, 0);
   };
 
-  const handleSelectCategory = (catId: string) => {
-    setActiveCategory(catId);
+  const currentSortLabel = SORT_OPTIONS.find(s => s.id === sortBy)?.label || 'Recomendados';
+  const hasActiveFilters = activeCategory !== 'todas' || selectedKeyword !== 'todas' || sortBy !== 'featured' || searchQuery !== '';
+
+  const clearAllFilters = () => {
+    setActiveCategory('todas');
     setSelectedKeyword('todas');
+    setSortBy('featured');
+    setSearchQuery('');
   };
 
-  const handleReorder = () => {
-    clearCart();
-    lastOrder.forEach(item => {
-      addToCart({ id: item.id, name: item.name, price: item.price }, item.quantity, item.notes);
-    });
-    setIsCartOpen(true);
-  };
-
-  /* ─── Splash Screen ─── */
+  /* ─── SPLASH SCREEN CINEMÁTICO ZEN ─── */
   if (loading || showSplash) {
     return (
       <AnimatePresence>
         <motion.div
-          exit={{ opacity: 0, scale: 1.03 }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          exit={{ opacity: 0, scale: 1.02 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           onClick={() => setShowSplash(false)}
-          className="min-h-screen bg-[#FBF8F3] flex flex-col items-center justify-center relative overflow-hidden cursor-pointer select-none"
+          className="min-h-screen bg-[#161C11] text-[#F8F6F1] flex flex-col items-center justify-center relative overflow-hidden cursor-pointer select-none px-6 py-10"
         >
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(201,169,98,0.14)_0%,_rgba(251,248,243,1)_70%)] pointer-events-none" />
+          {/* Glowing Aurora Orbs */}
+          <div className="absolute top-1/4 -left-20 w-80 h-80 rounded-full bg-[#52633E]/35 blur-3xl animate-aurora-glow pointer-events-none" />
+          <div className="absolute bottom-1/4 -right-20 w-80 h-80 rounded-full bg-[#8E5238]/30 blur-3xl animate-aurora-glow pointer-events-none" style={{ animationDelay: '3s' }} />
 
-          <div className="relative z-10 flex flex-col items-center justify-center text-center px-6 max-w-lg mx-auto">
+          {/* Micro-esporas Zen */}
+          <div className="absolute top-1/3 left-1/4 w-2 h-2 rounded-full bg-[#D3DECA]/30 animate-spore-slow pointer-events-none" />
+          <div className="absolute bottom-1/3 right-1/3 w-2.5 h-2.5 rounded-full bg-[#C49A68]/30 animate-spore-slow pointer-events-none" style={{ animationDelay: '4s' }} />
+
+          <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-lg mx-auto w-full">
             <motion.div
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-[#C9A962]/15 border border-[#C9A962]/30 px-4 py-1.5 rounded-full mb-6 shadow-sm"
+              className="inline-flex items-center gap-2 bg-[#334026]/70 border border-[#7D8F63]/40 px-4 py-1.5 rounded-full mb-7 backdrop-blur-xl shadow-lg"
             >
-              <span className="w-2 h-2 rounded-full bg-[#C9A962] animate-ping" aria-hidden="true" />
-              <span className="text-[11px] font-black uppercase tracking-widest text-[#A8863B]">
-                EL PARAÍSO DE LOS PERFUMES 👑
+              <span className="w-2 h-2 rounded-full bg-[#D3DECA] animate-ping" aria-hidden="true" />
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.28em] text-[#D3DECA]">
+                MEDICINA ANCESTRAL · BOTICA NATURAL
               </span>
             </motion.div>
 
             <motion.div
-              initial={{ scale: 0.7, opacity: 0 }}
+              initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
-              className="relative mb-6"
+              transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
+              className="relative mb-7 animate-zen-breathe"
             >
-              <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-[#C9A962] shadow-xl overflow-hidden bg-white flex items-center justify-center relative z-10">
+              <div className="w-44 h-44 sm:w-52 sm:h-52 rounded-3xl border border-[#D3DECA]/40 shadow-2xl overflow-hidden bg-[#242D1C] flex items-center justify-center p-3 relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#161C11] via-[#334026]/60 to-[#52633E]/40" />
                 <img
-                  src="/img/logo/aventus_perfumeria.jpg"
-                  alt="AVENTUS Perfumería"
-                  className="w-full h-full object-cover"
+                  src="/img/logo/puravidahongos_logo.svg"
+                  alt="Hongos Pura Vida"
+                  className="w-full h-full object-contain relative z-10 ultra-crisp-img"
                 />
               </div>
             </motion.div>
@@ -333,42 +357,26 @@ export default function ClientHome() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <h1 className="text-4xl sm:text-5xl font-black text-stone-900 tracking-tight font-display drop-shadow-sm">
-                AVENTUS
+              <h1 className="text-3xl sm:text-5xl font-light tracking-wider font-display text-white">
+                HONGOS PURA VIDA
               </h1>
-              <p className="text-xs sm:text-sm font-extrabold text-[#A8863B] uppercase tracking-widest mt-2">
-                PERFUMERÍA PREMIUM &bull; 8 AÑOS JUNTO A VOS 🤍
+              <p className="text-xs sm:text-sm font-semibold text-[#D3DECA]/85 uppercase tracking-[0.3em] mt-2 font-sans">
+                ELIXIRES DE HONGOS MEDICINALES & ADAPTÓGENOS
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4, duration: 0.5 }}
-              className="flex flex-wrap items-center justify-center gap-2 mt-6"
-            >
-              <span className="bg-white border border-stone-200 text-stone-700 text-[10px] font-bold px-3 py-1.5 rounded-xl uppercase shadow-sm">
-                Perfumes Árabes
-              </span>
-              <span className="bg-white border border-stone-200 text-stone-700 text-[10px] font-bold px-3 py-1.5 rounded-xl uppercase shadow-sm">
-                Diseñador Original
-              </span>
-              <span className="bg-white border border-stone-200 text-stone-700 text-[10px] font-bold px-3 py-1.5 rounded-xl uppercase shadow-sm">
-                Nacionales & Esencia
-              </span>
-            </motion.div>
-
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
+              initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.6, duration: 0.5, type: "spring" }}
+              transition={{ delay: 0.5, duration: 0.5 }}
               className="mt-8 flex flex-col items-center gap-2"
             >
-              <span className="bg-gradient-to-r from-[#A8863B] to-[#C9A962] text-white font-black text-base uppercase tracking-wider px-8 py-3.5 rounded-2xl shadow-lg shadow-[#C9A962]/30 active:scale-95 transition-transform">
-                ENTRAR AL CATÁLOGO
+              <span className="bg-gradient-to-r from-[#52633E] via-[#7D8F63] to-[#52633E] text-white font-bold text-xs sm:text-sm uppercase tracking-[0.2em] px-9 py-3.5 rounded-2xl shadow-2xl shadow-[#161C11] hover:brightness-110 active:scale-95 transition-all border border-[#D3DECA]/30 flex items-center gap-2">
+                <Sparkles size={16} className="text-[#D3DECA]" />
+                INGRESAR AL CATÁLOGO
               </span>
-              <span className="text-[11px] text-stone-500 font-medium">
-                Toca en cualquier lugar para ingresar
+              <span className="text-[11px] text-[#B8C4AC]/70 font-medium">
+                Toca en cualquier parte para continuar
               </span>
             </motion.div>
           </div>
@@ -377,182 +385,125 @@ export default function ClientHome() {
     );
   }
 
-  /* ─── Error State ─── */
   if (error && !empresa) {
     return <ErrorRetry message={error} onRetry={loadData} fullScreen />;
   }
 
-  if (!empresa) {
-    return <ErrorRetry message="No se pudo cargar la empresa. Verificá la conexión." onRetry={loadData} fullScreen />;
-  }
-
-  /* ─── Loading Skeleton ─── */
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-[#FBF8F3] pb-28">
-        <header className="bg-white/95 pt-6 pb-5 px-4 border-b border-stone-200">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center gap-3.5 mb-4">
-              <div className="w-[52px] h-[52px] rounded-2xl bg-stone-200 animate-pulse" />
-              <div className="space-y-2">
-                <div className="h-5 w-32 bg-stone-200 rounded animate-pulse" />
-                <div className="h-3 w-48 bg-stone-200 rounded animate-pulse" />
+  return (
+    <div className="min-h-screen bg-[#1D2417] text-[#F8F6F1] pb-32 selection:bg-[#7D8F63]/40">
+      
+      {/* ═══════ 1. HEADER CON GLASSMORPHISM BOTÁNICO ═══════ */}
+      <header className="sticky top-0 z-40 glass-header px-4 pt-3.5 pb-3">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex justify-between items-center mb-3">
+            <div className="flex items-center gap-2.5">
+              <div className="w-11 h-11 bg-[#2E3823]/90 rounded-2xl border border-[#7D8F63]/40 flex items-center justify-center shadow-lg overflow-hidden shrink-0 p-1">
+                <img 
+                  src="/img/logo/puravidahongos_logo.svg" 
+                  alt="Hongos Pura Vida" 
+                  className="w-full h-full object-contain ultra-crisp-img" 
+                />
+              </div>
+              <div>
+                <h1 className="text-lg sm:text-xl font-light tracking-wider font-display text-white uppercase leading-none">
+                  HONGOS PURA VIDA
+                </h1>
+                <div className="flex items-center gap-1.5 text-[11px] text-[#B8C4AC] mt-1">
+                  <span className="text-[#C49A68] font-bold text-[10px] uppercase tracking-wider">
+                    Medicina Ancestral
+                  </span>
+                  <span>&bull;</span>
+                  <span className="flex items-center gap-0.5">
+                    <MapPin size={10} className="text-[#7D8F63]" /> Envíos país
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="h-12 bg-stone-200 rounded-2xl animate-pulse" />
-          </div>
-        </header>
-        <main className="max-w-6xl mx-auto mt-4 px-4">
-          <div className="flex gap-4 mb-8 overflow-hidden">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="shrink-0 w-[85vw] max-w-[340px] h-44 rounded-3xl bg-stone-200 animate-pulse" />
-            ))}
-          </div>
-          <div className="flex gap-3 mb-8 overflow-hidden">
-            {[1, 2, 3, 4].map(i => (
-              <div key={i} className="shrink-0 w-36 h-28 rounded-2xl bg-stone-200 animate-pulse" />
-            ))}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[1, 2, 3, 4, 5, 6].map(i => <ProductCardSkeleton key={i} />)}
-          </div>
-        </main>
-      </div>
-    );
-  }
 
-  return (
-    <div className="min-h-screen bg-[#FBF8F3] pb-28 font-sans text-stone-800">
-      {/* ═══════ HEADER ═══════ */}
-      <header className="bg-white/95 pt-6 pb-5 px-4 sticky top-0 z-40 border-b border-stone-200 backdrop-blur-xl shadow-sm">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex items-center gap-3.5">
-               <div className="w-[52px] h-[52px] bg-white rounded-2xl border-2 border-[#C9A962] flex items-center justify-center shadow-sm overflow-hidden shrink-0 transition-transform hover:scale-105">
-                  <img src="/img/logo/aventus_perfumeria.jpg" alt="AVENTUS Perfumería Logo" className="w-full h-full object-cover" />
-               </div>
-               <div>
-                 <h1 className="text-xl md:text-2xl font-black tracking-tight text-stone-900 font-display uppercase">
-                   AVENTUS
-                 </h1>
-                 <div className="flex items-center gap-2 text-xs font-semibold text-stone-600 mt-0.5">
-                   <span className="flex items-center gap-1 font-extrabold text-[#A8863B] uppercase tracking-wider">
-                     Perfumería Premium
-                   </span>
-                   <span className="text-stone-300">&bull;</span>
-                   <span className="flex items-center gap-1 text-stone-500">
-                     <MapPin size={11} className="text-[#A8863B]" aria-hidden="true" /> Envíos a todo el país
-                   </span>
-                 </div>
-               </div>
-            </div>
-
-            <div className="flex items-center gap-2.5">
-              <a
-                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Consultar por WhatsApp"
-                className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-300 flex items-center justify-center text-emerald-600 hover:bg-emerald-600 hover:text-white transition-all shadow-sm focus-ring"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
-              </a>
-            </div>
+            <a
+              href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Consultar por WhatsApp"
+              className="inline-flex items-center gap-1.5 h-9 px-3.5 rounded-xl bg-[#334026]/80 border border-[#7D8F63]/40 text-[#D3DECA] hover:bg-[#52633E] hover:text-white transition-all shadow-md focus-ring font-bold text-xs backdrop-blur-md"
+            >
+              <MessageCircle size={15} />
+              <span>Asesoría</span>
+            </a>
           </div>
 
-          {/* Search Bar */}
+          {/* ═══════ 2. BUSCADOR GLASSMORPHIC ═══════ */}
           <div className="relative group">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-[#A8863B] transition-colors" size={18} aria-hidden="true" />
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[#B8C4AC] group-focus-within:text-[#D3DECA] transition-colors" size={16} />
             <input
               type="text"
-              placeholder="Buscar perfumes, marcas, árabes, tester..."
+              placeholder="Buscar por hongo o beneficio (ej: Melena de León, Reishi, Inmuno)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Buscar productos"
-              className="w-full bg-stone-100 border border-stone-200 text-stone-900 rounded-2xl py-3.5 pl-12 pr-4 shadow-inner outline-none focus:bg-white focus:border-[#C9A962] focus:ring-2 focus:ring-[#C9A962]/20 transition-all text-sm placeholder:text-stone-400"
+              aria-label="Buscar elixires"
+              className="w-full bg-[#161C11]/75 border border-[#7D8F63]/35 text-[#F8F6F1] rounded-xl py-2.5 pl-10 pr-3 shadow-inner outline-none focus:border-[#7D8F63] focus:ring-2 focus:ring-[#7D8F63]/30 transition-all text-xs sm:text-sm placeholder:text-[#8D9B7C] backdrop-blur-md"
             />
           </div>
 
           {activeOrderId && !searchQuery && (
             <motion.button
-              initial={{ opacity: 0, y: -20 }}
+              initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               onClick={() => setIsTrackerOpen(true)}
               aria-label="Seguir pedido en vivo"
-              className="w-full mt-4 bg-amber-50 border border-amber-300 text-amber-800 py-3 px-4 rounded-xl flex items-center justify-between font-bold text-sm shadow-sm focus-ring"
+              className="w-full mt-2.5 bg-[#8E5238]/35 border border-[#8E5238]/60 text-[#F4E2D7] py-2 px-3 rounded-xl flex items-center justify-between font-semibold text-xs shadow-sm focus-ring backdrop-blur-md"
             >
               <div className="flex items-center gap-2">
-                <span className="relative flex h-3 w-3 mr-1" aria-hidden="true">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+                <span className="relative flex h-2 w-2 mr-1">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C49A68] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C49A68]"></span>
                 </span>
-                Sigue tu pedido en vivo
+                Pedido en preparación · Ver estado
               </div>
-              <ChevronRight size={18} aria-hidden="true" />
+              <ChevronRight size={14} />
             </motion.button>
           )}
         </div>
       </header>
 
-      <main className="mt-2 max-w-6xl mx-auto w-full">
-        {/* ═══════ REORDER ═══════ */}
-        {lastOrder.length > 0 && !searchQuery && (
-          <section className="px-4 py-2 mt-2">
-            <button
-              onClick={handleReorder}
-              aria-label="Repetir último pedido"
-              className="w-full bg-white border border-stone-200 p-4 rounded-2xl flex items-center justify-between shadow-sm hover:shadow-md transition-all focus-ring"
-            >
-              <div className="flex items-center gap-3 text-left">
-                <div className="bg-[#C9A962]/15 p-2.5 rounded-full text-[#A8863B]">
-                  <RotateCcw size={20} aria-hidden="true" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-stone-900 text-sm">Pedir lo mismo de nuevo</h3>
-                  <p className="text-xs text-stone-500">Tu último pedido fue increíble.</p>
-                </div>
-              </div>
-              <ChevronRight size={20} className="text-stone-400" aria-hidden="true" />
-            </button>
-          </section>
-        )}
+      <main className="max-w-4xl mx-auto w-full px-3.5 sm:px-4 mt-4">
 
-        {/* ═══════ BANNERS CAROUSEL ═══════ */}
+        {/* ═══════ 3. BANNER PUBLICITARIO EN CAROUSEL CON CRISTAL TRANSLÚCIDO ═══════ */}
         {!searchQuery && (
-          <section className="py-4 overflow-hidden relative group" aria-label="Banners promocionales">
+          <section className="mb-4 overflow-hidden relative" aria-label="Banners informativos">
             <div
               ref={scrollRef}
               onTouchStart={stopAutoScroll}
               onTouchEnd={() => setTimeout(startAutoScroll, 5000)}
               onMouseEnter={stopAutoScroll}
               onMouseLeave={() => setTimeout(startAutoScroll, 5000)}
-              className="flex gap-4 px-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-2"
+              className="flex gap-3 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-1"
               style={{ scrollBehavior: 'smooth' }}
             >
-              {displayBanners.map((banner) => (
+              {banners.map((banner) => (
                 <div
                   key={banner.id}
-                  className="shrink-0 w-[85vw] max-w-[340px] md:w-96 h-44 rounded-3xl overflow-hidden relative border border-stone-200 shadow-md block bg-stone-900 snap-center group/banner cursor-pointer"
+                  className="shrink-0 w-[88vw] max-w-[340px] sm:w-96 h-40 rounded-2xl overflow-hidden relative border border-[#7D8F63]/30 shadow-2xl block bg-[#161C11] snap-center group/banner cursor-pointer"
                 >
                   <img
                     src={banner.image_url}
-                    alt={banner.title || `Promoción ${BRAND}`}
-                    className="w-full h-full object-cover opacity-80 group-hover/banner:scale-105 transition-transform duration-500"
+                    alt={banner.title || 'Hongos Pura Vida'}
+                    className="w-full h-full object-cover opacity-85 group-hover/banner:scale-105 transition-transform duration-700 ultra-crisp-img"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-950/35 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#161C11]/95 via-[#161C11]/30 to-transparent backdrop-blur-[1px]"></div>
 
-                  <div className="absolute bottom-4 left-4 right-4 text-left">
-                    <span className="inline-block bg-[#C9A962] text-stone-950 font-extrabold text-[10px] px-2.5 py-0.5 rounded-md uppercase tracking-widest mb-1.5 shadow-sm">
-                      AVENTUS
+                  <div className="absolute bottom-3.5 left-3.5 right-3.5 text-left">
+                    <span className="inline-block bg-[#52633E]/90 backdrop-blur-md text-[#F8F6F1] font-bold text-[9px] px-2 py-0.5 rounded uppercase tracking-[0.18em] mb-1 shadow-sm border border-[#D3DECA]/25">
+                      PURA VIDA
                     </span>
                     {banner.title && (
-                      <h3 className="text-white font-black text-lg leading-tight uppercase tracking-tight drop-shadow-sm">
+                      <h3 className="text-white font-normal font-display text-base sm:text-lg leading-tight tracking-wide drop-shadow-sm">
                         {banner.title}
                       </h3>
                     )}
                     {banner.subtitle && (
-                      <p className="text-stone-200 text-xs font-medium mt-0.5 line-clamp-1">
+                      <p className="text-[#D3DECA] text-[11px] font-medium mt-0.5 line-clamp-1 leading-normal">
                         {banner.subtitle}
                       </p>
                     )}
@@ -562,9 +513,9 @@ export default function ClientHome() {
             </div>
 
             {/* Dot Indicators */}
-            {displayBanners.length > 1 && (
-              <div className="flex justify-center gap-1.5 mt-3" role="tablist" aria-label="Navegación de banners">
-                {displayBanners.map((banner, idx) => (
+            {banners.length > 1 && (
+              <div className="flex justify-center gap-1.5 mt-2" role="tablist" aria-label="Navegación de banners">
+                {banners.map((banner, idx) => (
                   <button
                     key={banner.id}
                     onClick={() => {
@@ -575,11 +526,11 @@ export default function ClientHome() {
                     }}
                     role="tab"
                     aria-selected={idx === bannerIndex}
-                    aria-label={`Banner ${idx + 1} de ${displayBanners.length}`}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 focus-ring ${
+                    aria-label={`Banner ${idx + 1}`}
+                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
                       idx === bannerIndex
-                        ? 'bg-[#A8863B] w-5'
-                        : 'bg-stone-300 hover:bg-stone-400'
+                        ? 'bg-[#7D8F63] w-5 shadow-sm'
+                        : 'bg-[#52633E]/40 hover:bg-[#7D8F63]'
                     }`}
                   />
                 ))}
@@ -588,357 +539,249 @@ export default function ClientHome() {
           </section>
         )}
 
-        {/* ═══════ CATEGORY SELECTOR — Mosaico Premium ═══════ */}
+        {/* ═══════ SECCIÓN ZEN: SELLO DE PAZ & PUREZA ═══════ */}
         {!searchQuery && (
-          <section className="px-4 mb-8">
-            <div className="flex items-center justify-between mb-3">
-              <h2 className="text-base font-black text-stone-900 tracking-tight uppercase flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#C9A962]" aria-hidden="true"></span>
-                Categorías Oficiales
-              </h2>
-              <button
-                onClick={() => handleSelectCategory('todas')}
-                aria-label="Ver todos los productos"
-                className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[11px] font-black uppercase tracking-wider border transition-all focus-ring ${
-                  activeCategory === 'todas'
-                    ? 'bg-gradient-to-r from-[#A8863B] to-[#C9A962] text-white border-[#C9A962] shadow-sm'
-                    : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                }`}
-              >
-                <Star size={12} aria-hidden="true" />
-                Ver todas
-              </button>
-            </div>
-
-            <div className="flex gap-5 md:gap-8 overflow-x-auto hide-scrollbar pb-2 pt-2 -mx-4 px-4 md:mx-0 md:px-0">
-              {categories.map((cat, i) => {
-                const isActive = activeCategory === cat.id;
-                
-                return (
-                  <motion.button
-                    key={cat.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: 0.05 * (i + 1) }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => handleSelectCategory(cat.id)}
-                    aria-label={`Categoría ${cat.name}`}
-                    className="flex flex-col items-center gap-2.5 shrink-0 group focus-ring"
-                  >
-                    <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl overflow-hidden transition-all duration-500 flex items-center justify-center bg-white ${
-                      isActive 
-                        ? 'border-[1.5px] border-[#C9A962] shadow-luxury ring-4 ring-[#C9A962]/10 scale-105' 
-                        : 'border border-stone-200/60 group-hover:border-[#C9A962]/40 shadow-sm group-hover:shadow-luxury-hover group-hover:-translate-y-1'
-                    }`}>
-                      <img
-                        src={getCategoryImage(cat.name)}
-                        alt={cat.name}
-                        loading="lazy"
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                    <span className={`text-[12px] md:text-[13px] font-bold text-center w-20 md:w-24 leading-tight transition-colors ${
-                      isActive ? 'text-[#A8863B]' : 'text-stone-800 group-hover:text-stone-900'
-                    }`}>
-                      {cat.name}
-                    </span>
-                  </motion.button>
-                );
-              })}
-            </div>
-          </section>
+          <div className="mb-4 py-2 px-3 rounded-xl bg-[#252E1C]/60 border border-[#7D8F63]/25 backdrop-blur-md flex items-center justify-around text-[10px] sm:text-[11px] text-[#D3DECA] font-medium overflow-x-auto hide-scrollbar">
+            <span className="flex items-center gap-1 shrink-0"><Leaf size={12} className="text-[#7D8F63]" /> 100% Extracto Puro</span>
+            <span className="text-[#7D8F63]/40">&bull;</span>
+            <span className="flex items-center gap-1 shrink-0"><Droplets size={12} className="text-[#C49A68]" /> Sin Alcohol Residual</span>
+            <span className="text-[#7D8F63]/40">&bull;</span>
+            <span className="flex items-center gap-1 shrink-0"><ShieldCheck size={12} className="text-[#8E5238]" /> Cavitación Acústica</span>
+          </div>
         )}
 
-        {/* ═══════ ADVANCED FILTERS ═══════ */}
-        <section className="px-4 mb-8 space-y-4">
+        {/* ═══════ 4. BARRA DE FILTROS & ORDENAMIENTO PROFESIONAL ═══════ */}
+        <section className="mb-4 space-y-2.5">
           
-          {/* Brand Filter */}
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                Filtrar por Marca
+          {/* Fila 1: Pestañas de Categorías Principales */}
+          <div className="flex items-center gap-2 overflow-x-auto hide-scrollbar pb-1 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
+            <button
+              onClick={() => setActiveCategory('todas')}
+              className={`shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all border flex items-center gap-1.5 ${
+                activeCategory === 'todas'
+                  ? 'glass-pill-active text-white scale-[1.02]'
+                  : 'glass-pill text-[#D3DECA] hover:border-[#7D8F63]'
+              }`}
+            >
+              <span>Todas las Líneas</span>
+              <span className={`text-[10px] px-1.5 py-0.2 rounded-md ${activeCategory === 'todas' ? 'bg-white/20 text-white' : 'bg-[#182012]/60 text-[#B8C4AC]'}`}>
+                {products.length}
               </span>
-              {selectedBrand !== 'todas' && (
+            </button>
+
+            {categories.map(cat => {
+              const count = products.filter(p => p.category_id === cat.id).length;
+              const isActive = activeCategory === cat.id;
+
+              return (
                 <button
-                  onClick={() => setSelectedBrand('todas')}
-                  className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  className={`shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all border flex items-center gap-1.5 ${
+                    isActive
+                      ? 'glass-pill-active text-white scale-[1.02]'
+                      : 'glass-pill text-[#D3DECA] hover:border-[#7D8F63]'
+                  }`}
                 >
-                  Limpiar marca
+                  <span>{cat.icon} {cat.name}</span>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-md ${isActive ? 'bg-white/20 text-white' : 'bg-[#182012]/60 text-[#B8C4AC]'}`}>
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Fila 2: Barra de Control: Botón Ordenar + Filtros por Objetivo */}
+          <div className="flex items-center gap-2 justify-between flex-wrap">
+            
+            {/* Botón de Ordenar Profesional */}
+            <button
+              onClick={() => setIsSortModalOpen(true)}
+              className="inline-flex items-center gap-1.5 h-8 px-3 rounded-xl glass-pill text-xs font-bold text-[#EBF2E5] hover:bg-[#334026] transition-all shadow-sm focus-ring"
+            >
+              <ArrowDownUp size={13} className="text-[#C49A68]" />
+              <span className="text-[#B8C4AC]">Ordenar:</span>
+              <span className="text-white truncate max-w-[140px]">{currentSortLabel}</span>
+            </button>
+
+            {/* Contador de resultados & Botón limpiar */}
+            <div className="flex items-center gap-2 text-xs">
+              <span className="text-[#B8C4AC] font-medium">
+                {processedProducts.length} {processedProducts.length === 1 ? 'producto' : 'productos'}
+              </span>
+
+              {hasActiveFilters && (
+                <button
+                  onClick={clearAllFilters}
+                  className="inline-flex items-center gap-1 text-[11px] font-bold text-[#C49A68] bg-[#C49A68]/15 px-2.5 py-1 rounded-lg border border-[#C49A68]/35 hover:bg-[#C49A68]/25 transition-all"
+                >
+                  <X size={12} /> Limpiar
                 </button>
               )}
             </div>
-            <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4">
-              <button
-                onClick={() => setSelectedBrand('todas')}
-                className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                  selectedBrand === 'todas'
-                    ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
-                    : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                }`}
-              >
-                Todas las Marcas
-              </button>
-              {availableBrands.map(brand => (
-                <button
-                  key={brand}
-                  onClick={() => setSelectedBrand(selectedBrand === brand ? 'todas' : brand)}
-                  className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                    selectedBrand === brand
-                      ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
-                      : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                  }`}
-                >
-                  {brand}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* Gender & Keyword Filters Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Gender Filter */}
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                  Género
-                </span>
-                {selectedGender !== 'todos' && (
-                  <button
-                    onClick={() => setSelectedGender('todos')}
-                    className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
-                  >
-                    Limpiar género
-                  </button>
-                )}
-              </div>
-              <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4 md:mx-0 md:px-0">
+          {/* Fila 3: Chips de Objetivos de Salud / Beneficio */}
+          <div className="flex gap-1.5 overflow-x-auto hide-scrollbar pb-1 -mx-3.5 px-3.5 sm:mx-0 sm:px-0">
+            {TARGET_GOALS.map((goal) => {
+              const isActive = selectedKeyword === goal.value;
+              return (
                 <button
-                  onClick={() => setSelectedGender('todos')}
-                  className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                    selectedGender === 'todos'
-                      ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
-                      : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
+                  key={goal.id}
+                  onClick={() => setSelectedKeyword(goal.value)}
+                  className={`shrink-0 px-2.5 py-1 rounded-lg text-[11px] font-semibold transition-all border ${
+                    isActive
+                      ? 'bg-[#8E5238] text-white border-white/30 shadow-md'
+                      : 'bg-[#182012]/60 text-[#B8C4AC] border-[#7D8F63]/20 hover:border-[#7D8F63]'
                   }`}
                 >
-                  Todos
+                  {goal.label}
                 </button>
-                {['Hombre', 'Mujer', 'Unisex'].map(gender => (
-                  <button
-                    key={gender}
-                    onClick={() => setSelectedGender(selectedGender === gender ? 'todos' : gender)}
-                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                      selectedGender === gender
-                        ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
-                        : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                    }`}
-                  >
-                    {gender}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Keyword Filter */}
-            <div>
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-black uppercase tracking-wider text-stone-400 flex items-center gap-1.5">
-                  Tags Populares
-                </span>
-                {selectedKeyword !== 'todas' && (
-                  <button
-                    onClick={() => setSelectedKeyword('todas')}
-                    className="text-[11px] font-bold text-[#A8863B] hover:underline focus-ring"
-                  >
-                    Limpiar tag
-                  </button>
-                )}
-              </div>
-              <div className="flex overflow-x-auto hide-scrollbar gap-2 pb-1 -mx-4 px-4 md:mx-0 md:px-0">
-                <button
-                  onClick={() => setSelectedKeyword('todas')}
-                  className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                    selectedKeyword === 'todas'
-                      ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm'
-                      : 'bg-white text-stone-600 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                  }`}
-                >
-                  # Todos
-                </button>
-                {availableKeywords.map(kw => (
-                  <button
-                    key={kw}
-                    onClick={() => setSelectedKeyword(selectedKeyword === kw ? 'todas' : kw)}
-                    className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all border focus-ring ${
-                      selectedKeyword === kw
-                        ? 'bg-[#A8863B] text-white border-[#A8863B] shadow-sm scale-105'
-                        : 'bg-white text-stone-700 border-stone-200 hover:border-[#A8863B] hover:text-[#A8863B] shadow-sm'
-                    }`}
-                  >
-                    #{kw}
-                  </button>
-                ))}
-              </div>
-            </div>
+              );
+            })}
           </div>
         </section>
 
-        {/* ═══════ PRODUCT LIST ═══════ */}
-        <section className="px-4">
-          {categories.map(category => {
-            const categoryProducts = filteredProducts.filter(p => p.category_id === category.id).sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0));
-            if (categoryProducts.length === 0) return null;
+        {/* ═══════ 5. LISTA DE PRODUCTOS CON GLASSMORPHISM (COMPACTO PEDIDOS YA) ═══════ */}
+        <section>
+          {sortBy === 'featured' && activeCategory === 'todas' && selectedKeyword === 'todas' && !searchQuery ? (
+            categories.map(category => {
+              const categoryProducts = processedProducts.filter(p => p.category_id === category.id);
+              if (categoryProducts.length === 0) return null;
 
-            return (
-              <div key={category.id} className="mb-10">
-                <h2 className="text-lg font-black text-stone-900 mb-3.5 flex items-center gap-2.5 uppercase tracking-wide">
-                  <img
-                    src={getCategoryImage(category.name)}
-                    alt={category.name}
-                    className="w-9 h-9 rounded-xl object-cover border border-stone-200 shadow-sm"
-                    loading="lazy"
-                  />
-                  <span>{category.name}</span>
-                </h2>
+              return (
+                <div key={category.id} className="mb-7">
+                  <div className="flex items-center gap-2 mb-2.5 border-b border-[#7D8F63]/20 pb-1.5">
+                    <span className="text-base">{category.icon}</span>
+                    <h2 className="text-base sm:text-lg font-light font-display text-white uppercase tracking-wide">
+                      {category.name}
+                    </h2>
+                    <span className="text-[11px] text-[#B8C4AC] ml-auto">
+                      {categoryProducts.length} elixires
+                    </span>
+                  </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {categoryProducts.map((product, idx) => {
-                    const qty = getProductQuantity(product.id);
-
-                    return (
-                      <motion.div
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: idx * 0.03 }}
-                        key={product.id}
-                        onClick={() => setSelectedProduct(product)}
-                        className="glass-card rounded-3xl p-4 flex gap-5 relative cursor-pointer active:scale-[0.98] transition-all duration-500 hover:-translate-y-1 hover:shadow-luxury-hover hover:border-[#C9A962]/30 group focus-ring animate-fade-in"
-                        role="button"
-                        tabIndex={0}
-                        aria-label={`${product.name} - $${product.price.toLocaleString('es-AR')}`}
-                        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedProduct(product); }}
-                      >
-                        <div className="flex-1 flex flex-col justify-between">
-                          <div>
-                            <h3 className="font-bold text-stone-900 group-hover:text-[#A8863B] text-[15px] leading-tight mb-1 pr-2 transition-colors">{product.name}</h3>
-                            <p className="text-xs text-stone-500 line-clamp-2 mb-2 leading-relaxed">{product.description}</p>
-                          </div>
-
-                          <div className="flex items-center gap-3 mt-1">
-                            <span className="font-black text-stone-900 text-lg tracking-tight">${product.price.toLocaleString('es-AR')}</span>
-                            {/* Quantity badge in cart */}
-                            {qty > 0 && (
-                              <Badge variant="primary" size="sm">
-                                {qty} en pedido
-                              </Badge>
-                            )}
-                          </div>
-
-                          {/* Quantity selector on card (when qty > 0) */}
-                          {qty > 0 && (
-                            <div className="flex items-center gap-1 mt-2">
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  const cartItem = items.find(i => i.id === product.id);
-                                  if (!cartItem) return;
-                                  if (cartItem.quantity <= 1) {
-                                    removeFromCart(product.id, cartItem.notes);
-                                  } else {
-                                    updateQuantity(product.id, cartItem.quantity - 1, cartItem.notes);
-                                  }
-                                }}
-                                aria-label={`Reducir cantidad de ${product.name}`}
-                                className="w-7 h-7 flex items-center justify-center bg-stone-100 hover:bg-stone-200 rounded-lg text-stone-700 transition-colors border border-stone-200"
-                              >
-                                <Minus size={12} aria-hidden="true" />
-                              </button>
-                              <span className="font-bold text-sm w-5 text-center text-stone-900">{qty}</span>
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  addToCart(product, 1);
-                                }}
-                                aria-label={`Aumentar cantidad de ${product.name}`}
-                                className="w-7 h-7 flex items-center justify-center bg-[#A8863B] hover:bg-[#8F6F2F] rounded-lg text-white transition-colors"
-                              >
-                                <Plus size={12} aria-hidden="true" />
-                              </button>
-                            </div>
-                          )}
-                        </div>
-
-                        <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 bg-stone-50 rounded-2xl relative overflow-hidden border border-stone-200/50 group-hover:border-[#C9A962]/30 transition-all flex flex-col justify-between p-2 shadow-sm">
-                          <img
-                            src={product.image_url || '/img/Perfumes/generico.svg'}
-                            alt={product.name}
-                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                          />
-
-                          {/* Plus button only when not in cart (otherwise quantity selector is shown) */}
-                          {qty === 0 && (
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                addToCart(product, 1);
-                              }}
-                              aria-label={`Agregar ${product.name} al carrito`}
-                              className="absolute bottom-1.5 right-1.5 z-20 w-8 h-8 flex items-center justify-center bg-gradient-to-r from-[#A8863B] to-[#C9A962] rounded-lg text-white shadow-md shadow-[#C9A962]/30 active:scale-90 hover:brightness-110 transition-all"
-                            >
-                              <Plus size={16} strokeWidth={3} aria-hidden="true" />
-                            </button>
-                          )}
-                        </div>
-                      </motion.div>
-                    );
-                  })}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                    {categoryProducts.map((product, idx) => renderProductCard(product, idx))}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              {processedProducts.map((product, idx) => renderProductCard(product, idx))}
+            </div>
+          )}
 
-          {filteredProducts.length === 0 && (
-            <div className="text-center py-16 bg-white rounded-3xl border border-stone-200 shadow-sm">
-              <Search size={48} className="mx-auto text-stone-300 mb-4" aria-hidden="true" />
-              <p className="text-base font-bold text-stone-800">No encontramos ningún producto</p>
-              <p className="text-stone-500 text-sm">Prueba buscando con otras palabras o seleccionando otra categoría.</p>
+          {processedProducts.length === 0 && (
+            <div className="text-center py-14 glass-olive-card px-4">
+              <Search size={36} className="mx-auto text-[#7D8F63] mb-2.5" />
+              <p className="text-sm sm:text-base font-bold text-white">No encontramos ningún elixir con esos filtros</p>
+              <p className="text-[#B8C4AC] text-xs mt-1">Prueba cambiando el objetivo o restableciendo los filtros.</p>
               <button
-                onClick={() => { setSearchQuery(''); setActiveCategory('todas'); setSelectedKeyword('todas'); }}
-                className="mt-4 text-sm font-bold text-[#A8863B] hover:underline focus-ring"
+                onClick={clearAllFilters}
+                className="mt-3.5 text-xs font-bold uppercase tracking-wider text-white bg-[#7D8F63] px-4 py-2 rounded-xl shadow-md hover:bg-[#52633E]"
               >
                 Ver todos los productos
               </button>
             </div>
           )}
         </section>
+
       </main>
 
-      {/* ═══════ FLOATING CART BUTTON ═══════ */}
+      {/* ═══════ MODAL BOTTOM SHEET DE ORDENAMIENTO GLASSMORPHIC ═══════ */}
+      <AnimatePresence>
+        {isSortModalOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsSortModalOpen(false)}
+              className="fixed inset-0 bg-black/70 z-[100] backdrop-blur-md"
+              aria-hidden="true"
+            />
+
+            <motion.div
+              initial={{ y: '100%' }}
+              animate={{ y: 0 }}
+              exit={{ y: '100%' }}
+              transition={{ type: 'spring', damping: 26, stiffness: 240 }}
+              role="dialog"
+              aria-modal="true"
+              className="fixed bottom-0 left-0 right-0 z-[101] glass-olive-card rounded-t-3xl border-t border-[#7D8F63]/40 p-5 max-w-lg mx-auto shadow-2xl"
+            >
+              <div className="flex justify-between items-center mb-4 pb-2 border-b border-[#7D8F63]/20">
+                <div className="flex items-center gap-2">
+                  <SlidersHorizontal size={16} className="text-[#C49A68]" />
+                  <h3 className="font-display text-lg text-white">Ordenar Productos</h3>
+                </div>
+                <button
+                  onClick={() => setIsSortModalOpen(false)}
+                  className="p-1 text-[#B8C4AC] hover:text-white rounded-lg"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              <div className="space-y-1.5">
+                {SORT_OPTIONS.map((opt) => {
+                  const isSelected = sortBy === opt.id;
+                  return (
+                    <button
+                      key={opt.id}
+                      onClick={() => {
+                        setSortBy(opt.id);
+                        setIsSortModalOpen(false);
+                      }}
+                      className={`w-full p-3 rounded-xl flex items-center justify-between transition-all text-sm font-medium ${
+                        isSelected
+                          ? 'bg-[#52633E] text-white border border-[#D3DECA]/40 shadow-md'
+                          : 'hover:bg-[#2E3823]/60 text-[#D3DECA]'
+                      }`}
+                    >
+                      <span className="flex items-center gap-2.5">
+                        <span className="text-base">{opt.icon}</span>
+                        <span>{opt.label}</span>
+                      </span>
+                      {isSelected && <Check size={16} className="text-[#C49A68]" />}
+                    </button>
+                  );
+                })}
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+      {/* ═══════ BOTÓN FLOTANTE GLASSMORPHIC PARA PEDIDOS ═══════ */}
       <AnimatePresence>
         {itemCount > 0 && (
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
-            className="fixed bottom-6 left-4 right-4 md:max-w-md md:mx-auto z-40"
+            className="fixed bottom-5 left-3.5 right-3.5 max-w-lg mx-auto z-40"
           >
             <button
               onClick={() => setIsCartOpen(true)}
-              aria-label={`Abrir carrito con ${itemCount} productos`}
-              className="w-full bg-gradient-to-r from-[#A8863B] to-[#C9A962] text-white p-4 rounded-2xl shadow-xl shadow-[#C9A962]/35 flex items-center justify-between transition-all hover:brightness-110 active:scale-95 border border-white/20 focus-ring"
+              aria-label={`Abrir carrito con ${itemCount} elixires`}
+              className="w-full bg-gradient-to-r from-[#7D8F63] via-[#52633E] to-[#334026] text-white p-3.5 rounded-2xl shadow-2xl shadow-black/70 flex items-center justify-between transition-all hover:brightness-110 active:scale-95 border border-[#D3DECA]/50 focus-ring backdrop-blur-xl"
             >
               <div className="flex items-center gap-3">
-                <div className="bg-black/25 text-white w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg border border-white/20 shadow-inner">
+                <div className="bg-white/25 text-white w-9 h-9 rounded-xl flex items-center justify-center font-bold text-base border border-white/35 shadow-inner">
                   {itemCount}
                 </div>
                 <div className="text-left">
-                  <span className="block text-xs font-semibold text-amber-100 uppercase tracking-wider">Tu Pedido</span>
-                  <span className="font-black text-base">Ver Carrito</span>
+                  <span className="block text-[10px] font-bold text-[#D3DECA] uppercase tracking-widest leading-none mb-0.5">Botica Ancestral</span>
+                  <span className="font-bold text-sm">Ver Mi Pedido</span>
                 </div>
               </div>
-              <div className="flex items-center gap-2 font-black text-lg">
-                <span>Ir a Pagar</span>
-                <ChevronRight size={20} aria-hidden="true" />
+              <div className="flex items-center gap-1.5 font-bold text-sm">
+                <span>Finalizar</span>
+                <ChevronRight size={17} />
               </div>
             </button>
           </motion.div>
@@ -951,13 +794,18 @@ export default function ClientHome() {
         isOpen={!!selectedProduct}
         onClose={() => setSelectedProduct(null)}
         onAddToCart={(prod, qty, notes) => addToCart(prod, qty, notes)}
+        eyebrow={theme.modalEyebrow}
+        fallbackImage={theme.fallbackProductImage}
+        emptyDescription={theme.modalEmptyDescription}
       />
 
       <CartModal
-        empresaId={empresa.id}
-        empresaName={empresa.name}
-        empresaPhone={empresa.phone}
-        empresaAlias={empresa.alias || ''}
+        empresaId={empresa?.id || 'puravida-flagship'}
+        empresaName={empresa?.name || theme.brand}
+        empresaPhone={empresa?.phone || '5493815102886'}
+        empresaAlias={empresa?.alias || activeSlug}
+        emptyText={theme.cartEmptyText}
+        ctaHint={theme.cartCtaHint}
         onOrderPlaced={(orderId) => {
           setActiveOrderId(orderId);
           setIsTrackerOpen(true);
@@ -972,4 +820,106 @@ export default function ClientHome() {
       />
     </div>
   );
+
+  /* ─── Renderizado de tarjeta compacta con Glassmorphism ─── */
+  function renderProductCard(product: Product, idx: number) {
+    const qty = getProductQuantity(product.id);
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: idx * 0.015 }}
+        key={product.id}
+        onClick={() => setSelectedProduct(product)}
+        className="glass-product-card p-3.5 sm:p-4 flex gap-3.5 relative cursor-pointer group focus-ring items-stretch justify-between"
+        role="button"
+        tabIndex={0}
+        aria-label={`${product.name} - $${product.price.toLocaleString('es-AR')}`}
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setSelectedProduct(product); }}
+      >
+        {/* Info Column */}
+        <div className="flex-1 min-w-0 flex flex-col justify-between">
+          <div>
+            <div className="flex items-center gap-1.5 mb-1">
+              {product.badge && (
+                <span className="text-[9px] font-bold text-[#8E5238] bg-[#F4E2D7] px-2 py-0.5 rounded uppercase tracking-wider">
+                  {product.badge}
+                </span>
+              )}
+              <span className="text-[10px] font-semibold text-[#8A9380]">
+                {product.code || '50ml'}
+              </span>
+            </div>
+
+            <h3 className="text-sm sm:text-base font-bold font-display text-[#182012] group-hover:text-[#52633E] transition-colors leading-snug line-clamp-2">
+              {product.name}
+            </h3>
+
+            <p className="text-[11px] text-[#52633E] line-clamp-2 leading-relaxed mt-1 font-normal">
+              {product.description}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2 mt-2 pt-1">
+            <span className="text-base font-extrabold text-[#182012] font-sans">
+              ${product.price.toLocaleString('es-AR')}
+            </span>
+            {qty > 0 && (
+              <span className="text-[10px] font-bold text-[#52633E] bg-[#D3DECA] px-2 py-0.5 rounded-md">
+                {qty} en pedido
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Thumbnail + Button Column */}
+        <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 bg-[#EFECE4]/70 rounded-xl overflow-hidden relative border border-[#D3DECA]/60 p-1.5 flex items-center justify-center backdrop-blur-sm">
+          <img
+            src={product.image_url || '/img/logo/puravidahongos_logo.svg'}
+            alt={product.name}
+            className="max-h-full max-w-full object-contain ultra-crisp-img"
+            loading="lazy"
+          />
+
+          {qty === 0 ? (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                addToCart(product, 1);
+              }}
+              aria-label={`Agregar ${product.name} al pedido`}
+              className="absolute bottom-1.5 right-1.5 w-7 h-7 bg-[#334026] hover:bg-[#52633E] text-white rounded-lg flex items-center justify-center shadow-md active:scale-90 transition-all"
+            >
+              <Plus size={14} strokeWidth={2.5} />
+            </button>
+          ) : (
+            <div 
+              className="absolute bottom-1.5 right-1.5 flex items-center bg-[#161C11]/90 text-white rounded-lg overflow-hidden shadow-lg border border-white/20 scale-90"
+              onClick={e => e.stopPropagation()}
+            >
+              <button
+                onClick={() => {
+                  const cartItem = items.find(i => i.id === product.id);
+                  if (!cartItem) return;
+                  if (cartItem.quantity <= 1) removeFromCart(product.id, cartItem.notes);
+                  else updateQuantity(product.id, cartItem.quantity - 1, cartItem.notes);
+                }}
+                className="w-6 h-6 flex items-center justify-center hover:bg-white/20 text-white active:scale-90"
+              >
+                <Minus size={11} />
+              </button>
+              <span className="font-bold text-[11px] w-5 text-center">{qty}</span>
+              <button
+                onClick={() => addToCart(product, 1)}
+                className="w-6 h-6 flex items-center justify-center bg-[#52633E] hover:bg-[#7D8F63] text-white active:scale-90"
+              >
+                <Plus size={11} />
+              </button>
+            </div>
+          )}
+        </div>
+      </motion.div>
+    );
+  }
 }

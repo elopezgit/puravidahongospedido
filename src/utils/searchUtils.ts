@@ -1,6 +1,6 @@
 /**
  * Normalizes text by converting to lowercase and removing accents/diacritics.
- * Example: "Pérfume" -> "perfume"
+ * Example: "Melena de León" -> "melena de leon"
  */
 export const normalizeText = (text: string | null | undefined): string => {
   if (!text) return '';

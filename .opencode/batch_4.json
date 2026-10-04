@@ -1,0 +1,210 @@
+[
+  {
+    "id": "9b3d09f3-1c51-4180-8307-6d48ef0d961d",
+    "code": "AVN-0204",
+    "name": "N5 MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "N° 5 Midoré París es una fragancia de la línea Midoré comercializada como símil importada. Se conserva como producto Midoré y no como el perfume diseñador original, ya que no se encontró una pirámide olfativa propia oficialmente publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "04a6794f-57c8-4125-9052-798b28882ba2",
+    "code": "AVN-0205",
+    "name": "FLOWER AIR MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Flower Air Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró información oficial suficiente sobre sus notas para publicar una pirámide olfativa sin riesgo de error.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7ba7b1ac-0245-446e-9658-d6a9a70816bb",
+    "code": "AVN-0206",
+    "name": "ODANZA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Odanza es una fragancia comercializada dentro de la línea Midoré. La referencia comercial está verificada, aunque no se encontró una pirámide olfativa oficial suficientemente documentada para detallar sus notas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5ec58da9-1fb4-4ecd-aed0-147df6225502",
+    "code": "AVN-0207",
+    "name": "MH MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "MH Midoré es una fragancia de la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica oficial con notas olfativas verificables para esta referencia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "78602732-943c-4dd2-b780-c1a19dde9bab",
+    "code": "AVN-0208",
+    "name": "LADY MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fragancia comercializada en la categoría Midoré/símil importada bajo la referencia Lady Million. No se utiliza la descripción del perfume diseñador original porque no se pudo verificar que ambos productos compartan exactamente la misma formulación.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8d1865df-65a6-441e-9203-3b7b7417fcba",
+    "code": "AVN-0209",
+    "name": "CHANCE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Chance Midoré es una fragancia comercializada dentro de la línea Midoré de fragancias símil importadas. No se encontró una ficha oficial con su pirámide olfativa completa.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "387dd731-f971-48ab-be5f-cdc685a5c206",
+    "code": "AVN-0210",
+    "name": "OLIMPEAS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Olimpeas es una fragancia comercializada dentro del catálogo de fragancias Midoré. Se trata de una referencia de la línea símil importada y no se encontró una pirámide olfativa propia publicada por una fuente suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c2836d24-073b-4a0e-8289-82ed56e5609a",
+    "code": "AVN-0211",
+    "name": "LA VIDA ES BELLA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "La Vida es Bella es una referencia comercializada dentro del catálogo de fragancias símil de esta línea. No se presenta como Lancôme La Vie Est Belle original ni se trasladan automáticamente sus notas, ya que la formulación específica del producto no está publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8a78e0f4-d6bf-40b1-9a9b-7cdecaa3dcb8",
+    "code": "AVN-0214",
+    "name": "HELLOWOMAN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Hellowoman es una fragancia comercializada dentro del catálogo Midoré. No se encontró una descripción olfativa oficial o una pirámide de notas suficientemente confiable para agregar detalles adicionales.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "01e6e8db-1a11-4116-827a-75cfbd1cb0e6",
+    "code": "AVN-0215",
+    "name": "SUPERVIOLETA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "230adaf0-1853-4c19-b3c5-fbac605f25dc",
+    "code": "AVN-0216",
+    "name": "COOL MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Cool Midoré es una fragancia de la línea Midoré de fragancias símil importadas. La referencia está verificada comercialmente, pero no se encontró una pirámide olfativa oficial publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "bc884c01-c2c4-4ac8-9150-b0957c8451d7",
+    "code": "AVN-0221",
+    "name": "MIDORE MEN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Men es una fragancia masculina perteneciente a la línea Midoré. La referencia comercial está verificada, aunque no se encontró una descripción oficial suficientemente detallada de sus notas olfativas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "43d888c1-43ca-401f-9799-8d4de57436b0",
+    "code": "AVN-0222",
+    "name": "BLACK MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Black Midoré es una referencia perteneciente al catálogo de fragancias Midoré. No se encontró una ficha técnica oficial con pirámide olfativa suficiente para describir sus notas sin introducir información no confirmada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dd2d95b9-e453-4c7f-b5a4-94796ee5b8a8",
+    "code": "AVN-0223",
+    "name": "FAHRENHEIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fragancia de la línea Midoré comercializada bajo la referencia Ferenhait/Fahrenheit. Se trata de una fragancia símil importada; no se utiliza la pirámide del Dior Fahrenheit original porque no existe documentación que confirme una formulación idéntica.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "0ef3ecf4-7886-4d81-9c92-84c2457ff849",
+    "code": "AVN-0224",
+    "name": "XS MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "XS Midoré es una fragancia de la línea Midoré de fragancias símil importadas. La referencia comercial está confirmada, pero no se encontró una ficha oficial con su pirámide olfativa propia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d2c20614-af6b-40d6-9975-709236e3014c",
+    "code": "AVN-0226",
+    "name": "ONE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "One Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró una ficha oficial con notas olfativas propias suficientemente documentadas para describir su composición sin riesgo de error.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dffbe9b7-fa39-4660-aef0-282a31d64b67",
+    "code": "AVN-0227",
+    "name": "SALVAGE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Salvage es una referencia comercializada dentro de la línea de fragancias símil. No se utiliza la descripción ni la pirámide olfativa de Dior Sauvage porque no existe evidencia suficiente de que la formulación sea idéntica.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "557ed46d-638d-4856-9c25-cebde804e336",
+    "code": "AVN-0228",
+    "name": "MIDORE KZO AIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "KZO Air Midoré es una fragancia de la línea Midoré. La referencia comercial puede identificarse como producto símil, pero no se encontró una pirámide olfativa oficial propia suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d071bc02-5b97-4432-8808-e844bc9c7f70",
+    "code": "AVN-0229",
+    "name": "CLASSIC MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Classic Midoré es una referencia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica oficial con su composición olfativa completa.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3ec88aab-a247-44a1-a2e6-fc4a229e0b22",
+    "code": "AVN-0230",
+    "name": "BLUE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Blue Midoré es una fragancia de la línea Midoré. La referencia comercial está identificada, pero no existe una ficha pública suficientemente precisa para detallar sus notas olfativas con seguridad.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e93b0240-e5e2-461c-a335-d7c435f22bf9",
+    "code": "AVN-0231",
+    "name": "RED MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Red Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró información oficial suficiente para publicar una pirámide olfativa propia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7a2c51a9-e88a-4f9e-b0e2-081a654b358b",
+    "code": "AVN-0232",
+    "name": "MIDORE HERRERO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Herrero Midoré es una referencia de la línea Midoré. No se encontró documentación pública suficiente sobre su composición olfativa como para atribuirle notas específicas sin inventar información.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ba8b9356-6a69-46e5-8d68-bd97912a4918",
+    "code": "AVN-0235",
+    "name": "MIDORE IRRESISTIBLE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Irresistible Midoré es una fragancia de la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica pública con una pirámide olfativa propia suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "10ff9406-6a95-4a26-956a-c2b8ab549a03",
+    "code": "AVN-0237",
+    "name": "RALF",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph by Ralph Lauren Eau de Toilette es una fragancia femenina floral frutal. Combina manzana verde, mandarina y hojas verdes con fresia, magnolia y flores blancas, sobre una base limpia, suave y almizclada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1cb45b66-6f8d-4b6c-b323-d1b6fc1dc8c6",
+    "code": "AVN-0238",
+    "name": "MIDORE GIRL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Girl es una fragancia de la línea Midoré. No se encontró una ficha técnica oficial o una pirámide olfativa pública suficientemente documentada para agregar notas específicas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "4333af19-5a56-46ee-9efb-fb037a4c259f",
+    "code": "AVN-0239",
+    "name": "MIDORÉ — THE FORD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré The Ford es una fragancia de la línea de equivalencias o símil importadas de Midoré. Se comercializa como una interpretación aromática inspirada en perfumería internacional.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  }
+]

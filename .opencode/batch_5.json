@@ -1,0 +1,210 @@
+[
+  {
+    "id": "d696109c-6d72-4e6f-a8a2-5e0f7450653f",
+    "code": "AVN-0240",
+    "name": "MIDORÉ — BROSS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Bross es una fragancia de la línea de equivalencias Midoré. Forma parte del catálogo de fragancias símil importadas comercializadas por la marca.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9073a88f-7f53-4662-a4b3-5487c3398f40",
+    "code": "AVN-0241",
+    "name": "MIDORÉ — COCODRILE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Cocodrile es una fragancia de la línea de equivalencias Midoré. El nombre corresponde a una referencia comercial de la colección de fragancias símil importadas de la marca.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "260ae132-2865-4b26-8f0a-a001de579fff",
+    "code": "AVN-0242",
+    "name": "MH MEN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "MH Men es una referencia masculina perteneciente al catálogo de fragancias Midoré/símil. No se encontró una composición olfativa oficial suficientemente documentada para detallar sus notas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e71f6a8f-00e9-40f3-a47f-4a1225752bfb",
+    "code": "AVN-0244",
+    "name": "SPORT MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sport Midoré es una fragancia de la línea Midoré. La referencia está identificada como producto símil, pero no se encontró una ficha técnica pública con notas olfativas verificables.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "645e6888-f4cf-4e22-a6e0-790631d9d2d8",
+    "code": "AVN-0248",
+    "name": "OLIMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa es una fragancia femenina oriental floral. Abre con jazmín acuático, mandarina verde y flor de jengibre; continúa con vainilla y sal; y finaliza con madera de cachemira, ámbar gris y sándalo. Su perfil combina vainilla dulce, acordes salados y flores blancas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "b9e10800-6a62-468b-997f-aaf0140caa7d",
+    "code": "AVN-0250",
+    "name": "JEAN PAUL GAULTIER DIVINE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Gaultier Divine Eau de Parfum es una fragancia femenina floral gourmand marina. Combina una nota salada con flor de lis y un acorde de merengue, creando un perfil floral blanco, dulce, luminoso y marino.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9abd5fce-5352-4385-bfb6-a51ab2e79019",
+    "code": "AVN-0251",
+    "name": "DIOR ADDICT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Addict Eau de Parfum es una fragancia femenina intensa y sensual. Abre con hoja de mandarina y flor de naranjo de Túnez; continúa con absoluto de jazmín sambac; y finaliza con vainilla Bourbon. Su perfil es floral, cálido, envolvente y avainillado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8e778c8a-e0ca-435e-a533-6f96728f59d6",
+    "code": "AVN-0252",
+    "name": "MOSCHINO BUBBLE GUMM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy 2 Bubble Gum Eau de Toilette es una fragancia floral, frutal y oriental. Abre con cítricos confitados, limón y naranja; continúa con acorde de chicle, canela, arándanos, jengibre, rosa búlgara y durazno; y finaliza con cedro, Ambrofix y almizcles.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "112c60b9-44fc-4e5d-8131-592b4a0f097b",
+    "code": "AVN-0255",
+    "name": "POISON",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Poison es una fragancia femenina intensa, especiada y ambarada. Su composición combina frutas oscuras y especias con flores blancas, incienso, miel, vainilla, almizcle y notas amaderadas.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "8c87a03b-d042-4497-b3a8-27917b3710e7",
+    "code": "AVN-0256",
+    "name": "I DON'T — LE PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "I Don't Le Parfum es una fragancia femenina floral almizclada. Combina pera y bergamota con rosa de mayo, rosa turca y jazmín de la India, sobre un fondo de almizcle blanco y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "8b85fb0b-3edf-4e24-898f-16a0a3fc2294",
+    "code": "AVN-0257",
+    "name": "TOM FORD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4b184596-b3e9-4e5e-a89f-0b18c140800a",
+    "code": "AVN-0258",
+    "name": "SI ARMANI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani Sì Eau de Parfum es una fragancia femenina elegante y envolvente. Combina néctar de grosella negra con un corazón floral de rosa y fresia, sobre un fondo cálido de maderas, pachulí, vainilla y almizcle.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "89765edc-13a3-41dd-8b6d-c9dbe5d71c44",
+    "code": "AVN-0259",
+    "name": "SI PASIÓN ARMANI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani Sì Passione es una fragancia femenina floral y frutal. Su firma combina grosella negra con un corazón de jazmín y una base cálida de vainilla y pachulí. Su perfil es intenso, femenino, dulce y sensual.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "aefea83a-2a58-47ea-b463-434288eaab60",
+    "code": "AVN-0260",
+    "name": "FAME SILVER — INSPIRADO EN RABANNE FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fame Silver es una fragancia alternativa inspirada en Rabanne Fame. Presenta un perfil femenino floral y dulce con jazmín, flor de azahar y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "fc0e3518-6296-414a-93c2-2df7faf0da7c",
+    "code": "AVN-0261",
+    "name": "GOLD FAME — INSPIRADO EN RABANNE FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Gold Fame es una fragancia femenina inspirada en Rabanne Fame. Combina mango, mandarina y bergamota con jazmín e incienso, sobre una base de sándalo, vainilla y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "f291aa02-4f74-4b68-810f-6c449de4d691",
+    "code": "AVN-0262",
+    "name": "FAME ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "da77819f-98d8-4c24-9aeb-7d2676558bc8",
+    "code": "AVN-0263",
+    "name": "DIOR — JOY EAU DE PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Joy Eau de Parfum es una fragancia femenina floral amaderada almizclada. Combina bergamota y mandarina con rosa y jazmín, sobre una base de sándalo, cedro, almizcles blancos y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "52e3b4e4-d4f8-4f75-a142-36ad1e451395",
+    "code": "AVN-0264",
+    "name": "OLYMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa es una fragancia femenina oriental floral. Abre con jazmín acuático, mandarina verde y flor de jengibre; continúa con vainilla y sal; y finaliza con madera de cachemira, ámbar gris y sándalo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "404c3fb4-7c88-4fb9-8607-a4172e728105",
+    "code": "AVN-0265",
+    "name": "TOM FORD BOSS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "ef9fba7b-2bff-4593-bf8e-90c517c33f5b",
+    "code": "AVN-0266",
+    "name": "VERSACE EROS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Versace Eros Eau de Toilette es una fragancia masculina fresca, oriental y amaderada. Abre con limón y mandarina italianos, menta y manzana; continúa con geranio, salvia y acordes ambarados; y finaliza con cedro, vetiver, pachulí, sándalo y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4c19dfdb-dddb-42c4-9331-d26e9569e6d0",
+    "code": "AVN-0268",
+    "name": "ERBA PURA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Erba Pura es una fragancia unisex fresca y frutal. Abre con limón, bergamota de Calabria y naranja siciliana; continúa con frutas mediterráneas; y finaliza con ámbar, vainilla de Madagascar y almizcle blanco.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "91503829-6e35-4196-81f4-bfd151dea7fd",
+    "code": "AVN-0275",
+    "name": "MANDARÍN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "26ca8030-a988-46fd-aca9-a655969b688c",
+    "code": "AVN-0277",
+    "name": "KHAMRAH DUKHAN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah Dukhan es una fragancia unisex de perfil ahumado, especiado y ambarado. Abre con mandarina, pimiento y especias ahumadas; continúa con cistus, flor de azahar, incienso y pachulí; y finaliza con tabaco, ámbar, haba tonka, benjuí y praliné.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "79ad6baf-9de0-4c7b-902d-3f836d0e2004",
+    "code": "AVN-0278",
+    "name": "KHAMRAH QAWA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah Qahwa es una fragancia unisex gourmand y especiada. Abre con jengibre, canela y cardamomo; continúa con praliné, frutas confitadas y flores blancas; y finaliza con café arábica, haba tonka, almizcle, benjuí y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "ec79d536-70ee-41b8-90b7-4789b6836eb7",
+    "code": "AVN-0279",
+    "name": "ERBA PURA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Erba Pura es una fragancia unisex fresca y frutal. Abre con limón, bergamota de Calabria y naranja siciliana; continúa con frutas mediterráneas; y finaliza con ámbar, vainilla de Madagascar y almizcle blanco.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "324d09e6-6e8c-4915-a8b6-88fe0bbe52cb",
+    "code": "AVN-0281",
+    "name": "SPECTRA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Spectra Eau de Parfum es una fragancia masculina intensa y cálida. Abre con canela, bergamota y manzana; continúa con lavanda, canela, lirio del valle y flor de azahar; y finaliza con tabaco, ámbar, haba tonka, pachulí y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  }
+]

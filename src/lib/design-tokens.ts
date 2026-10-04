@@ -1,61 +1,69 @@
 /**
- * AVENTUS Perfumería Design System — Tokens
+ * PURA VIDA HONGOS Design System — Tokens
  * 
  * Fuente única de verdad para colores, tipografía, espaciado,
- * sombras y bordes. Todas las variantes (cliente, POS, admin)
- * se derivan de estos tokens base.
+ * sombras y bordes botánicos.
  * 
- * Identidad: perfumería premium — oro champagne / negro profundo / marfil.
+ * Identidad: Medicina Ancestral & Adaptógenos — Verde Oliva / Sage Pastel / Terracota / Lino Cálido.
  */
 
 export const tokens = {
   /* ─── Paleta Principal ─── */
   color: {
-    // Oro AVENTUS (primary)
-    primary: '#C9A962',
-    'primary-hover': '#A8863B',
-    'primary-light': '#E4C87F',
-    'primary-bg': 'rgba(201,169,98,0.12)',
-    'primary-ring': 'rgba(201,169,98,0.30)',
+    // Verde Oliva & Sage (Primary)
+    primary: '#525B38',
+    'primary-hover': '#41492C',
+    'primary-light': '#7E8B5E',
+    'primary-pastel': '#DCE5D0',
+    'primary-bg': 'rgba(82, 91, 56, 0.08)',
+    'primary-ring': 'rgba(82, 91, 56, 0.25)',
 
-    // Secundario (violeta amatista / esencia)
-    secondary: '#7A5C9E',
-    'secondary-hover': '#62497F',
-    'secondary-bg': 'rgba(122,92,158,0.10)',
+    // Terracota Cálida (Secondary)
+    secondary: '#8E5238',
+    'secondary-hover': '#743F29',
+    'secondary-light': '#B36D4E',
+    'secondary-pastel': '#F4E3D8',
+    'secondary-bg': 'rgba(142, 82, 56, 0.08)',
 
-    // Neutros
+    // Dorado Ámbar / Arena
+    accent: '#C49A68',
+    'accent-hover': '#AB8252',
+    'accent-pastel': '#F6EFE5',
+    'accent-bg': 'rgba(196, 154, 104, 0.12)',
+
+    // Neutros Botánicos
     surface: '#FFFFFF',
     'surface-card': '#FFFFFF',
-    background: '#FBF8F3',      // marfil claro
-    'background-alt': '#F3EDE2', // marfil intenso
-    'text-primary': '#1C1713',   // casi negro cálido
-    'text-secondary': '#5B5145', // pardo suave
-    'text-muted': '#A89E8E',     // piedra
-    border: '#E7DFD2',           // beige
-    'border-light': '#F5F0E7',  // beige claro
+    background: '#F8F6F1',       // Lino marfil cálido
+    'background-alt': '#EFECE3',   // Arena suave
+    'text-primary': '#1D2218',    // Carbón botánico
+    'text-secondary': '#545D4B',  // Musgo pétreo
+    'text-muted': '#8A9380',      // Sage apacible
+    border: '#E1E6DA',            // Sage pastel claro
+    'border-light': '#EFF3EA',
 
-    // POS / Admin (fondos oscuros premium)
-    'dark-bg': '#0C0A09',        // negro profundo
-    'dark-surface': '#171310',   // negro cálido
-    'dark-border': '#2B2218',   // marrón oscuro
-    'dark-text': '#F5EFE6',     // marfil
-    'dark-text-muted': '#9C8F7C', // pardo claro
+    // POS / Admin (Fondos botánicos oscuros)
+    'dark-bg': '#141810',         // Bosque noche
+    'dark-surface': '#1C2218',    // Oliva oscuro
+    'dark-border': '#2D3726',     // Borde musgo
+    'dark-text': '#F5F2EA',      // Marfil
+    'dark-text-muted': '#9CA691', // Sage suave
 
     // Semántica
-    success: '#16A34A',
-    'success-bg': '#DCFCE7',
-    warning: '#D97706',
-    'warning-bg': '#FEF3C7',
-    error: '#DC2626',
-    'error-bg': '#FEE2E2',
-    info: '#2563EB',
-    'info-bg': '#DBEAFE',
+    success: '#3A7D44',
+    'success-bg': '#EAF5EC',
+    warning: '#C47C1B',
+    'warning-bg': '#FDF4E6',
+    error: '#B9382F',
+    'error-bg': '#FBECEB',
+    info: '#3B6E8C',
+    'info-bg': '#EBF3F8',
   },
 
   /* ─── Tipografía ─── */
   font: {
-    sans: "'Outfit', sans-serif",
-    display: "'Playfair Display', serif",
+    sans: "'Outfit', 'Plus Jakarta Sans', sans-serif",
+    display: "'Cormorant Garamond', 'Playfair Display', serif",
     mono: "'Courier New', monospace",
   },
 
@@ -94,11 +102,11 @@ export const tokens = {
 
   /* ─── Sombras ─── */
   shadow: {
-    sm: '0 1px 2px rgba(12,10,9,0.05)',
-    md: '0 4px 6px rgba(12,10,9,0.07)',
-    lg: '0 10px 15px rgba(12,10,9,0.10)',
-    xl: '0 20px 25px rgba(12,10,9,0.15)',
-    primary: '0 4px 14px rgba(201,169,98,0.30)',
+    sm: '0 1px 3px rgba(31,36,24,0.04)',
+    md: '0 4px 8px rgba(31,36,24,0.06)',
+    lg: '0 10px 20px rgba(31,36,24,0.08)',
+    xl: '0 20px 30px rgba(31,36,24,0.12)',
+    primary: '0 4px 16px rgba(82,91,56,0.22)',
   },
 } as const;
 

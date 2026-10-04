@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { getEmpresaId } from '../../lib/getEmpresa';
 import { useToast } from '../../hooks/useToast';
-import { filterAventusCategories, filterAventusProducts } from '../../lib/defaultCatalog';
+import { filterTenantCategories, filterTenantProducts } from '../../lib/defaultCatalog';
 import { matchesSearchQuery } from '../../utils/searchUtils';
 import { Trash2, Edit, Plus, Upload } from 'lucide-react';
 
@@ -53,8 +53,8 @@ export default function CatalogManager({ empresaSlug }: { empresaSlug: string })
       supabase.from('products').select('*').eq('empresa_id', id).order('name')
     ]);
     
-    setCategories(filterAventusCategories(cats.data || []));
-    setProducts(filterAventusProducts(prods.data || []));
+    setCategories(filterTenantCategories(empresaSlug, cats.data || []) as Category[]);
+    setProducts(filterTenantProducts(empresaSlug, prods.data || []) as Product[]);
   };
 
   const handleSave = async (e: React.FormEvent) => {

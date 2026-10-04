@@ -1,5 +1,10 @@
 # Playbook Supabase + Next.js
 
+> **Complementario (ADR-006)** — La referencia técnica oficial es la skill global `supabase` de
+> Supabase (`supabase/agent-skills`), más el MCP oficial `supabase` para operar sobre el proyecto
+> real. Este playbook conserva el flujo de Gobierno AIBF; la skill oficial resuelve el **cómo**
+> técnico. Si el playbook describe una API desactualizada, la skill oficial gana.
+
 ## Stack
 - **Frontend**: Next.js 14+ (App Router) + TypeScript + Tailwind CSS
 - **Backend**: Supabase (PostgreSQL + Auth + RLS + Edge Functions)

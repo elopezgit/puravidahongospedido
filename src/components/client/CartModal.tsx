@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../../lib/CartContext';
 import { supabase } from '../../lib/supabase';
-import { X, Minus, Plus, Trash2, MapPin, Wallet, CreditCard, Copy, CheckCircle2 } from 'lucide-react';
+import { X, Minus, Plus, Trash2, MapPin, Wallet, CreditCard, Copy, CheckCircle2, Sparkles } from 'lucide-react';
 import { useToast } from '../../hooks/useToast';
 
 interface CartModalProps {
@@ -10,17 +10,25 @@ interface CartModalProps {
   empresaName: string;
   empresaPhone: string;
   empresaAlias?: string;
+  emptyText?: string;
+  ctaHint?: string;
   onOrderPlaced?: (orderId: string) => void;
 }
 
-export default function CartModal({ empresaId, empresaName, empresaPhone, empresaAlias, onOrderPlaced }: CartModalProps) {
+export default function CartModal({
+  empresaId,
+  empresaName,
+  empresaPhone,
+  empresaAlias,
+  emptyText = 'Agregá tus elixires botánicos favoritos',
+  ctaHint = 'Armás tu pedido acá y lo confirmamos por WhatsApp',
+  onOrderPlaced,
+}: CartModalProps) {
   const { isCartOpen, setIsCartOpen, items, updateQuantity, removeFromCart, total, clearCart } = useCart();
   const toast = useToast();
 
   const [customerName, setCustomerName] = useState('');
   const [customerPhone, setCustomerPhone] = useState('');
-  const [customerEmail, setCustomerEmail] = useState('');
-  const [customerBirthDate, setCustomerBirthDate] = useState('');
   const [deliveryAddress, setDeliveryAddress] = useState('');
   const [comment, setComment] = useState('');
   const [paymentMethod, setPaymentMethod] = useState<'efectivo' | 'transferencia'>('efectivo');
@@ -28,8 +36,8 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
   const [copied, setCopied] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const displayAlias = empresaAlias || 'aventus.perfumeria';
-  const displayTitular = 'Aventus Perfumería';
+  const displayAlias = empresaAlias || 'puravida.hongos';
+  const displayTitular = empresaName || 'Hongos Pura Vida';
   const handleCopyAlias = () => {
     navigator.clipboard.writeText(displayAlias);
     setCopied(true);
@@ -46,57 +54,61 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
     const fullComment = `${paymentMethod === 'transferencia' ? '[PAGA CON TRANSFERENCIA] ' : '[PAGA EN EFECTIVO] '}${comment}`;
 
     try {
-      const { data: orderData, error } = await supabase
-        .from('orders')
-        .insert({
-          empresa_id: empresaId,
-          customer_name: customerName,
-          customer_phone: customerPhone,
-          customer_email: customerEmail || null,
-          customer_birth_date: customerBirthDate || null,
-          delivery_address: deliveryAddress,
-          comment: fullComment,
-          total: total,
-          items: items,
-          status: 'pendiente'
-        })
-        .select()
-        .single();
+      let orderId = `PVH-${Date.now().toString().slice(-6)}`;
+      try {
+        const { data: orderData, error } = await supabase
+          .from('orders')
+          .insert({
+            empresa_id: empresaId,
+            customer_name: customerName,
+            customer_phone: customerPhone,
+            delivery_address: deliveryAddress,
+            comment: fullComment,
+            total: total,
+            items: items,
+            status: 'pendiente'
+          })
+          .select()
+          .single();
 
-      if (error) throw error;
+        if (!error && orderData) {
+          orderId = orderData.id;
+        }
+      } catch (e) {
+        console.warn('Registro local de orden:', e);
+      }
 
-      let wpMessage = `*NUEVO PEDIDO - ${empresaName}*\n`;
-      wpMessage += `Orden #${orderData.id.split('-')[0].toUpperCase()}\n\n`;
+      let wpMessage = `🌿 *NUEVO PEDIDO - ${empresaName || 'HONGOS PURA VIDA'}*\n`;
+      wpMessage += `Orden #${orderId.toString().split('-')[0].toUpperCase()}\n\n`;
       wpMessage += `*Cliente:* ${customerName}\n`;
       wpMessage += `*Teléfono:* ${customerPhone}\n`;
-      if (customerEmail) wpMessage += `*Email:* ${customerEmail}\n`;
-      if (customerBirthDate) wpMessage += `*Fecha Nac.:* ${new Date(customerBirthDate).toLocaleDateString('es-AR')}\n`;
-      if (deliveryAddress) wpMessage += `*Dirección:* ${deliveryAddress}\n`;
-      wpMessage += `\n*Detalle del pedido:*\n`;
+      if (deliveryAddress) wpMessage += `*Dirección de Envío:* ${deliveryAddress}\n`;
+      wpMessage += `\n*Elixires Seleccionados:*\n`;
       items.forEach(item => {
-        wpMessage += `• ${item.quantity}x ${item.name} ($${item.price})\n`;
+        wpMessage += `• ${item.quantity}x ${item.name} ($${item.price.toLocaleString('es-AR')})\n`;
         if (item.notes) wpMessage += `  _Nota: ${item.notes}_\n`;
       });
       wpMessage += `\n*Medio de Pago:* ${paymentMethod.toUpperCase()}`;
-      if (comment) wpMessage += `\n*Comentarios:* ${comment}`;
+      if (comment) wpMessage += `\n*Aclaraciones:* ${comment}`;
       wpMessage += `\n\n*TOTAL: $${total.toLocaleString('es-AR')}*`;
 
-      const wpUrl = `https://wa.me/${empresaPhone.replace(/\D/g, '')}?text=${encodeURIComponent(wpMessage)}`;
+      const rawPhone = empresaPhone ? empresaPhone.replace(/\D/g, '') : '5493815102886';
+      const cleanPhone = rawPhone.startsWith('54') ? rawPhone : `549${rawPhone}`;
+      const wpUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(wpMessage)}`;
       window.open(wpUrl, '_blank');
 
-      // Save order to localStorage for the "Reorder" feature
+      // Save order to localStorage
       localStorage.setItem(`lastOrder_${empresaId}`, JSON.stringify(items));
-      // Save order id for Tracking feature
-      localStorage.setItem(`activeOrder_${empresaId}`, orderData.id);
+      localStorage.setItem(`activeOrder_${empresaId}`, orderId);
 
-      if (onOrderPlaced) onOrderPlaced(orderData.id);
+      if (onOrderPlaced) onOrderPlaced(orderId);
 
       clearCart();
       setIsCartOpen(false);
     } catch (err) {
       console.error(err);
       setSubmitError('Hubo un error al procesar el pedido. Por favor intenta de nuevo.');
-      toast.error('Error al procesar', 'Hubo un error al procesar el pedido. Por favor intenta de nuevo.');
+      toast.error('Error al procesar', 'Hubo un error al procesar el pedido.');
     } finally {
       setIsSubmitting(false);
     }
@@ -117,22 +129,22 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
           <motion.div
             role="dialog"
             aria-modal="true"
-            aria-label="Carrito de compras"
+            aria-label="Mi pedido de elixires"
             initial={{ y: '100%' }}
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed bottom-0 left-0 right-0 top-12 md:top-1/2 md:bottom-auto md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-xl md:max-h-[88vh] bg-white text-stone-900 z-[101] rounded-t-3xl md:rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-stone-200"
+            className="fixed bottom-0 left-0 right-0 top-12 md:top-1/2 md:bottom-auto md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:max-w-xl md:max-h-[88vh] bg-white text-[#1D2218] z-[101] rounded-t-3xl md:rounded-3xl shadow-2xl flex flex-col overflow-hidden border border-[#E1E6DA]"
           >
-            <div className="px-5 py-4 border-b border-stone-200 flex items-center justify-between bg-stone-50 shrink-0">
-              <h2 className="text-lg font-black text-stone-900 flex items-center gap-2 font-display">
-                <span className="w-2 h-2 rounded-full bg-[#C9A962]"></span>
-                Mi Pedido
+            <div className="px-5 py-4 border-b border-[#E1E6DA] flex items-center justify-between bg-[#F8F6F1] shrink-0">
+              <h2 className="text-lg font-bold text-[#1D2218] flex items-center gap-2 font-display">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#525B38]"></span>
+                Mi Pedido Botánico
               </h2>
               <button
                 onClick={() => setIsCartOpen(false)}
                 aria-label="Cerrar carrito"
-                className="p-2 bg-white text-stone-500 border border-stone-200 rounded-xl hover:bg-[#A8863B] hover:text-white transition-colors focus-ring"
+                className="p-2 bg-white text-[#545D4B] border border-[#E1E6DA] rounded-xl hover:bg-[#525B38] hover:text-white transition-colors focus-ring"
               >
                 <X size={18} />
               </button>
@@ -140,42 +152,42 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
 
             <div className="flex-1 overflow-y-auto hide-scrollbar bg-white">
               {items.length === 0 ? (
-                <div className="flex flex-col items-center justify-center h-full p-8 text-stone-400">
-                  <span className="text-5xl mb-4 opacity-30" aria-hidden="true">🧴</span>
-                  <p className="text-base font-bold text-stone-800 font-display">Tu pedido está vacío</p>
-                  <p className="text-sm mt-1 text-stone-500">Agregá tus perfumes favoritos</p>
+                <div className="flex flex-col items-center justify-center h-full p-8 text-center text-[#8A9380]">
+                  <span className="text-5xl mb-4 opacity-40" aria-hidden="true">🍄</span>
+                  <p className="text-base font-bold text-[#1D2218] font-display">Tu pedido está vacío</p>
+                  <p className="text-sm mt-1 text-[#545D4B]">{emptyText}</p>
                 </div>
               ) : (
                 <div className="p-4 space-y-4">
-                  <div className="bg-stone-50 p-4 rounded-2xl border border-stone-200 space-y-3">
+                  <div className="bg-[#F8F6F1] p-4 rounded-2xl border border-[#E1E6DA] space-y-3">
                     {items.map((item, idx) => (
-                      <div key={idx} className="flex gap-3 items-start border-b border-stone-200/80 pb-3 last:border-0 last:pb-0">
+                      <div key={idx} className="flex gap-3 items-start border-b border-[#E1E6DA]/80 pb-3 last:border-0 last:pb-0">
                         <div className="flex-1 min-w-0">
-                          <h4 className="font-bold text-stone-900 text-sm">{item.name}</h4>
-                          {item.notes && <p className="text-[11px] text-[#A8863B] font-medium mt-0.5">"{item.notes}"</p>}
-                          <div className="font-extrabold text-stone-800 mt-0.5 text-sm">${(item.price * item.quantity).toLocaleString('es-AR')}</div>
+                          <h4 className="font-bold text-[#1D2218] text-sm font-display">{item.name}</h4>
+                          {item.notes && <p className="text-[11px] text-[#8E5238] font-medium mt-0.5">"{item.notes}"</p>}
+                          <div className="font-extrabold text-[#525B38] mt-0.5 text-sm">${(item.price * item.quantity).toLocaleString('es-AR')}</div>
                         </div>
                         <div className="flex flex-col items-end gap-2 shrink-0">
                           <button
                             onClick={() => removeFromCart(item.id, item.notes)}
                             aria-label={`Eliminar ${item.name}`}
-                            className="text-stone-400 hover:text-[#A8863B] transition-colors focus-ring"
+                            className="text-[#8A9380] hover:text-[#8E5238] transition-colors focus-ring p-1"
                           >
                             <Trash2 size={15} />
                           </button>
-                          <div className="flex items-center bg-white border border-stone-200 rounded-lg overflow-hidden shadow-sm">
+                          <div className="flex items-center bg-white border border-[#E1E6DA] rounded-lg overflow-hidden shadow-sm">
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity - 1, item.notes)}
                               aria-label={`Reducir cantidad de ${item.name}`}
-                              className="w-7 h-7 flex items-center justify-center text-stone-700 hover:bg-stone-100 transition-colors focus-ring"
+                              className="w-7 h-7 flex items-center justify-center text-[#1D2218] hover:bg-[#F4F6F0] transition-colors focus-ring"
                             >
                               <Minus size={12} />
                             </button>
-                            <span className="font-bold text-xs w-5 text-center text-stone-900">{item.quantity}</span>
+                            <span className="font-bold text-xs w-5 text-center text-[#1D2218]">{item.quantity}</span>
                             <button
                               onClick={() => updateQuantity(item.id, item.quantity + 1, item.notes)}
                               aria-label={`Aumentar cantidad de ${item.name}`}
-                              className="w-7 h-7 flex items-center justify-center bg-[#A8863B] text-white hover:brightness-110 transition-all focus-ring"
+                              className="w-7 h-7 flex items-center justify-center bg-[#525B38] text-white hover:bg-[#41492C] transition-all focus-ring"
                             >
                               <Plus size={12} />
                             </button>
@@ -186,97 +198,79 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
                   </div>
 
                   {/* Checkout Form */}
-                  <form id="checkout-form" onSubmit={handleSubmit} className="bg-stone-50 p-4 rounded-2xl border border-stone-200 space-y-3" noValidate>
-                    <h3 className="font-bold text-stone-900 text-xs uppercase tracking-wider border-b border-stone-200 pb-2 font-display">Datos de entrega</h3>
+                  <form id="checkout-form" onSubmit={handleSubmit} className="bg-[#F8F6F1] p-4 rounded-2xl border border-[#E1E6DA] space-y-3" noValidate>
+                    <h3 className="font-bold text-[#1D2218] text-xs uppercase tracking-wider border-b border-[#E1E6DA] pb-2 font-display flex items-center gap-1.5">
+                      <Sparkles size={13} className="text-[#8E5238]" />
+                      Datos de Entrega & Contacto
+                    </h3>
 
                     {submitError && (
-                      <div role="alert" className="bg-red-50 border border-red-200 text-red-700 text-xs font-medium p-3 rounded-xl">
+                      <div role="alert" className="bg-[#FBECEB] border border-[#F5C7C5] text-[#B9382F] text-xs font-medium p-3 rounded-xl">
                         {submitError}
                       </div>
                     )}
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-name">Nombre</label>
+                        <label className="block text-[10px] font-bold text-[#545D4B] mb-0.5 uppercase tracking-wider" htmlFor="customer-name">Nombre Completo</label>
                         <input
                           id="customer-name"
                           required
                           type="text"
                           value={customerName}
                           onChange={e => setCustomerName(e.target.value)}
-                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
-                          placeholder="Juan Pérez"
+                          className="w-full bg-white border border-[#E1E6DA] text-[#1D2218] rounded-xl p-2.5 text-sm focus:border-[#525B38] outline-none placeholder:text-[#8A9380] shadow-sm focus-ring"
+                          placeholder="Tu nombre y apellido"
                         />
                       </div>
                       <div>
-                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-phone">WhatsApp</label>
+                        <label className="block text-[10px] font-bold text-[#545D4B] mb-0.5 uppercase tracking-wider" htmlFor="customer-phone">WhatsApp</label>
                         <input
                           id="customer-phone"
                           required
                           type="tel"
                           value={customerPhone}
                           onChange={e => setCustomerPhone(e.target.value)}
-                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
+                          className="w-full bg-white border border-[#E1E6DA] text-[#1D2218] rounded-xl p-2.5 text-sm focus:border-[#525B38] outline-none placeholder:text-[#8A9380] shadow-sm focus-ring"
                           placeholder="381 123 4567"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-email">Email (Opcional)</label>
-                        <input
-                          id="customer-email"
-                          type="email"
-                          value={customerEmail}
-                          onChange={e => setCustomerEmail(e.target.value)}
-                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
-                          placeholder="juan@ejemplo.com"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="customer-birth">F. Nacimiento (Opcional)</label>
-                        <input
-                          id="customer-birth"
-                          type="date"
-                          value={customerBirthDate}
-                          onChange={e => setCustomerBirthDate(e.target.value)}
-                          className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider flex items-center gap-1" htmlFor="delivery-address">
-                        <MapPin size={12} className="text-[#A8863B]" /> Dirección
+                      <label className="block text-[10px] font-bold text-[#545D4B] mb-0.5 uppercase tracking-wider flex items-center gap-1" htmlFor="delivery-address">
+                        <MapPin size={12} className="text-[#525B38]" /> Dirección de entrega
                       </label>
                       <input
                         id="delivery-address"
                         type="text"
                         value={deliveryAddress}
                         onChange={e => setDeliveryAddress(e.target.value)}
-                        className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none placeholder:text-stone-400 shadow-sm focus-ring"
-                        placeholder="Calle 123 (opcional si retira)"
+                        className="w-full bg-white border border-[#E1E6DA] text-[#1D2218] rounded-xl p-2.5 text-sm focus:border-[#525B38] outline-none placeholder:text-[#8A9380] shadow-sm focus-ring"
+                        placeholder="Calle, número, piso/depto, ciudad, provincia"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-bold text-stone-500 mb-0.5 uppercase tracking-wider" htmlFor="comment">Comentario</label>
+                      <label className="block text-[10px] font-bold text-[#545D4B] mb-0.5 uppercase tracking-wider" htmlFor="comment">Comentarios adicionales</label>
                       <textarea
                         id="comment"
                         value={comment}
                         onChange={e => setComment(e.target.value)}
-                        className="w-full bg-white border border-stone-200 text-stone-900 rounded-xl p-2.5 text-sm focus:border-[#C9A962] outline-none resize-none h-14 placeholder:text-stone-400 shadow-sm focus-ring"
-                        placeholder="Ej: Preferencia de horario"
+                        className="w-full bg-white border border-[#E1E6DA] text-[#1D2218] rounded-xl p-2.5 text-sm focus:border-[#525B38] outline-none resize-none h-14 placeholder:text-[#8A9380] shadow-sm focus-ring"
+                        placeholder="Ej: Horarios preferidos de entrega o consulta adicional"
                       />
                     </div>
 
-                    <div className="pt-3 border-t border-stone-200">
-                      <label className="block text-[10px] font-bold text-stone-500 mb-2 uppercase tracking-wider">Método de pago</label>
+                    <div className="pt-3 border-t border-[#E1E6DA]">
+                      <label className="block text-[10px] font-bold text-[#545D4B] mb-2 uppercase tracking-wider">Forma de Pago</label>
                       <div className="grid grid-cols-2 gap-2" role="radiogroup" aria-label="Método de pago">
                         <button
                           type="button"
                           onClick={() => setPaymentMethod('efectivo')}
                           aria-label="Pagar en efectivo"
                           aria-pressed={paymentMethod === 'efectivo'}
-                          className={`flex items-center justify-center gap-2 p-2.5 font-bold text-xs rounded-xl transition-all border shadow-sm focus-ring ${paymentMethod === 'efectivo' ? 'bg-[#A8863B] border-[#A8863B] text-white' : 'bg-white border-stone-200 text-stone-600 hover:border-[#A8863B]'}`}
+                          className={`flex items-center justify-center gap-2 p-2.5 font-bold text-xs rounded-xl transition-all border shadow-sm focus-ring ${paymentMethod === 'efectivo' ? 'bg-[#525B38] border-[#525B38] text-white' : 'bg-white border-[#E1E6DA] text-[#545D4B] hover:border-[#525B38]'}`}
                         >
                           <Wallet size={14} /> Efectivo
                         </button>
@@ -285,7 +279,7 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
                           onClick={() => setPaymentMethod('transferencia')}
                           aria-label="Pagar con transferencia"
                           aria-pressed={paymentMethod === 'transferencia'}
-                          className={`flex items-center justify-center gap-2 p-2.5 font-bold text-xs rounded-xl transition-all border shadow-sm focus-ring ${paymentMethod === 'transferencia' ? 'bg-[#A8863B] border-[#A8863B] text-white' : 'bg-white border-stone-200 text-stone-600 hover:border-[#A8863B]'}`}
+                          className={`flex items-center justify-center gap-2 p-2.5 font-bold text-xs rounded-xl transition-all border shadow-sm focus-ring ${paymentMethod === 'transferencia' ? 'bg-[#525B38] border-[#525B38] text-white' : 'bg-white border-[#E1E6DA] text-[#545D4B] hover:border-[#525B38]'}`}
                         >
                           <CreditCard size={14} /> Transferencia
                         </button>
@@ -295,34 +289,34 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
-                          className="mt-3 overflow-hidden border border-[#C9A962]/25 bg-[#231C17]"
+                          className="mt-3 overflow-hidden rounded-2xl border border-[#E1E6DA] bg-white shadow-sm"
                         >
-                          <div className="p-2.5 bg-[#C9A962]/12 text-[#E4C87F] text-[10px] font-bold text-center uppercase tracking-wider border-b border-[#C9A962]/15">
-                            Datos para transferencia
+                          <div className="p-2.5 bg-[#DCE5D0]/40 text-[#525B38] text-[10px] font-extrabold text-center uppercase tracking-wider border-b border-[#E1E6DA]">
+                            Datos para transferencia bancaria
                           </div>
                           <div className="p-3 flex flex-col gap-2">
-                            <div className="flex justify-between items-center bg-[#1A1410] p-2.5 border border-slate-800">
-                              <span className="text-[10px] text-slate-500">Titular</span>
-                              <span className="text-xs font-bold text-white">{displayTitular}</span>
+                            <div className="flex justify-between items-center bg-[#F8F6F1] p-2.5 rounded-xl border border-[#E1E6DA]">
+                              <span className="text-[10px] text-[#8A9380] font-semibold">Titular</span>
+                              <span className="text-xs font-bold text-[#1D2218]">{displayTitular}</span>
                             </div>
-                            <div className="flex justify-between items-center bg-[#1A1410] p-2.5 border border-slate-800">
-                              <span className="text-[10px] text-slate-500">Alias</span>
+                            <div className="flex justify-between items-center bg-[#F8F6F1] p-2.5 rounded-xl border border-[#E1E6DA]">
+                              <span className="text-[10px] text-[#8A9380] font-semibold">Alias</span>
                               <div className="flex items-center gap-2">
-                                <span className="text-xs font-bold text-[#C9A962]">{displayAlias}</span>
+                                <span className="text-xs font-extrabold text-[#525B38]">{displayAlias}</span>
                                 <button
                                   type="button"
                                   onClick={handleCopyAlias}
-                                  className="p-1 bg-[#C9A962]/25 text-[#E4C87F] hover:bg-[#C9A962]/45 transition-colors focus-ring"
-                                  title="Copiar"
+                                  className="p-1 bg-[#DCE5D0] text-[#525B38] rounded-lg hover:bg-[#525B38] hover:text-white transition-colors focus-ring"
+                                  title="Copiar alias"
                                   aria-label="Copiar alias"
                                 >
-                                  {copied ? <CheckCircle2 size={14} className="text-green-400" /> : <Copy size={14} />}
+                                  {copied ? <CheckCircle2 size={14} className="text-emerald-600" /> : <Copy size={14} />}
                                 </button>
                               </div>
                             </div>
                           </div>
-                          <p className="text-[10px] text-slate-500 text-center px-3 pb-3">
-                            Al finalizar enviamos el detalle por WhatsApp
+                          <p className="text-[10px] text-[#8A9380] text-center px-3 pb-2.5">
+                            Al confirmar, te enviaremos el comprobante y detalle por WhatsApp
                           </p>
                         </motion.div>
                       )}
@@ -334,16 +328,16 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
 
             {/* Footer Total & Button */}
             {items.length > 0 && (
-              <div className="px-5 py-4 border-t border-stone-200 bg-stone-50 shrink-0">
+              <div className="px-5 py-4 border-t border-[#E1E6DA] bg-[#F8F6F1] shrink-0">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-stone-500 text-xs font-bold uppercase tracking-wider">Total del Pedido</span>
-                  <span className="text-2xl font-black text-stone-900 font-display">${total.toLocaleString('es-AR')}</span>
+                  <span className="text-[#545D4B] text-xs font-bold uppercase tracking-wider">Total del Pedido</span>
+                  <span className="text-2xl font-extrabold text-[#1D2218] font-display">${total.toLocaleString('es-AR')}</span>
                 </div>
                 <button
                   type="submit"
                   form="checkout-form"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-[#A8863B] to-[#C9A962] hover:brightness-110 text-white py-3.5 rounded-2xl font-black text-sm uppercase tracking-wider transition-all active:scale-[0.98] disabled:opacity-70 disabled:active:scale-100 shadow-md shadow-[#C9A962]/25 focus-ring"
+                  className="w-full bg-gradient-to-r from-[#525B38] to-[#41492C] hover:brightness-110 text-white py-3.5 rounded-2xl font-bold text-sm uppercase tracking-wider transition-all active:scale-[0.98] disabled:opacity-70 disabled:active:scale-100 shadow-md shadow-[#525B38]/25 focus-ring"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center justify-center gap-2">
@@ -355,6 +349,9 @@ export default function CartModal({ empresaId, empresaName, empresaPhone, empres
                     </span>
                   ) : 'Confirmar pedido por WhatsApp'}
                 </button>
+                {ctaHint && (
+                  <p className="text-center text-[11px] text-[#8A9380] mt-2 font-medium">{ctaHint}</p>
+                )}
               </div>
             )}
           </motion.div>

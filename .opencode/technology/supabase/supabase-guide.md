@@ -1,5 +1,12 @@
 # Supabase — Guía Tecnológica
 
+> **Complementario (ADR-006)** — La referencia técnica oficial es la skill global `supabase` de
+> Supabase (`supabase/agent-skills`), que el agente carga bajo demanda, junto con el MCP oficial
+> `supabase` para operar sobre el proyecto real. Esta guía fija las **reglas del proyecto**
+> (Gobernanza AIBF, puertas de calidad, flujo de aprobación); la skill oficial resuelve el **cómo**
+> técnico. Ante contradicción, prevalece la skill oficial en lo técnico y esta guía en las puertas
+> de calidad y la aprobación.
+
 ## Versiones y compatibilidad
 - Supabase CLI: `npm install -g supabase`
 - `@supabase/supabase-js`: última estable

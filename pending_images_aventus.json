@@ -1,0 +1,1666 @@
+[
+  {
+    "id": "fe73a931-eb7d-40a3-bd4d-0cc98bcfea6c",
+    "code": "AVN-0039",
+    "name": "RUE BROCA — HOOKED AZURE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Azure Pour Homme es una fragancia masculina aromática fougère. Abre con pera, cardamomo y lavanda; continúa con menta, romero y canela; y finaliza con ámbar, vetiver y ajenjo.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "47c6a07b-d70b-4e5b-b286-7c1a3d1bae00",
+    "code": "AVN-0040",
+    "name": "RUE BROCA — HOOKED POUR HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Pour Homme Eau de Parfum es una fragancia masculina dulce y amaderada. Abre con caramelo y salvia esclarea; continúa con vainilla, cítricos y ámbar; y finaliza con maderas, vetiver y haba tonka.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "3c4c1236-e9f3-49d0-a1e0-02f3bb7e22a9",
+    "code": "AVN-0041",
+    "name": "RUE BROCA — HOOKED POUR FEMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Pour Femme es una fragancia femenina frutal y floral. Abre con mora, bergamota y pimienta rosa; continúa con rosa, notas amaderadas y ciprés; y finaliza con almizcle, ámbar y vetiver.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "2e97c4dc-0e13-42ee-a43c-06153ca610bf",
+    "code": "AVN-0072",
+    "name": "FRENCH AVENUE — VENENO NEGRO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno es una fragancia unisex de carácter dulce, ahumado y cálido. Abre con manzana, canela y humo; continúa con acordes de musgo y tabaco; y finaliza con vainilla Bourbon y Orcanox. Presenta un perfil oscuro, especiado, ahumado y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "58f72b44-21e2-4e8d-8a99-0fe180995d7c",
+    "code": "AVN-0073",
+    "name": "FRENCH AVENUE — VENENO BLANCO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno Bianco es un Extrait de Parfum floral y ambarado. Abre con bergamota, neroli y leche; continúa con flor de tiaré, ylang-ylang y flores blancas; y finaliza con coco, vainilla, madera de guayaco y ládano. Su perfil es floral, cremoso, tropical y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "1113bf17-b0b5-4502-9fd7-7cb30af04a11",
+    "code": "AVN-0074",
+    "name": "FRENCH AVENUE — VENENO SCARLET",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno Scarlet es una fragancia unisex lanzada en 2025. Abre con fresa, zarzamora y caramelo; continúa con frambuesa, cedro y canela; y finaliza con cuero, pachulí, abeto, caramelo, haba tonka y vainilla. Su perfil es frutal, dulce, amaderado y cálido, con un marcado acorde de cuero.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "08ac03d9-590e-42d3-ac42-d17e61c5e3e3",
+    "code": "AVN-0075",
+    "name": "FRENCH AVENUE — VULCAN BAIE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Vulcan Baie es una fragancia unisex floral frutal lanzada en 2025. Abre con zarzamora, grosella negra, romero y bergamota; continúa con frambuesa, vodka, albahaca y lirio de los valles; y finaliza con fresa, almizcle, durazno, ámbar, sándalo, pachulí e incienso. Presenta un perfil intensamente frutal, fresco, dulce y aromático.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "571791ae-8755-4cda-a54f-6ee131da3bb2",
+    "code": "AVN-0076",
+    "name": "FRENCH AVENUE — VULCAN FEU",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Vulcan Feu es una fragancia unisex Eau de Parfum de perfil oriental y amaderado. Abre con jengibre, mango, limón y ruibarbo; continúa con jazmín, violeta, praliné y pimienta rosa; y finaliza con cedro, acordes de ámbar gris, haba tonka y musgo. Presenta un carácter frutal, especiado, dulce y amaderado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "225c8237-71d2-4985-ad27-26a3b585d19c",
+    "code": "AVN-0077",
+    "name": "FRENCH AVENUE — CHAOS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Chaos Extrait es una fragancia unisex de perfil frutal y cuero. Abre con cereza y frutos rojos; desarrolla un corazón de iris; y finaliza con musgo, cuero y vainilla. Su composición combina frutas oscuras y dulces con un fondo profundo, cálido y marcadamente cuero.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "22eb99a2-6bf9-458a-8613-b120eb520113",
+    "code": "AVN-0091",
+    "name": "BHARARA — BHARARA ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara Rose Eau de Parfum es una fragancia femenina floral y frutal. Abre con geranio, bergamota y pomelo; continúa con manzana, gardenia, jazmín, rosa y pera; y finaliza con musgo, almizcle, vainilla, vetiver y sándalo. Presenta un carácter floral luminoso con un fondo cálido y cremoso.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "6469b32f-4d85-4363-a443-c8d4e6777859",
+    "code": "AVN-0092",
+    "name": "BHARARA — BHARARA KING",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Eau de Parfum es una fragancia masculina de carácter cítrico, frutal y dulce. Abre con naranja, bergamota y limón; continúa con un acorde tutti frutti; y finaliza con almizcle blanco, ámbar y vainilla. Es una composición fresca en su salida y cálida, dulce y envolvente en el fondo.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "93304998-f1b1-436a-8543-845f3240e717",
+    "code": "AVN-0093",
+    "name": "BHARARA — BHARARA SOLEIL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Soleil es una fragancia frutal gourmand. Abre con naranja siciliana, bergamota de Calabria, limón siciliano y frutas rojas y amarillas; continúa con jazmín, sándalo, bálsamo de copaiba, madera de cachemira y ámbar gris; y finaliza con avellana, chocolate, vainilla de Madagascar, azúcar glas y benjuí de Siam.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "626b011c-0802-4b7f-b529-89e775d35bf5",
+    "code": "AVN-0094",
+    "name": "BHARARA — BHARARA GOLD EDITION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Gold Edition Eau de Parfum es una fragancia cálida, frutal y dulce. Abre con naranja dulce, bergamota y limón; continúa con frutos rojos y coco; y finaliza con almizcle blanco, vainilla y ámbar. Su perfil combina cítricos luminosos con frutas, coco y un fondo suave y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "bdad5d81-83c8-47d9-bc1c-8394af511d3e",
+    "code": "AVN-0095",
+    "name": "CHERRY LUXE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cherry Luxe es una fragancia unisex oriental avainillada. Abre con cereza, frutos rojos y heliotropo; continúa con haba tonka, sándalo y jazmín; y finaliza con almizcle, ámbar gris y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "473804d9-79ad-4df0-83a8-91f662ecb45e",
+    "code": "AVN-0096",
+    "name": "BEARY LOVE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Beary Love es una fragancia unisex fresca, frutal y floral. Abre con melón y durazno; continúa con notas acuáticas y florales; y finaliza con almizcle limpio y suave.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "72df6c1c-66ab-4ad8-8288-4c8d65ab4c01",
+    "code": "AVN-0097",
+    "name": "PACIFIDREAM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4d6d15f8-aed5-43dd-bd5e-6d2cd8f797aa",
+    "code": "AVN-0098",
+    "name": "TITANS SPLASH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Titans Splash es una fragancia unisex floral frutal. Abre con grosella negra, bergamota y pera; continúa con flor de azahar, ylang-ylang, jazmín, violeta y azucena; y finaliza con cedro, ámbar, almizcle y musgo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "a5ba9e04-08dd-41e0-b23f-995a2bee4bca",
+    "code": "AVN-0099",
+    "name": "PINK SUGAR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Pink Sugar es una fragancia unisex dulce y gourmand. Abre con lirio del valle, durazno, coco y sándalo; continúa con arroz, flores blancas y caramelo; y finaliza con almizcle, sándalo, haba tonka y leche.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "e1b0e83f-11a1-4af8-a582-a1055c65519c",
+    "code": "AVN-0100",
+    "name": "COTTON CANDY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cotton Candy es una fragancia unisex gourmand de perfil dulce y cremoso. Abre con leche de coco; continúa con caramelo y algodón de azúcar; y finaliza con vainilla y almizcle.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "d37dd23e-ae68-4c5a-9e62-0cf435263d78",
+    "code": "AVN-0101",
+    "name": "BERRY BLAST",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Berry Blast es una fragancia unisex frutal y floral. Abre con fresia, grosella negra y bergamota; continúa con pachulí, jazmín y rosa; y finaliza con almizcle, vainilla y azúcar.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "bc88f297-ac3e-44f1-acc3-b2c1eceac43f",
+    "code": "AVN-0102",
+    "name": "SWEET CARAMEL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Sweet Caramel es una fragancia unisex gourmand, cremosa y avainillada. Abre con acordes cremosos, mantecosos y de frutos secos; continúa con vainilla, notas lácteas y leche; y finaliza con haba tonka y vainilla empolvada.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "667715e0-e45e-4479-a36b-e205fe59e52d",
+    "code": "AVN-0103",
+    "name": "UNICORN VANILLA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Unicorn Vanilla es una fragancia unisex floral frutal gourmand. Abre con açaí, cítricos y grosella negra; continúa con té matcha, rosa y flores blancas; y finaliza con vainilla, algodón de azúcar y sándalo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "126884d9-4633-4c43-b747-fe401ac7a248",
+    "code": "AVN-0104",
+    "name": "BUBBLE GUMM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Bubble Gum es una fragancia unisex dulce y frutal. Abre con frutas y clavo; continúa con acorde de chicle y aceite de naranja; y finaliza con vainilla, cashmeran y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4e85f4e9-fea7-4277-bf93-598081fe692a",
+    "code": "AVN-0105",
+    "name": "CHOCOLATE FUDGE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Chocolate Fudge es una fragancia unisex gourmand centrada en chocolate. Combina chocolate oscuro, avellana y acordes de fudge con caramelo y vainilla, creando un aroma dulce, cremoso y cálido inspirado en un postre de chocolate.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "82f903ec-2960-4c01-abac-113bbb11bf2d",
+    "code": "AVN-0106",
+    "name": "COOKIES DREAM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cookies & Cream es una fragancia unisex gourmand. Abre con manteca y azúcar; continúa con leche y chocolate con leche; y finaliza con vainilla y almizcle blanco, logrando un perfil cremoso y dulce inspirado en galletas con crema.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "6e4ee991-4af6-4645-bc74-6e914a1c874b",
+    "code": "AVN-0107",
+    "name": "CAROLINA HERRERA 212 VIP",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera 212 VIP Eau de Parfum es una fragancia femenina floral ambarada. Abre con bergamota y maracuyá; continúa con gardenia y acorde de ron; y finaliza con benjuí y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "90bfd15e-ecfd-4797-8ccd-92ac328cb8ea",
+    "code": "AVN-0108",
+    "name": "CAROLINA HERRERA LA BOMBA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera La Bomba Eau de Parfum es una fragancia femenina floral, frutal y ambarada. Abre con pitaya exótica; desarrolla un corazón de peonía cereza y frangipani rojo; y finaliza con vainilla solar. Es una composición vibrante, tropical, floral y cálida.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9f6c0278-ef92-4e73-af45-fde9f0f8e3fb",
+    "code": "AVN-0109",
+    "name": "CAROLINA HERRERA 212 VIP ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera 212 VIP Rosé es una fragancia femenina Eau de Parfum floral, frutal y amaderada. Abre con Champagne Rosé y pimienta rosa; continúa con flor de durazno y un bouquet de rosas; y finaliza con queenwood y almizcle. Presenta un perfil fresco, chispeante, floral y elegante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "eabe735f-4996-43b4-b963-b23b64659ea5",
+    "code": "AVN-0112",
+    "name": "BVLGARI — OMNIA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bvlgari Omnia es una fragancia femenina oriental especiada. Abre con jengibre, cardamomo, pimienta, azafrán y mandarina; continúa con té masala chai, nuez moscada, canela, almendra, clavo y loto; y finaliza con chocolate blanco, sándalo, haba tonka, madera de guayaco y notas amaderadas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "63339fee-7f8b-42a2-a40f-ea7086936667",
+    "code": "AVN-0116",
+    "name": "VALENTINO DONNA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Donna Eau de Parfum es una fragancia femenina oriental floral lanzada en 2015. Abre con bergamota y pomelo; continúa con iris, rosa búlgara, praliné y mahonial; y finaliza con cuero, vainilla y pachulí. Presenta un perfil floral, empolvado, elegante y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ec531bdd-7c63-4b12-bc65-db658bba3142",
+    "code": "AVN-0119",
+    "name": "GOOD GIRL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera Good Girl Eau de Parfum es una fragancia femenina floral ambarada. Combina almendra amarga y café con un corazón de jazmín sambac y tuberosa, sobre un fondo cálido de haba tonka tostada y cacao. Presenta un perfil floral blanco, dulce, intenso y sensual.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "67c0dc22-3e44-4323-ae1a-a856e6296d94",
+    "code": "AVN-0120",
+    "name": "LADY MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Lady Million Eau de Parfum es una fragancia femenina floral frutal lanzada en 2010. Abre con frambuesa, neroli y limón; continúa con jazmín, flor de azahar africano y gardenia; y finaliza con miel blanca, pachulí y ámbar. Su perfil es floral, dulce, luminoso y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1bcc4519-3dec-4235-8c68-fe06bdd7ab28",
+    "code": "AVN-0121",
+    "name": "ONE MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne 1 Million es una fragancia masculina amaderada especiada lanzada en 2008. Abre con mandarina sanguina, pomelo y menta; continúa con canela, especias y rosa; y finaliza con ámbar, cuero, notas amaderadas y pachulí. Es una composición cálida, especiada, dulce y de marcada presencia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "96996b8e-25ff-486f-b8fd-bc5b89187752",
+    "code": "AVN-0123",
+    "name": "PACO RABANNE INVICTUS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Eau de Toilette es una fragancia masculina lanzada en 2013. Abre con notas marinas, pomelo y mandarina; continúa con hoja de laurel y jazmín; y finaliza con ámbar gris, madera de guayaco, musgo de roble y pachulí. Presenta un perfil fresco, marino, aromático y amaderado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3b820da4-e21c-4421-a211-708b4a816f81",
+    "code": "AVN-0124",
+    "name": "PACO RABANNE INVICTUS VICTORY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Victory es una fragancia masculina oriental lanzada en 2021. Abre con pimienta rosa y limón; continúa con incienso y lavanda; y finaliza con vainilla, haba tonka y ámbar. Su perfil es cálido, dulce, ambarado y aromático.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "24bfebf1-51f8-4e48-8bb2-cf7af6906f8e",
+    "code": "AVN-0125",
+    "name": "PACO RABANNE INVICTUS VICTORY ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Victory Elixir es una fragancia masculina lanzada en 2023. Abre con lavanda, cardamomo y pimienta negra; continúa con incienso y pachulí; y finaliza con vaina de vainilla y haba tonka. Su perfil es intenso, especiado, ahumado, dulce y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "32afa7b2-cc5d-4e28-b459-0b12f01af24d",
+    "code": "AVN-0126",
+    "name": "PACO RABANNE INVICTUS INTENSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Intense es una fragancia masculina lanzada en 2016. Abre con flor de azahar y pimienta negra; continúa con whisky y laurel; y finaliza con ámbar, ámbar gris y sal. Su perfil es cálido, especiado, ambarado y ligeramente salino.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "b6f73e61-85c3-4948-a7e0-3e4e515fc9ba",
+    "code": "AVN-0127",
+    "name": "PACO RABANNE INVICTUS LEGEND",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Legend es una fragancia masculina amaderada aromática lanzada en 2019. Abre con notas marinas, sal de mar y pomelo; continúa con laurel, geranio y especias; y finaliza con ámbar rojo y madera de guayaco. Presenta un perfil marino, aromático, salado y amaderado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dda6c4c6-e947-46d5-b42a-c6dfdf157466",
+    "code": "AVN-0128",
+    "name": "PACO RABANNE EU DE PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c6184428-c042-4e97-8edd-7320e6ef06ae",
+    "code": "AVN-0129",
+    "name": "PACO RABANNE PHANTOM GOLD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9d539bad-9b66-4f59-831c-97c209ed1f17",
+    "code": "AVN-0130",
+    "name": "PACO RABANNE PHANTOM INTENSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Phantom Intense Eau de Parfum es una fragancia masculina oriental fougère lanzada en 2024. Abre con cardamomo, limón, bergamota y ruibarbo; continúa con lavanda, cedro, geranio y pachulí; y finaliza con vainilla, bálsamo de Tolú y vetiver. Su perfil es aromático, cálido, especiado y avainillado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "11484a13-d759-4d5a-8620-14c038358b6c",
+    "code": "AVN-0131",
+    "name": "PACO RABANNE PHANTOM ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Phantom Elixir Parfum Intense es una fragancia masculina presentada en 2025. Combina un acorde acuático de salida, oud mineral en el corazón y vainilla en el fondo. Su perfil es acuático, amaderado, mineral y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ed576468-b3ba-4f56-a5b5-92bbb9ebda18",
+    "code": "AVN-0132",
+    "name": "PACO RABANNE PHANTOM CLÁSICO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Phantom Eau de Toilette es una fragancia masculina aromática lanzada en 2021. Combina lavanda cremosa, limón energizante y vainilla amaderada en una composición fresca, aromática y ligeramente dulce.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "26d669e5-cb99-443f-9c76-3946bd677f02",
+    "code": "AVN-0133",
+    "name": "PACO RABANNE PHANTOM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Phantom es una fragancia masculina aromática y amaderada de perfil moderno. Combina una salida cítrica y aromática con lavanda y un fondo cremoso y amaderado, de carácter fresco, dulce y tecnológico.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9007d7e7-3d61-448f-9982-642e7a9f3a41",
+    "code": "AVN-0134",
+    "name": "PACO RABANNE PHANTOM PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Phantom Parfum es una fragancia masculina aromática lanzada en 2023. Abre con cardamomo, bergamota, ruibarbo y limón; continúa con lavanda, cedro, pachulí y geranio; y finaliza con vainilla, bálsamo de Tolú y vetiver de Haití. Presenta un perfil aromático, amaderado, especiado y avainillado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "cedaf859-7a7a-4170-9c85-8363d5d76cde",
+    "code": "AVN-0136",
+    "name": "MOSCHINO TOY 2",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy 2 Eau de Parfum es una fragancia frutal, floral y amaderada. Abre con mandarina, manzana Granny Smith y magnolia; continúa con jazmín, peonía y grosella blanca; y finaliza con maderas ambaradas, sándalo y almizcle. Su perfil es fresco, floral y limpio.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "cfe53eb3-838e-4ddd-8165-45c3d1e54e5d",
+    "code": "AVN-0142",
+    "name": "JEAN PAUL GAULTIER LE BEAU GARDEN  PARADISE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Beau Paradise Garden Eau de Parfum es una fragancia masculina verde, acuática y amaderada. Sus notas principales son agua de coco, higo verde y sándalo, acompañadas por matices de haba tonka, jengibre y menta. Su perfil es tropical, fresco, verde y sensual.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ef6a7894-6180-4a66-99f5-f90de4d9c932",
+    "code": "AVN-0143",
+    "name": "JEAN PAUL GAULTIER LE MALE  ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Elixir Parfum es una fragancia masculina ámbar, aromática y amaderada. Sus notas principales son lavanda, haba tonka y benjuí, acompañadas por un toque fresco de menta y matices cálidos de miel, tabaco y vainilla. Su carácter es intenso, dulce y balsámico.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "0cfa1067-4dd9-485e-8654-ebe6f18f76e5",
+    "code": "AVN-0144",
+    "name": "JEAN PAUL GAULTIER LE  MALE LE  PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Le Parfum Eau de Parfum Intense es una fragancia masculina oriental amaderada. Abre con cardamomo; continúa con lavanda e iris; y finaliza con vainilla. Su perfil es especiado, aromático, empolvado y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "64232693-742e-4a03-98c2-ad8ea4b8a7d7",
+    "code": "AVN-0145",
+    "name": "JEAN PAUL GAULTIER LE MALE ULTRA ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3168a85c-2bcd-4648-99d5-0ff7835e3ab1",
+    "code": "AVN-0146",
+    "name": "JEAN PAUL GAULTIER LE MALE LOVER",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Lover es una fragancia masculina oriental avainillada lanzada en 2024. Abre con pimienta blanca y lima dedo; continúa con ámbar gris, notas marinas y almizcle; y finaliza con vainilla y notas amaderadas. Su perfil combina frescura marina, especias y una base dulce y cálida.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7e55c9b5-918b-455f-ba41-47e2a9842b99",
+    "code": "AVN-0147",
+    "name": "JEAN PAUL GAULTIER LE BEAU",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Beau Eau de Toilette es una fragancia masculina amaderada aromática. Sus notas principales son bergamota, madera de coco y haba tonka. Presenta un perfil fresco, aromático, tropical y ligeramente dulce.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "f66555c2-4842-4389-96cd-04893f7ec31c",
+    "code": "AVN-0148",
+    "name": "JEAN PAUL GAULTIER LE  MALE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Eau de Toilette es una fragancia masculina ámbar aromática. Combina la frescura de la menta con un corazón de lavanda y un fondo sensual de vainilla. Su perfil es fresco, aromático, dulce y cálido.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "f5a7f65e-bc8a-4966-b028-115ebbee0d29",
+    "code": "AVN-0153",
+    "name": "LATTAFA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "c1020c7b-6e5d-43fa-8796-d142918f19df",
+    "code": "AVN-0154",
+    "name": "RAEES",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Raees es una fragancia unisex de perfil dulce, especiado, floral y oriental. Fue presentada en 2018. Se mantiene una descripción general porque no se encontró una pirámide olfativa oficial suficientemente consistente para completar sus notas sin riesgo de error.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "28633da7-4b46-4206-b687-a6e825f81f15",
+    "code": "AVN-0165",
+    "name": "FAKHAR ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Fakhar Rose es una fragancia femenina de marcado carácter floral blanco. Abre con frutas, lirio, granada y aldehídos; continúa con tuberosa, jazmín, gardenia, ylang-ylang, madreselva, rosa y peonía; y finaliza con vainilla, almizcle blanco, ambroxan y sándalo.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "7cf65184-340f-42cf-b27f-2185ded85c41",
+    "code": "AVN-0168",
+    "name": "TERIAQ",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Teriaq es una fragancia creada por Quentin Bisch y lanzada en 2024. Abre con pimienta rosa, caramelo, almendra amarga y damasco; continúa con miel, flores blancas, ruibarbo y rosa; y finaliza con vainilla, cuero, ládano, almizcle y vetiver. Su perfil es dulce, gourmand, floral y coriáceo.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "c1a8fecc-07f1-429e-887b-a8306ef71fe5",
+    "code": "AVN-0169",
+    "name": "MAYAR NATURAL INTENSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Mayar Natural Intense presenta un perfil fresco, acuático y frutal. Abre con mandarina verde, higo, agua de coco y melón; continúa con loto, nenúfar y jazmín; y finaliza con almizcle, ambroxan, sándalo y vainilla.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "580dcf88-0e73-48c5-a066-ed6b6f1d7f7b",
+    "code": "AVN-0170",
+    "name": "HAYAATI  FLORENCE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Hayaati Florence es una fragancia femenina floral frutal gourmand. Abre con lichi, pomelo y grosella roja; continúa con rosa, durazno y cedro; y finaliza con vainilla, praliné y ámbar. Su perfil es frutal, floral, dulce y cálido.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "b51f012a-308a-43fb-9dd3-eead7118926f",
+    "code": "AVN-0180",
+    "name": "HAYAATI AL MALEKY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Hayaati Al Maleky presenta una composición cálida y especiada. La marca lista pomelo, bergamota y cassis en la salida; durazno, azafrán y cuero en el corazón; y vetiver, vainilla, almizcle y acorde de ámbar en el fondo.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "a342df91-1f55-4dfb-8028-6b22a04171bf",
+    "code": "AVN-0181",
+    "name": "HAYAATI CLÁSICO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Hayaati es una fragancia amaderada aromática. Abre con manzana y bergamota; continúa con canela y notas amaderadas; y finaliza con almizcle y vainilla. Su perfil combina frescura frutal con especias y una base dulce.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "0c715eb8-36e2-407b-ba4c-fc89adb6ad59",
+    "code": "AVN-0182",
+    "name": "OUD FOR GLORY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Badee Al Oud Oud for Glory es una fragancia unisex ambarada y amaderada. Abre con azafrán, nuez moscada y lavanda; continúa con oud y pachulí; y finaliza con oud, pachulí y almizcle. Su carácter es oscuro, cálido, especiado y amaderado.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "5c63e232-3a91-4315-8285-6a7d9458fc3b",
+    "code": "AVN-0184",
+    "name": "KHAMRAH QAWA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah Qahwa es una fragancia unisex gourmand y especiada. Abre con jengibre, canela y cardamomo; continúa con praliné, frutas confitadas y flores blancas; y finaliza con café arábica, haba tonka, almizcle, benjuí y vainilla.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "8aa4259b-6497-4028-9a54-12035e667a9a",
+    "code": "AVN-0186",
+    "name": "CLUB DE NUIT WOMEN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Club de Nuit Woman Eau de Parfum es una fragancia femenina floral. Abre con bergamota, pomelo, durazno y naranja; continúa con geranio, jazmín, lichi y rosa; y finaliza con almizcle, pachulí, vainilla y vetiver.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "a41f5c2f-08b7-4409-93ca-d7da5257365f",
+    "code": "AVN-0187",
+    "name": "CLUB DE NUIT UNTOLD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Club de Nuit Untold Eau de Parfum es una fragancia unisex amaderada. Abre con azafrán y jazmín; continúa con amberwood y ámbar gris; y finaliza con resina de abeto y cedro. Su perfil es cálido, ambarado, amaderado y ligeramente floral.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "9cb9ebe3-d040-44f3-b52a-f20b52013822",
+    "code": "AVN-0188",
+    "name": "CLUB DE NUIT INTENSE MAN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Club de Nuit Intense Man es una fragancia masculina amaderada. Abre con manzana, bergamota, grosella negra, piña y limón; continúa con rosa, abedul y jazmín; y finaliza con almizcle, ámbar gris, pachulí y vainilla.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "b45249fe-7ca3-4162-87cd-2227b9407ed5",
+    "code": "AVN-0189",
+    "name": "ODYSSEY — WHITE HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Homme White Edition es una fragancia masculina de perfil aromático, dulce y amaderado. Abre con menta, pimienta rosa y cardamomo; continúa con salvia, piña y acordes acuáticos; y finaliza con cedro, amberwood y vainilla.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "1e90a664-f0bb-48f7-9f1a-c55db78a2c23",
+    "code": "AVN-0190",
+    "name": "ODYSSEY — HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Homme Eau de Parfum es una fragancia masculina ambarada. Abre con mandarina, neroli y cardamomo; continúa con rosa y flor de azahar; y finaliza con sándalo, vainilla, ámbar y acordes amaderados.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "445f36a4-4c29-4a8f-a63b-14f9fa265fd2",
+    "code": "AVN-0191",
+    "name": "ODYSSEY — AOUD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Aoud Eau de Parfum es una fragancia masculina de carácter amaderado y profundo. Abre con azafrán, nuez moscada y lavanda; continúa con oud y notas amaderadas; y finaliza con pachulí, almizcle y ambroxan.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "1b86622d-4736-4c5e-bd26-3e7cb5c010a4",
+    "code": "AVN-0192",
+    "name": "ODYSSEY — LIMONI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Limoni Eau de Parfum es una fragancia unisex fresca y cítrica. Abre con limón, naranja dulce, bergamota y mandarina; continúa con jengibre, flor de azahar y notas marinas; y finaliza con ámbar, almizcle y té azul.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "08541a35-376c-4989-be50-f94a8b5ed922",
+    "code": "AVN-0193",
+    "name": "ODYSSEY — SPECTRA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Spectra Eau de Parfum es una fragancia masculina cálida y especiada. Abre con canela, bergamota y manzana; continúa con lavanda, canela, lirio del valle y flor de azahar; y finaliza con tabaco, ámbar, haba tonka, pachulí y vainilla.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "d6f02f9f-231a-4427-a702-f19582c3fd50",
+    "code": "AVN-0194",
+    "name": "ODYSSEY — AQUA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Aqua Eau de Parfum es una fragancia masculina fougère fresca. Abre con pomelo, naranja y artemisia; continúa con lavanda y menta; y finaliza con ciprés, pachulí y ambroxan.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "ccd237cd-f01a-486a-93ea-b36678d69a58",
+    "code": "AVN-0195",
+    "name": "ODYSSEY — CANDEE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Candee presenta un perfil frutal, floral y gourmand. Abre con fresa, frambuesa, bergamota, geranio y durazno; continúa con caramelo, jazmín y maracuyá; y finaliza con pachulí, almizcle y ámbar.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "06a765c6-ad07-4770-880d-fd1670146e2a",
+    "code": "AVN-0196",
+    "name": "ODYSSEY — MANDARÍN SKY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Mandarin Sky Eau de Parfum es una fragancia masculina fresca con carácter cítrico y gourmand. Abre con salvia, mandarina, naranja y azafrán; continúa con caramelo, haba tonka y tagetes; y finaliza con vetiver, cedro y ambroxan.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "a92277ec-3f6b-454f-9598-a0fea3e06020",
+    "code": "AVN-0197",
+    "name": "ODYSSEY — MANDARÍN SKY ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Mandarin Sky Elixir Eau de Parfum es una fragancia masculina fresca con matices cálidos y gourmand. Abre con salvia, mandarina, naranja y azafrán; continúa con caramelo, haba tonka y tagetes; y finaliza con vetiver, cedro y ambroxan.",
+    "category_id": "d75451c8-2aea-4376-be7a-4ead8653b11c"
+  },
+  {
+    "id": "4bf7ebdf-8af5-4691-af1f-c1e2b50d9b2c",
+    "code": "AVN-0198",
+    "name": "CARO CUORE — AMORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Caro Cuore Amore es una fragancia femenina floral frutal. Abre con lichi, bergamota y durazno; continúa con rosas, fresias y pimienta negra; y finaliza con sándalo, almizcle y cedro.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "f8b9fda0-c0e0-4088-a67c-d1794150e66b",
+    "code": "AVN-0201",
+    "name": "RICH MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fragancia de la línea Midoré. Corresponde a la categoría de fragancias símil importadas comercializadas por la marca. No se encontró una pirámide olfativa oficial verificable para esta variante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7838de06-f298-426c-9c36-56d3d647af59",
+    "code": "AVN-0202",
+    "name": "GOOD BLACK",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Good Black es una fragancia comercializada dentro de la línea de fragancias Midoré. No se encontró una pirámide olfativa oficial publicada que permita detallar sus notas sin incorporar información no verificada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9b3d09f3-1c51-4180-8307-6d48ef0d961d",
+    "code": "AVN-0204",
+    "name": "N5 MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "N° 5 Midoré París es una fragancia de la línea Midoré comercializada como símil importada. Se conserva como producto Midoré y no como el perfume diseñador original, ya que no se encontró una pirámide olfativa propia oficialmente publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "04a6794f-57c8-4125-9052-798b28882ba2",
+    "code": "AVN-0205",
+    "name": "FLOWER AIR MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Flower Air Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró información oficial suficiente sobre sus notas para publicar una pirámide olfativa sin riesgo de error.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7ba7b1ac-0245-446e-9658-d6a9a70816bb",
+    "code": "AVN-0206",
+    "name": "ODANZA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Odanza es una fragancia comercializada dentro de la línea Midoré. La referencia comercial está verificada, aunque no se encontró una pirámide olfativa oficial suficientemente documentada para detallar sus notas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5ec58da9-1fb4-4ecd-aed0-147df6225502",
+    "code": "AVN-0207",
+    "name": "MH MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "MH Midoré es una fragancia de la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica oficial con notas olfativas verificables para esta referencia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "78602732-943c-4dd2-b780-c1a19dde9bab",
+    "code": "AVN-0208",
+    "name": "LADY MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fragancia comercializada en la categoría Midoré/símil importada bajo la referencia Lady Million. No se utiliza la descripción del perfume diseñador original porque no se pudo verificar que ambos productos compartan exactamente la misma formulación.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8d1865df-65a6-441e-9203-3b7b7417fcba",
+    "code": "AVN-0209",
+    "name": "CHANCE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Chance Midoré es una fragancia comercializada dentro de la línea Midoré de fragancias símil importadas. No se encontró una ficha oficial con su pirámide olfativa completa.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "387dd731-f971-48ab-be5f-cdc685a5c206",
+    "code": "AVN-0210",
+    "name": "OLIMPEAS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Olimpeas es una fragancia comercializada dentro del catálogo de fragancias Midoré. Se trata de una referencia de la línea símil importada y no se encontró una pirámide olfativa propia publicada por una fuente suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c2836d24-073b-4a0e-8289-82ed56e5609a",
+    "code": "AVN-0211",
+    "name": "LA VIDA ES BELLA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "La Vida es Bella es una referencia comercializada dentro del catálogo de fragancias símil de esta línea. No se presenta como Lancôme La Vie Est Belle original ni se trasladan automáticamente sus notas, ya que la formulación específica del producto no está publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8a78e0f4-d6bf-40b1-9a9b-7cdecaa3dcb8",
+    "code": "AVN-0214",
+    "name": "HELLOWOMAN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Hellowoman es una fragancia comercializada dentro del catálogo Midoré. No se encontró una descripción olfativa oficial o una pirámide de notas suficientemente confiable para agregar detalles adicionales.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "01e6e8db-1a11-4116-827a-75cfbd1cb0e6",
+    "code": "AVN-0215",
+    "name": "SUPERVIOLETA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "230adaf0-1853-4c19-b3c5-fbac605f25dc",
+    "code": "AVN-0216",
+    "name": "COOL MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Cool Midoré es una fragancia de la línea Midoré de fragancias símil importadas. La referencia está verificada comercialmente, pero no se encontró una pirámide olfativa oficial publicada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "bc884c01-c2c4-4ac8-9150-b0957c8451d7",
+    "code": "AVN-0221",
+    "name": "MIDORE MEN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Men es una fragancia masculina perteneciente a la línea Midoré. La referencia comercial está verificada, aunque no se encontró una descripción oficial suficientemente detallada de sus notas olfativas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "43d888c1-43ca-401f-9799-8d4de57436b0",
+    "code": "AVN-0222",
+    "name": "BLACK MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Black Midoré es una referencia perteneciente al catálogo de fragancias Midoré. No se encontró una ficha técnica oficial con pirámide olfativa suficiente para describir sus notas sin introducir información no confirmada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dd2d95b9-e453-4c7f-b5a4-94796ee5b8a8",
+    "code": "AVN-0223",
+    "name": "FAHRENHEIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fragancia de la línea Midoré comercializada bajo la referencia Ferenhait/Fahrenheit. Se trata de una fragancia símil importada; no se utiliza la pirámide del Dior Fahrenheit original porque no existe documentación que confirme una formulación idéntica.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "0ef3ecf4-7886-4d81-9c92-84c2457ff849",
+    "code": "AVN-0224",
+    "name": "XS MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "XS Midoré es una fragancia de la línea Midoré de fragancias símil importadas. La referencia comercial está confirmada, pero no se encontró una ficha oficial con su pirámide olfativa propia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d2c20614-af6b-40d6-9975-709236e3014c",
+    "code": "AVN-0226",
+    "name": "ONE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "One Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró una ficha oficial con notas olfativas propias suficientemente documentadas para describir su composición sin riesgo de error.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dffbe9b7-fa39-4660-aef0-282a31d64b67",
+    "code": "AVN-0227",
+    "name": "SALVAGE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Salvage es una referencia comercializada dentro de la línea de fragancias símil. No se utiliza la descripción ni la pirámide olfativa de Dior Sauvage porque no existe evidencia suficiente de que la formulación sea idéntica.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "557ed46d-638d-4856-9c25-cebde804e336",
+    "code": "AVN-0228",
+    "name": "MIDORE KZO AIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "KZO Air Midoré es una fragancia de la línea Midoré. La referencia comercial puede identificarse como producto símil, pero no se encontró una pirámide olfativa oficial propia suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d071bc02-5b97-4432-8808-e844bc9c7f70",
+    "code": "AVN-0229",
+    "name": "CLASSIC MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Classic Midoré es una referencia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica oficial con su composición olfativa completa.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3ec88aab-a247-44a1-a2e6-fc4a229e0b22",
+    "code": "AVN-0230",
+    "name": "BLUE MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Blue Midoré es una fragancia de la línea Midoré. La referencia comercial está identificada, pero no existe una ficha pública suficientemente precisa para detallar sus notas olfativas con seguridad.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e93b0240-e5e2-461c-a335-d7c435f22bf9",
+    "code": "AVN-0231",
+    "name": "RED MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Red Midoré es una fragancia perteneciente a la línea Midoré de fragancias símil importadas. No se encontró información oficial suficiente para publicar una pirámide olfativa propia.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "7a2c51a9-e88a-4f9e-b0e2-081a654b358b",
+    "code": "AVN-0232",
+    "name": "MIDORE HERRERO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Herrero Midoré es una referencia de la línea Midoré. No se encontró documentación pública suficiente sobre su composición olfativa como para atribuirle notas específicas sin inventar información.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ba8b9356-6a69-46e5-8d68-bd97912a4918",
+    "code": "AVN-0235",
+    "name": "MIDORE IRRESISTIBLE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Irresistible Midoré es una fragancia de la línea Midoré de fragancias símil importadas. No se encontró una ficha técnica pública con una pirámide olfativa propia suficientemente confiable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "10ff9406-6a95-4a26-956a-c2b8ab549a03",
+    "code": "AVN-0237",
+    "name": "RALF",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph by Ralph Lauren Eau de Toilette es una fragancia femenina floral frutal. Combina manzana verde, mandarina y hojas verdes con fresia, magnolia y flores blancas, sobre una base limpia, suave y almizclada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1cb45b66-6f8d-4b6c-b323-d1b6fc1dc8c6",
+    "code": "AVN-0238",
+    "name": "MIDORE GIRL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Girl es una fragancia de la línea Midoré. No se encontró una ficha técnica oficial o una pirámide olfativa pública suficientemente documentada para agregar notas específicas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "4333af19-5a56-46ee-9efb-fb037a4c259f",
+    "code": "AVN-0239",
+    "name": "MIDORÉ — THE FORD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré The Ford es una fragancia de la línea de equivalencias o símil importadas de Midoré. Se comercializa como una interpretación aromática inspirada en perfumería internacional.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d696109c-6d72-4e6f-a8a2-5e0f7450653f",
+    "code": "AVN-0240",
+    "name": "MIDORÉ — BROSS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Bross es una fragancia de la línea de equivalencias Midoré. Forma parte del catálogo de fragancias símil importadas comercializadas por la marca.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9073a88f-7f53-4662-a4b3-5487c3398f40",
+    "code": "AVN-0241",
+    "name": "MIDORÉ — COCODRILE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Midoré Cocodrile es una fragancia de la línea de equivalencias Midoré. El nombre corresponde a una referencia comercial de la colección de fragancias símil importadas de la marca.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "260ae132-2865-4b26-8f0a-a001de579fff",
+    "code": "AVN-0242",
+    "name": "MH MEN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "MH Men es una referencia masculina perteneciente al catálogo de fragancias Midoré/símil. No se encontró una composición olfativa oficial suficientemente documentada para detallar sus notas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e71f6a8f-00e9-40f3-a47f-4a1225752bfb",
+    "code": "AVN-0244",
+    "name": "SPORT MIDORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sport Midoré es una fragancia de la línea Midoré. La referencia está identificada como producto símil, pero no se encontró una ficha técnica pública con notas olfativas verificables.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "645e6888-f4cf-4e22-a6e0-790631d9d2d8",
+    "code": "AVN-0248",
+    "name": "OLIMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa es una fragancia femenina oriental floral. Abre con jazmín acuático, mandarina verde y flor de jengibre; continúa con vainilla y sal; y finaliza con madera de cachemira, ámbar gris y sándalo. Su perfil combina vainilla dulce, acordes salados y flores blancas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "b9e10800-6a62-468b-997f-aaf0140caa7d",
+    "code": "AVN-0250",
+    "name": "JEAN PAUL GAULTIER DIVINE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Gaultier Divine Eau de Parfum es una fragancia femenina floral gourmand marina. Combina una nota salada con flor de lis y un acorde de merengue, creando un perfil floral blanco, dulce, luminoso y marino.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "9abd5fce-5352-4385-bfb6-a51ab2e79019",
+    "code": "AVN-0251",
+    "name": "DIOR ADDICT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Addict Eau de Parfum es una fragancia femenina intensa y sensual. Abre con hoja de mandarina y flor de naranjo de Túnez; continúa con absoluto de jazmín sambac; y finaliza con vainilla Bourbon. Su perfil es floral, cálido, envolvente y avainillado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8e778c8a-e0ca-435e-a533-6f96728f59d6",
+    "code": "AVN-0252",
+    "name": "MOSCHINO BUBBLE GUMM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy 2 Bubble Gum Eau de Toilette es una fragancia floral, frutal y oriental. Abre con cítricos confitados, limón y naranja; continúa con acorde de chicle, canela, arándanos, jengibre, rosa búlgara y durazno; y finaliza con cedro, Ambrofix y almizcles.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "112c60b9-44fc-4e5d-8131-592b4a0f097b",
+    "code": "AVN-0255",
+    "name": "POISON",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Poison es una fragancia femenina intensa, especiada y ambarada. Su composición combina frutas oscuras y especias con flores blancas, incienso, miel, vainilla, almizcle y notas amaderadas.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "8c87a03b-d042-4497-b3a8-27917b3710e7",
+    "code": "AVN-0256",
+    "name": "I DON'T — LE PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "I Don't Le Parfum es una fragancia femenina floral almizclada. Combina pera y bergamota con rosa de mayo, rosa turca y jazmín de la India, sobre un fondo de almizcle blanco y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "8b85fb0b-3edf-4e24-898f-16a0a3fc2294",
+    "code": "AVN-0257",
+    "name": "TOM FORD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4b184596-b3e9-4e5e-a89f-0b18c140800a",
+    "code": "AVN-0258",
+    "name": "SI ARMANI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani Sì Eau de Parfum es una fragancia femenina elegante y envolvente. Combina néctar de grosella negra con un corazón floral de rosa y fresia, sobre un fondo cálido de maderas, pachulí, vainilla y almizcle.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "89765edc-13a3-41dd-8b6d-c9dbe5d71c44",
+    "code": "AVN-0259",
+    "name": "SI PASIÓN ARMANI",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani Sì Passione es una fragancia femenina floral y frutal. Su firma combina grosella negra con un corazón de jazmín y una base cálida de vainilla y pachulí. Su perfil es intenso, femenino, dulce y sensual.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "aefea83a-2a58-47ea-b463-434288eaab60",
+    "code": "AVN-0260",
+    "name": "FAME SILVER — INSPIRADO EN RABANNE FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Fame Silver es una fragancia alternativa inspirada en Rabanne Fame. Presenta un perfil femenino floral y dulce con jazmín, flor de azahar y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "fc0e3518-6296-414a-93c2-2df7faf0da7c",
+    "code": "AVN-0261",
+    "name": "GOLD FAME — INSPIRADO EN RABANNE FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Gold Fame es una fragancia femenina inspirada en Rabanne Fame. Combina mango, mandarina y bergamota con jazmín e incienso, sobre una base de sándalo, vainilla y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "f291aa02-4f74-4b68-810f-6c449de4d691",
+    "code": "AVN-0262",
+    "name": "FAME ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "da77819f-98d8-4c24-9aeb-7d2676558bc8",
+    "code": "AVN-0263",
+    "name": "DIOR — JOY EAU DE PARFUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Joy Eau de Parfum es una fragancia femenina floral amaderada almizclada. Combina bergamota y mandarina con rosa y jazmín, sobre una base de sándalo, cedro, almizcles blancos y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "52e3b4e4-d4f8-4f75-a142-36ad1e451395",
+    "code": "AVN-0264",
+    "name": "OLYMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa es una fragancia femenina oriental floral. Abre con jazmín acuático, mandarina verde y flor de jengibre; continúa con vainilla y sal; y finaliza con madera de cachemira, ámbar gris y sándalo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "404c3fb4-7c88-4fb9-8607-a4172e728105",
+    "code": "AVN-0265",
+    "name": "TOM FORD BOSS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "ef9fba7b-2bff-4593-bf8e-90c517c33f5b",
+    "code": "AVN-0266",
+    "name": "VERSACE EROS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Versace Eros Eau de Toilette es una fragancia masculina fresca, oriental y amaderada. Abre con limón y mandarina italianos, menta y manzana; continúa con geranio, salvia y acordes ambarados; y finaliza con cedro, vetiver, pachulí, sándalo y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4c19dfdb-dddb-42c4-9331-d26e9569e6d0",
+    "code": "AVN-0268",
+    "name": "ERBA PURA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Erba Pura es una fragancia unisex fresca y frutal. Abre con limón, bergamota de Calabria y naranja siciliana; continúa con frutas mediterráneas; y finaliza con ámbar, vainilla de Madagascar y almizcle blanco.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "91503829-6e35-4196-81f4-bfd151dea7fd",
+    "code": "AVN-0275",
+    "name": "MANDARÍN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "26ca8030-a988-46fd-aca9-a655969b688c",
+    "code": "AVN-0277",
+    "name": "KHAMRAH DUKHAN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah Dukhan es una fragancia unisex de perfil ahumado, especiado y ambarado. Abre con mandarina, pimiento y especias ahumadas; continúa con cistus, flor de azahar, incienso y pachulí; y finaliza con tabaco, ámbar, haba tonka, benjuí y praliné.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "79ad6baf-9de0-4c7b-902d-3f836d0e2004",
+    "code": "AVN-0278",
+    "name": "KHAMRAH QAWA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah Qahwa es una fragancia unisex gourmand y especiada. Abre con jengibre, canela y cardamomo; continúa con praliné, frutas confitadas y flores blancas; y finaliza con café arábica, haba tonka, almizcle, benjuí y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "ec79d536-70ee-41b8-90b7-4789b6836eb7",
+    "code": "AVN-0279",
+    "name": "ERBA PURA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Erba Pura es una fragancia unisex fresca y frutal. Abre con limón, bergamota de Calabria y naranja siciliana; continúa con frutas mediterráneas; y finaliza con ámbar, vainilla de Madagascar y almizcle blanco.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "324d09e6-6e8c-4915-a8b6-88fe0bbe52cb",
+    "code": "AVN-0281",
+    "name": "SPECTRA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Spectra Eau de Parfum es una fragancia masculina intensa y cálida. Abre con canela, bergamota y manzana; continúa con lavanda, canela, lirio del valle y flor de azahar; y finaliza con tabaco, ámbar, haba tonka, pachulí y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "9f952980-5a1a-45d0-a941-760526406367",
+    "code": "AVN-0284",
+    "name": "HIS CONFESSION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa His Confession es una fragancia masculina cálida y sofisticada. Abre con mandarina, canela y lavanda; continúa con iris, ciprés, benjuí y mahonial; y finaliza con vainilla, haba tonka, pachulí, cedro, incienso y ámbar.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "07d9d839-d5f1-4df6-87c3-9bf054a1e628",
+    "code": "AVN-0285",
+    "name": "ISLAND BLISS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Island Bliss es una fragancia comercializada oficialmente por Armaf. No se encontró una pirámide olfativa suficientemente completa y estable en la ficha oficial consultada, por lo que se evita detallar notas no verificadas.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "58a25b12-cd19-4b10-bdb1-9677c36c111f",
+    "code": "AVN-0286",
+    "name": "GIVE GOURMAND",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "fc0e36be-f2ab-46dc-bdb7-c19ddfc891da",
+    "code": "AVN-0287",
+    "name": "MUSAMAM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Musamam es una fragancia unisex amaderada y aromática. Abre con mandarina italiana, lavanda y azafrán; continúa con geranio egipcio, cedro de Virginia y amberwood; y finaliza con incienso de Somalia, Akigalawood y ládano.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "7de02592-9d0d-4dda-a0f8-be5514117102",
+    "code": "AVN-0291",
+    "name": "SKALA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "05a86660-2c2a-418e-bdd9-a36a1d9d4682"
+  },
+  {
+    "id": "8707d998-8f78-4a11-a731-4f8876bcf1d9",
+    "code": "AVN-0292",
+    "name": "KARSEELL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Karseell Collagen Hair Mask es una mascarilla capilar de reparación profunda enriquecida con colágeno, queratina y aceite de argán. Ayuda a hidratar, suavizar, reducir el frizz y mejorar el aspecto del cabello seco, dañado o teñido.",
+    "category_id": "05a86660-2c2a-418e-bdd9-a36a1d9d4682"
+  },
+  {
+    "id": "105362f8-7162-4fe0-bf56-7b2bc86ae218",
+    "code": "AVN-0294",
+    "name": "HAIR CARE SET KARSEELL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Set de cuidado capilar Karseell orientado a hidratación y reparación del cabello. La marca comercializa combinaciones con mascarilla de colágeno, shampoo y aceite de argán para ayudar a mejorar suavidad, brillo y manejo del cabello seco o dañado.",
+    "category_id": "05a86660-2c2a-418e-bdd9-a36a1d9d4682"
+  },
+  {
+    "id": "f891b529-187f-4ce2-8d3e-8d621fed6f94",
+    "code": "AVN-0302",
+    "name": "BURBERRY HER",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Burberry Her Eau de Parfum es una fragancia femenina gourmand y frutal. Combina frutos rojos y oscuros con violeta y jazmín, sobre un fondo de maderas blancas y ámbar cremoso.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "df7905ab-d08c-44fc-8b0e-6af04bed4398",
+    "code": "AVN-0303",
+    "name": "CHER DIECIOCHO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Cher Dieciocho Eau de Parfum es una fragancia femenina floral chipre gourmand. Abre con gardenia y mandarina sanguina; continúa con miel, flor de azahar, durazno y jazmín; y finaliza con notas dulces, pachulí y caramelo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3bd35cd2-fa68-43e2-a619-afb0b2b5635a",
+    "code": "AVN-0304",
+    "name": "CHOCO OVERDOSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Give Me Gourmand Choco Overdose es una fragancia femenina gourmand. Abre con chocolate fudge; continúa con cacao y cupcake; y finaliza con vainilla, caramelo y benjuí.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1daee0ed-cfb6-483b-9895-98c394529e8c",
+    "code": "AVN-0306",
+    "name": "DEVOTION INTENSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dolce&Gabbana Devotion Eau de Parfum Intense es una fragancia femenina gourmand luminosa. Reinterpreta la firma de azahar y vainilla del Devotion original y añade un acorde distintivo de avellana, logrando un perfil cálido, cremoso y envolvente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d2d6af54-049f-4128-aa40-46311f502d1a",
+    "code": "AVN-0307",
+    "name": "DEVOTION POUR HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dolce&Gabbana Devotion For Men Eau de Parfum es una fragancia masculina amaderada y especiada. Abre con limón fresco, desarrolla un corazón intenso de café y finaliza con pachulí, aportando profundidad y calidez.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "dd7ad5f5-0715-4d38-b50e-1baa1a7dd1c5",
+    "code": "AVN-0308",
+    "name": "ECLAIRE PISTACHE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Eclaire Pistache es una fragancia gourmand. Abre con crema de pistacho y pistacho tostado; continúa con crema pastelera, coco y cacao; y finaliza con vainilla, leche y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8dcc2bdb-8214-4406-be86-8bd6ce0bd24d",
+    "code": "AVN-0310",
+    "name": "GO MANGO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Go Mango es una fragancia unisex tropical, frutal y ambarada. Abre con limón, jengibre, flores blancas y pimienta rosa; continúa con mango, madera seca y haba tonka; y finaliza con ámbar, vainilla, madera de guayaco, almizcle y notas de frutos secos.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e2905531-0e8e-4ee8-bc2a-49d4d1e2ca0b",
+    "code": "AVN-0311",
+    "name": "GODDESS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Burberry Goddess Eau de Parfum es una fragancia femenina aromática gourmand. Su composición está protagonizada por un trío de vainillas realzado por lavanda luminosa, creando un perfil cálido, dulce y sofisticado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ed2897d1-498d-42af-900d-90fc322d3de5",
+    "code": "AVN-0312",
+    "name": "LE MALE ELIXIR ABSOLU",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Elixir Absolu Parfum Intense es una fragancia masculina ámbar aromática especiada. Combina ciruela carnosa y especiada con lavanda y una base intensa de haba tonka.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3ec22fc2-e3b4-4559-baba-443fe00f8b5e",
+    "code": "AVN-0313",
+    "name": "LIBRE BERRY. CRUSH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent Libre Berry Crush es una fragancia femenina floral frutal gourmand. Combina frambuesa jugosa y coco cremoso con la firma floral de lavanda francesa y flor de azahar de Marruecos.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3f03f346-5344-473f-8f48-b15dc9f8d0e7",
+    "code": "AVN-0314",
+    "name": "LIQUID BRUN",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Liquid Brun Eau de Parfum es una fragancia masculina ámbar-vainilla. Abre con canela, bergamota, cardamomo y flor de azahar; continúa con vainilla Bourbon y elemí; y finaliza con almizcle, praliné, ambroxan y madera de guayaco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "a2b5295f-fc07-47eb-a411-ca17145fc6c8",
+    "code": "AVN-0315",
+    "name": "LOST CHERRY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tom Ford Lost Cherry Eau de Parfum es una fragancia dulce, frutal y ambarada. Combina cereza negra y almendra amarga con jarabe de griotte, absoluto de rosa, bálsamo del Perú y haba tonka tostada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d421a231-5081-462c-b057-1eb69fec31ff",
+    "code": "AVN-0316",
+    "name": "MANDARÍN SKY ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Armaf Odyssey Mandarin Sky Elixir Eau de Parfum es una fragancia masculina fresca y amaderada con matices gourmand. Abre con salvia, mandarina, naranja y azafrán; continúa con caramelo, haba tonka y tagetes; y finaliza con vetiver, cedro y ambroxan.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "168cbb39-cabb-48ac-a484-736d4e80c3ce",
+    "code": "AVN-0318",
+    "name": "MYSLF L",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent MYSLF Absolu es una fragancia masculina amaderada floral intensa. Abre con bergamota, jengibre y cardamomo; continúa con flor de azahar; y finaliza con maderas cálidas y pachulí.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1fb42883-515d-46f4-8549-ee8478e3e563",
+    "code": "AVN-0319",
+    "name": "NOBLE BLUSH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Badee Al Oud Noble Blush es una fragancia femenina gourmand, suave y cremosa. Combina leche de rosas con un corazón de merengue y almendra, sobre un fondo de vainilla, almizcle y sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "6b629314-70bd-4881-9b21-1a09e29ce8ed",
+    "code": "AVN-0321",
+    "name": "STRONGER WITH YOU SANDALWOOD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani Stronger With You Sandalwood pertenece a la familia Stronger With You y presenta un perfil cálido, amaderado y envolvente centrado en el sándalo. Se evita agregar una pirámide detallada hasta contar con una ficha oficial suficientemente verificable.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1de0578a-1244-4598-8ea1-16b9357da2ce",
+    "code": "AVN-0322",
+    "name": "THE MOST WANTED INTENSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Azzaro The Most Wanted Eau de Parfum Intense es una fragancia masculina fougère amaderada y ambarada. Combina cardamomo especiado con un acorde gourmand de caramelo y un fondo cálido de ámbar amaderado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ad5ee519-1d12-4f42-963f-c1dde6557573",
+    "code": "AVN-0323",
+    "name": "TORINO 21",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Torino21 es una fragancia unisex fresca y aromática. Abre con limón, menta y albahaca; continúa con jazmín y lavanda; y finaliza con almizcle y verbena. Su perfil es limpio, verde, fresco y energizante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "01b630d1-2b88-42f6-adb6-75514ff9e429",
+    "code": "AVN-0326",
+    "name": "VALENTINO UOMO BORN IN ROMA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Uomo Born in Roma es una fragancia masculina amaderada aromática. Combina notas minerales y salvia aromática con un corazón de jengibre y una base de vetiver y maderas, logrando un perfil moderno, fresco y elegante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "98a1a2ee-8c2a-4f23-9140-13367d9e0edb",
+    "code": "AVN-0327",
+    "name": "VANILLA FRAK",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Give Me Gourmand Vanilla Freak es una fragancia femenina gourmand. Abre con cupcake; continúa con azúcar, glaseado, almendra y canela; y finaliza con manteca, vainilla y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "13b64a14-52f9-498e-9621-64f2609fe0dd",
+    "code": "AVN-0328",
+    "name": "Y ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent Y Elixir es una fragancia masculina intensa, amaderada y especiada. Combina lavanda fresca y geranio con incienso y una base sensual de madera de oud, logrando un perfil profundo, elegante y duradero.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c7ea20b6-8b1d-4810-9d85-f47e52ae1969",
+    "code": "AVN-0329",
+    "name": "VALENTINO DONNA BORN IN ROMA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Donna Born in Roma Eau de Parfum es una fragancia femenina floral amaderada. Combina jazmín sambac y jazmín con vainilla Bourbon y un fondo amaderado, creando un perfil elegante, dulce, floral y contemporáneo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "912407f1-c408-4107-8b92-e05c9b980672",
+    "code": "AVN-0337",
+    "name": "CLOUD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ariana Grande Cloud Eau de Parfum es una fragancia femenina floral gourmand. Combina lavanda, pera y bergamota con crema de coco, praliné y orquídea de vainilla, sobre una base de maderas y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1804e42c-9cbe-4d08-8106-8e50fe683f61",
+    "code": "AVN-0338",
+    "name": "FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Fame Eau de Parfum es una fragancia femenina floral y frutal. Combina mango jugoso y bergamota con jazmín y un fondo cremoso de incienso, vainilla y sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8682c5b0-66ca-43ce-aa36-5c295853574a",
+    "code": "AVN-0339",
+    "name": "FLOWER",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Flower by Kenzo Eau de Parfum es una fragancia femenina floral empolvada. Combina rosa damascena y bayas rosas con almizcles blancos y vainilla, logrando un perfil floral, suave, elegante y envolvente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "4bd33a7c-d65e-4a9a-a3c8-f3e56ff3c280",
+    "code": "AVN-0340",
+    "name": "GOOD GIRLS BLUSH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera Good Girl Blush Eau de Parfum es una fragancia femenina floral y avainillada. Combina bergamota y mandarina con peonía, ylang-ylang y agua de rosas, sobre un fondo de vainilla y haba tonka.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5b8e12ec-b0b2-4406-ab38-55ca1aad6bb3",
+    "code": "AVN-0341",
+    "name": "J'ADORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior J'adore Eau de Parfum es una fragancia femenina floral. Su composición combina ylang-ylang, rosa damascena y jazmín sambac y de Grasse, creando un bouquet luminoso, elegante y sofisticado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "07bd09e4-9527-40a1-89cb-dbd02edef6d3",
+    "code": "AVN-0342",
+    "name": "L'INTERDIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Givenchy L'Interdit Eau de Parfum es una fragancia femenina floral amaderada. Abre con bergamota y jengibre; continúa con flor de azahar, jazmín sambac y nardo; y finaliza con pachulí y vetiver.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "75cc730e-6776-4e37-896e-057c08cb9c04",
+    "code": "AVN-0343",
+    "name": "LA BOMBA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera La Bomba es una fragancia femenina floral frutal. Combina pitahaya exótica con peonía roja y frangipani, sobre una base de vainilla, logrando un perfil luminoso, tropical, floral y sensual.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c64ffe6b-51ee-4fa3-8a7d-709a75a02690",
+    "code": "AVN-0345",
+    "name": "LADY MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Lady Million Eau de Parfum es una fragancia femenina floral y amaderada. Combina frambuesa y cítricos con flor de azahar, jazmín y gardenia, sobre un fondo cálido de miel, pachulí y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5f5c3ebd-1599-45d8-b22b-a090b0cc7668",
+    "code": "AVN-0346",
+    "name": "LIBRE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent Libre Eau de Parfum es una fragancia femenina floral aromática. Combina lavanda francesa y flor de azahar de Marruecos con vainilla y acordes ambarados, logrando un perfil floral, cálido y elegante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "17432866-fa84-444e-8134-ee3e4d12ca16",
+    "code": "AVN-0348",
+    "name": "MISS DIOR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Miss Dior Eau de Parfum es una fragancia femenina floral, avainillada y sensual. Combina absoluto de rosa centifolia con vainilla gourmand, haba tonka de matiz almendrado y un fondo cremoso de sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e5260f13-23c1-4d52-b4f6-8c1e414b212c",
+    "code": "AVN-0349",
+    "name": "MY WAY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani My Way Eau de Parfum es una fragancia femenina floral. Combina bergamota y flor de azahar con tuberosa y jazmín, sobre un fondo cálido de vainilla, cedro y almizcle blanco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "29b84c5f-b291-41ba-95a1-12be69861824",
+    "code": "AVN-0350",
+    "name": "OLYMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa Eau de Parfum es una fragancia femenina oriental floral. Combina jazmín acuático, mandarina verde y flor de jengibre con vainilla salada, sobre una base de madera de cachemira, ámbar gris y sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "616e8096-d4e9-4c32-95dd-b6643cbd9d44",
+    "code": "AVN-0351",
+    "name": "RALPH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph by Ralph Lauren Eau de Toilette es una fragancia femenina fresca, floral y frutal. Combina manzana verde, mandarina y hojas verdes con fresia, magnolia y flores blancas, sobre una base limpia y almizclada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "b9f716e2-8568-4c2e-b2e6-8e3ef2a3e209",
+    "code": "AVN-0352",
+    "name": "SCANDAL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Scandal Eau de Parfum es una fragancia femenina chipre gourmand. Combina gardenia con miel dulce y pachulí, creando un perfil floral, cálido, intenso y envolvente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ed301d42-76b8-4d48-a007-1c8fdb667d38",
+    "code": "AVN-0353",
+    "name": "TOY 2 BUBBLE GUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy 2 Bubble Gum Eau de Toilette es una fragancia femenina floral frutal con carácter dulce. Combina cítricos y frutas con un distintivo acorde de chicle, rosa, durazno, especias y un fondo amaderado y almizclado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "31c51694-05a4-487b-8a12-1ea3af2bc4d6",
+    "code": "AVN-0357",
+    "name": "VALENTINO — UOMO BORN IN ROMA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Uomo Born in Roma Eau de Toilette es una fragancia masculina aromática y amaderada. Combina notas minerales y salvia con jengibre, vetiver y acordes amaderados, logrando un perfil moderno, elegante y fresco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "45525eb5-7a3d-40d6-a0c2-a995a78aa978",
+    "code": "AVN-0358",
+    "name": "CREED AVENTUS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Creed Aventus es una fragancia masculina frutal y amaderada. Combina bergamota, grosella negra, manzana y piña con notas aromáticas y florales, sobre una base de abedul, almizcle, musgo de roble y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e5f71298-5662-4252-8bd5-246b159a8e21",
+    "code": "AVN-0359",
+    "name": "EROS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Versace Eros es una fragancia masculina fresca, oriental y amaderada. Combina limón, mandarina, menta y manzana con geranio y salvia, sobre una base de cedro, vetiver, pachulí, sándalo y vainilla.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "42ee0370-637f-4aa5-816d-be11244f6ba3",
+    "code": "AVN-0360",
+    "name": "FAHRENHEIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Fahrenheit Eau de Toilette es una fragancia masculina amaderada floral. Su firma combina notas cítricas y mandarina siciliana con violeta y un fondo característico de cuero y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e6541f0f-fafb-47f3-a8cd-f9d7458d5a0b",
+    "code": "AVN-0361",
+    "name": "INVICTUS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Eau de Toilette es una fragancia masculina fresca y amaderada. Combina acordes marinos y pomelo con hoja de laurel, sobre una base de madera de guayaco, pachulí, ámbar gris y acordes amaderados.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3d714ef5-1d58-44df-bf9f-726b06ac02e2",
+    "code": "AVN-0362",
+    "name": "INVICTUS AQUA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Aqua es una interpretación más fresca y acuática de Invictus. Combina cítricos y acordes marinos con hojas verdes y notas aromáticas, sobre una base amaderada y ambarada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8f1f94b7-5fdf-45a0-9b0b-57efff812505",
+    "code": "AVN-0363",
+    "name": "INVICTUS LEGEND",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Legend es una fragancia masculina aromática amaderada. Combina acordes marinos con pomelo, especias y hoja de laurel, sobre un fondo de ámbar rojo y madera de guayaco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "703bde20-cd47-485b-b991-b316614247d2",
+    "code": "AVN-0364",
+    "name": "INVICTUS VICTORY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Victory Eau de Parfum Extrême es una fragancia masculina ambarada y especiada. Combina limón y pimienta rosa con lavanda e incienso, sobre una base cálida de vainilla, haba tonka y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "2b4247fe-9580-47a5-9a79-861977671be7",
+    "code": "AVN-0365",
+    "name": "INVICTUS VICTORY ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Victory Elixir es una fragancia masculina intensa y amaderada. Combina lavandín y cardamomo con incienso, sobre una base profunda de vainilla, haba tonka y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8e160da4-9446-40b2-baad-590039ddff56",
+    "code": "AVN-0366",
+    "name": "KENZO HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Kenzo Homme es una línea de fragancias masculinas inspirada en el mar y la naturaleza, caracterizada por perfiles frescos, acuáticos, aromáticos y amaderados. La versión exacta no está especificada en el nombre del producto.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ac6fa609-bd61-4cae-951f-d8b1205ecbf5",
+    "code": "AVN-0367",
+    "name": "L'EAU D'ISSEY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Issey Miyake L'Eau d'Issey Eau de Toilette es una fragancia femenina floral acuática. Combina rosa y loto con flores blancas, lirio y peonía, sobre una base de maderas preciosas, ámbar, sándalo, almizcle y cedro.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d7969053-33cb-4f1f-9372-18301cd5e0a1",
+    "code": "AVN-0368",
+    "name": "LE MALE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Le Male Eau de Toilette es una fragancia masculina aromática ambarada. Combina menta y lavanda con un corazón especiado, sobre una base cálida y dulce de vainilla, haba tonka y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "f03cb206-4324-44f1-9c7c-5d09712c0356",
+    "code": "AVN-0369",
+    "name": "MYSLF",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent MYSLF Eau de Parfum es una fragancia masculina amaderada floral. Combina bergamota fresca con un corazón de absoluto de flor de azahar, sobre una base de maderas cálidas y sensuales.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "0ff3ca49-1bbb-4f7d-bd52-1f4005cff537",
+    "code": "AVN-0370",
+    "name": "OMBRE NOMADE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Louis Vuitton Ombre Nomade es una fragancia intensa de perfil amaderado y ambarado. Su protagonista es la madera de oud, acompañada por benjuí, incienso, frambuesa y rosa, creando una estela oscura, ahumada y sofisticada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ac7de870-e4f4-48be-8141-6fa4c83cc04d",
+    "code": "AVN-0371",
+    "name": "ONE MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne 1 Million Eau de Toilette es una fragancia masculina especiada y amaderada. Combina mandarina y menta con rosa y canela, sobre una base cálida de cuero, ámbar y pachulí.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "09262441-c737-4fe4-939d-54404c2e9991",
+    "code": "AVN-0372",
+    "name": "ONE MILLION ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne 1 Million Elixir es una fragancia masculina intensa, dulce y amaderada. Combina manzana y davana con rosa, cedro y osmanto, sobre una base de vainilla, haba tonka y pachulí.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "068b295d-6721-4bc4-b521-7192b484bdb6",
+    "code": "AVN-0373",
+    "name": "ONE MILLION LUCKY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne 1 Million Lucky es una fragancia masculina amaderada gourmand. Combina ciruela y cítricos con miel, avellana y jazmín, sobre una base de madera de cachemira, cedro, pachulí y musgo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "bbbe8224-8fd2-444a-87e1-c97e1c89f4e9",
+    "code": "AVN-0374",
+    "name": "POLO BLUE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph Lauren Polo Blue Eau de Toilette es una fragancia masculina fresca y aromática. Combina melón, pepino y mandarina con albahaca, salvia y geranio, sobre una base de maderas, almizcle y gamuza.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "815f9b06-8414-481a-a4c3-3c315b0c34d3",
+    "code": "AVN-0375",
+    "name": "POLO RED",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph Lauren Polo Red Eau de Toilette es una fragancia masculina fresca y amaderada. Combina pomelo rojo y limón con azafrán y salvia, sobre un fondo de maderas, ámbar y café.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "53904ee2-47e6-4988-ab23-3b8f38852125",
+    "code": "AVN-0376",
+    "name": "POWER OF SEDUCTION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Antonio Banderas Power of Seduction es una fragancia masculina aromática y amaderada, de perfil fresco y moderno. Combina acordes frutales y aromáticos con un fondo de maderas y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "d800f286-d60b-4707-ab0c-3be24a16eccb",
+    "code": "AVN-0377",
+    "name": "SAUVAGE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Sauvage Eau de Toilette es una fragancia masculina fresca, especiada y amaderada. Se caracteriza por bergamota de Calabria, pimienta y una base mineral y amaderada dominada por Ambroxan.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e8c00fdb-3de8-480c-9d8f-4885df7a0729",
+    "code": "AVN-0378",
+    "name": "THE  MOST WANTED",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Azzaro The Most Wanted es una línea masculina de perfil especiado, ambarado y gourmand, caracterizada por acordes cálidos, dulces y amaderados. La concentración o variante exacta no está indicada en el nombre registrado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "adc00717-dd8d-4d11-9d12-986f61e7952d",
+    "code": "AVN-0380",
+    "name": "TOY BOY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy Boy Eau de Parfum es una fragancia masculina especiada, floral y amaderada. Combina bergamota, pimienta rosa y pera con rosa, clavo y magnolia, sobre una base de vetiver, cashmeran, sándalo y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "fe2269c9-5481-4859-9014-a359954f8894",
+    "code": "AVN-0381",
+    "name": "ULTRA MALE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Ultra Male Eau de Toilette Intense es una fragancia masculina ámbar aromática. Combina bergamota, pera, menta y lavanda con un fondo intenso de vainilla amaderada, creando un perfil dulce, especiado y potente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "45c42338-817d-4985-97e2-82ffb57ec0e2",
+    "code": "AVN-0382",
+    "name": "WANTED",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Azzaro Wanted Eau de Toilette es una fragancia masculina fresca, especiada y amaderada. Combina limón y jengibre con cardamomo, enebro y un fondo cálido de vetiver y haba tonka.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3f4a4e96-adde-40c1-b484-eee414d95bef",
+    "code": "AVN-0383",
+    "name": "CK ONE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Calvin Klein CK One Eau de Toilette es una fragancia unisex fresca y cítrica. Combina bergamota, limón, mandarina y notas verdes con flores suaves y una base de almizcle, ámbar y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3214ac08-e02e-4441-8d0e-a468c9c59780",
+    "code": "AVN-0386",
+    "name": "OPULENT MUSK",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Opulent Musk es una fragancia unisex floral y almizclada. Combina limón, azafrán y almizcle blanco con flores blancas y jazmín, sobre una base cálida de cedro, resinas y almizcles.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "791fc9e3-c55a-4fcc-97ae-3eb82c320c1a",
+    "code": "AVN-0393",
+    "name": "BHARARA KING",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Eau de Parfum es una fragancia masculina cítrica, aromática y amaderada. Combina cítricos frescos con acordes frutales y aromáticos, sobre una base cálida de vainilla, almizcle y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5024d721-b47a-4ca5-9865-8ad3b2a4afbc",
+    "code": "AVN-0394",
+    "name": "CLUB DE NUIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ffe13266-205a-43b7-8d29-2d4ff748411c",
+    "code": "AVN-0398",
+    "name": "ERBA PURA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Xerjoff Erba Pura es una fragancia unisex fresca y frutal. Abre con limón, bergamota de Calabria y naranja siciliana; continúa con frutas mediterráneas; y finaliza con ámbar, vainilla de Madagascar y almizcle blanco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "65bc4b03-b364-4ed9-96d2-e1d7c4bc1579",
+    "code": "AVN-0399",
+    "name": "KHAMRAH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Khamrah es una fragancia unisex especiada y gourmand. Abre con bergamota, canela y nuez moscada; continúa con dátiles, lirio del valle, praliné y tuberosa; y finaliza con haba tonka tostada, benjuí, mirra, vainilla y madera de ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "73570e6d-9d88-42ef-8f7a-26e12c30ebeb",
+    "code": "AVN-0400",
+    "name": "OUD FOR GLORY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Badee Al Oud Oud for Glory es una fragancia unisex intensa y amaderada. Combina azafrán, nuez moscada y lavanda con oud y pachulí, sobre un fondo profundo de oud, pachulí y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3c46fb6c-7b69-4ae7-9793-0691ffa8d23b",
+    "code": "AVN-0401",
+    "name": "OUD MOOD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Oud Mood Eau de Parfum es una fragancia unisex oriental, cálida y especiada. Abre con nuez moscada, canela y azafrán; continúa con sándalo, madera de oud y cuero; y finaliza con vainilla y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3a11190e-904f-409c-8de3-bb5657fb0af2",
+    "code": "AVN-0402",
+    "name": "SUBLIME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Badee Al Oud Sublime es una fragancia unisex frutal, floral y amaderada. Combina ciruela y manzana con magnolia, jazmín, notas solares, ládano y ámbar, sobre una base de almizcle, musgo y oud acaramelado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  }
+]

@@ -1,0 +1,210 @@
+[
+  {
+    "id": "fe73a931-eb7d-40a3-bd4d-0cc98bcfea6c",
+    "code": "AVN-0039",
+    "name": "RUE BROCA — HOOKED AZURE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Azure Pour Homme es una fragancia masculina aromática fougère. Abre con pera, cardamomo y lavanda; continúa con menta, romero y canela; y finaliza con ámbar, vetiver y ajenjo.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "47c6a07b-d70b-4e5b-b286-7c1a3d1bae00",
+    "code": "AVN-0040",
+    "name": "RUE BROCA — HOOKED POUR HOMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Pour Homme Eau de Parfum es una fragancia masculina dulce y amaderada. Abre con caramelo y salvia esclarea; continúa con vainilla, cítricos y ámbar; y finaliza con maderas, vetiver y haba tonka.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "3c4c1236-e9f3-49d0-a1e0-02f3bb7e22a9",
+    "code": "AVN-0041",
+    "name": "RUE BROCA — HOOKED POUR FEMME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rue Broca Hooked Pour Femme es una fragancia femenina frutal y floral. Abre con mora, bergamota y pimienta rosa; continúa con rosa, notas amaderadas y ciprés; y finaliza con almizcle, ámbar y vetiver.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "2e97c4dc-0e13-42ee-a43c-06153ca610bf",
+    "code": "AVN-0072",
+    "name": "FRENCH AVENUE — VENENO NEGRO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno es una fragancia unisex de carácter dulce, ahumado y cálido. Abre con manzana, canela y humo; continúa con acordes de musgo y tabaco; y finaliza con vainilla Bourbon y Orcanox. Presenta un perfil oscuro, especiado, ahumado y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "58f72b44-21e2-4e8d-8a99-0fe180995d7c",
+    "code": "AVN-0073",
+    "name": "FRENCH AVENUE — VENENO BLANCO",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno Bianco es un Extrait de Parfum floral y ambarado. Abre con bergamota, neroli y leche; continúa con flor de tiaré, ylang-ylang y flores blancas; y finaliza con coco, vainilla, madera de guayaco y ládano. Su perfil es floral, cremoso, tropical y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "1113bf17-b0b5-4502-9fd7-7cb30af04a11",
+    "code": "AVN-0074",
+    "name": "FRENCH AVENUE — VENENO SCARLET",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Veneno Scarlet es una fragancia unisex lanzada en 2025. Abre con fresa, zarzamora y caramelo; continúa con frambuesa, cedro y canela; y finaliza con cuero, pachulí, abeto, caramelo, haba tonka y vainilla. Su perfil es frutal, dulce, amaderado y cálido, con un marcado acorde de cuero.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "08ac03d9-590e-42d3-ac42-d17e61c5e3e3",
+    "code": "AVN-0075",
+    "name": "FRENCH AVENUE — VULCAN BAIE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Vulcan Baie es una fragancia unisex floral frutal lanzada en 2025. Abre con zarzamora, grosella negra, romero y bergamota; continúa con frambuesa, vodka, albahaca y lirio de los valles; y finaliza con fresa, almizcle, durazno, ámbar, sándalo, pachulí e incienso. Presenta un perfil intensamente frutal, fresco, dulce y aromático.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "571791ae-8755-4cda-a54f-6ee131da3bb2",
+    "code": "AVN-0076",
+    "name": "FRENCH AVENUE — VULCAN FEU",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Vulcan Feu es una fragancia unisex Eau de Parfum de perfil oriental y amaderado. Abre con jengibre, mango, limón y ruibarbo; continúa con jazmín, violeta, praliné y pimienta rosa; y finaliza con cedro, acordes de ámbar gris, haba tonka y musgo. Presenta un carácter frutal, especiado, dulce y amaderado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "225c8237-71d2-4985-ad27-26a3b585d19c",
+    "code": "AVN-0077",
+    "name": "FRENCH AVENUE — CHAOS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "French Avenue Chaos Extrait es una fragancia unisex de perfil frutal y cuero. Abre con cereza y frutos rojos; desarrolla un corazón de iris; y finaliza con musgo, cuero y vainilla. Su composición combina frutas oscuras y dulces con un fondo profundo, cálido y marcadamente cuero.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "22eb99a2-6bf9-458a-8613-b120eb520113",
+    "code": "AVN-0091",
+    "name": "BHARARA — BHARARA ROSE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara Rose Eau de Parfum es una fragancia femenina floral y frutal. Abre con geranio, bergamota y pomelo; continúa con manzana, gardenia, jazmín, rosa y pera; y finaliza con musgo, almizcle, vainilla, vetiver y sándalo. Presenta un carácter floral luminoso con un fondo cálido y cremoso.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "6469b32f-4d85-4363-a443-c8d4e6777859",
+    "code": "AVN-0092",
+    "name": "BHARARA — BHARARA KING",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Eau de Parfum es una fragancia masculina de carácter cítrico, frutal y dulce. Abre con naranja, bergamota y limón; continúa con un acorde tutti frutti; y finaliza con almizcle blanco, ámbar y vainilla. Es una composición fresca en su salida y cálida, dulce y envolvente en el fondo.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "93304998-f1b1-436a-8543-845f3240e717",
+    "code": "AVN-0093",
+    "name": "BHARARA — BHARARA SOLEIL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Soleil es una fragancia frutal gourmand. Abre con naranja siciliana, bergamota de Calabria, limón siciliano y frutas rojas y amarillas; continúa con jazmín, sándalo, bálsamo de copaiba, madera de cachemira y ámbar gris; y finaliza con avellana, chocolate, vainilla de Madagascar, azúcar glas y benjuí de Siam.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "626b011c-0802-4b7f-b529-89e775d35bf5",
+    "code": "AVN-0094",
+    "name": "BHARARA — BHARARA GOLD EDITION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Bharara King Gold Edition Eau de Parfum es una fragancia cálida, frutal y dulce. Abre con naranja dulce, bergamota y limón; continúa con frutos rojos y coco; y finaliza con almizcle blanco, vainilla y ámbar. Su perfil combina cítricos luminosos con frutas, coco y un fondo suave y avainillado.",
+    "category_id": "031cc514-28d1-485a-a7f2-e01ef59388a3"
+  },
+  {
+    "id": "bdad5d81-83c8-47d9-bc1c-8394af511d3e",
+    "code": "AVN-0095",
+    "name": "CHERRY LUXE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cherry Luxe es una fragancia unisex oriental avainillada. Abre con cereza, frutos rojos y heliotropo; continúa con haba tonka, sándalo y jazmín; y finaliza con almizcle, ámbar gris y vainilla.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "473804d9-79ad-4df0-83a8-91f662ecb45e",
+    "code": "AVN-0096",
+    "name": "BEARY LOVE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Beary Love es una fragancia unisex fresca, frutal y floral. Abre con melón y durazno; continúa con notas acuáticas y florales; y finaliza con almizcle limpio y suave.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "72df6c1c-66ab-4ad8-8288-4c8d65ab4c01",
+    "code": "AVN-0097",
+    "name": "PACIFIDREAM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Sin descripción disponible.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4d6d15f8-aed5-43dd-bd5e-6d2cd8f797aa",
+    "code": "AVN-0098",
+    "name": "TITANS SPLASH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Titans Splash es una fragancia unisex floral frutal. Abre con grosella negra, bergamota y pera; continúa con flor de azahar, ylang-ylang, jazmín, violeta y azucena; y finaliza con cedro, ámbar, almizcle y musgo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "a5ba9e04-08dd-41e0-b23f-995a2bee4bca",
+    "code": "AVN-0099",
+    "name": "PINK SUGAR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Pink Sugar es una fragancia unisex dulce y gourmand. Abre con lirio del valle, durazno, coco y sándalo; continúa con arroz, flores blancas y caramelo; y finaliza con almizcle, sándalo, haba tonka y leche.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "e1b0e83f-11a1-4af8-a582-a1055c65519c",
+    "code": "AVN-0100",
+    "name": "COTTON CANDY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cotton Candy es una fragancia unisex gourmand de perfil dulce y cremoso. Abre con leche de coco; continúa con caramelo y algodón de azúcar; y finaliza con vainilla y almizcle.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "d37dd23e-ae68-4c5a-9e62-0cf435263d78",
+    "code": "AVN-0101",
+    "name": "BERRY BLAST",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Berry Blast es una fragancia unisex frutal y floral. Abre con fresia, grosella negra y bergamota; continúa con pachulí, jazmín y rosa; y finaliza con almizcle, vainilla y azúcar.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "bc88f297-ac3e-44f1-acc3-b2c1eceac43f",
+    "code": "AVN-0102",
+    "name": "SWEET CARAMEL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Sweet Caramel es una fragancia unisex gourmand, cremosa y avainillada. Abre con acordes cremosos, mantecosos y de frutos secos; continúa con vainilla, notas lácteas y leche; y finaliza con haba tonka y vainilla empolvada.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "667715e0-e45e-4479-a36b-e205fe59e52d",
+    "code": "AVN-0103",
+    "name": "UNICORN VANILLA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Unicorn Vanilla es una fragancia unisex floral frutal gourmand. Abre con açaí, cítricos y grosella negra; continúa con té matcha, rosa y flores blancas; y finaliza con vainilla, algodón de azúcar y sándalo.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "126884d9-4633-4c43-b747-fe401ac7a248",
+    "code": "AVN-0104",
+    "name": "BUBBLE GUMM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Bubble Gum es una fragancia unisex dulce y frutal. Abre con frutas y clavo; continúa con acorde de chicle y aceite de naranja; y finaliza con vainilla, cashmeran y pachulí.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "4e85f4e9-fea7-4277-bf93-598081fe692a",
+    "code": "AVN-0105",
+    "name": "CHOCOLATE FUDGE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Chocolate Fudge es una fragancia unisex gourmand centrada en chocolate. Combina chocolate oscuro, avellana y acordes de fudge con caramelo y vainilla, creando un aroma dulce, cremoso y cálido inspirado en un postre de chocolate.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "82f903ec-2960-4c01-abac-113bbb11bf2d",
+    "code": "AVN-0106",
+    "name": "COOKIES DREAM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Tubbees Cookies & Cream es una fragancia unisex gourmand. Abre con manteca y azúcar; continúa con leche y chocolate con leche; y finaliza con vainilla y almizcle blanco, logrando un perfil cremoso y dulce inspirado en galletas con crema.",
+    "category_id": "b47eb057-0bad-49cb-aa57-035c1d3f0c03"
+  },
+  {
+    "id": "6e4ee991-4af6-4645-bc74-6e914a1c874b",
+    "code": "AVN-0107",
+    "name": "CAROLINA HERRERA 212 VIP",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera 212 VIP Eau de Parfum es una fragancia femenina floral ambarada. Abre con bergamota y maracuyá; continúa con gardenia y acorde de ron; y finaliza con benjuí y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  }
+]

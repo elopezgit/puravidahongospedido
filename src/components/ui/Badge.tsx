@@ -1,6 +1,6 @@
 import React from 'react';
 
-type BadgeVariant = 'default' | 'success' | 'warning' | 'danger' | 'info' | 'primary';
+type BadgeVariant = 'default' | 'success' | 'warning' | 'danger' | 'info' | 'primary' | 'secondary' | 'accent';
 type BadgeSize = 'sm' | 'md';
 
 interface BadgeProps {
@@ -13,12 +13,14 @@ interface BadgeProps {
 }
 
 const VARIANT_STYLES: Record<BadgeVariant, string> = {
-  default: 'bg-stone-100 text-stone-700 border-stone-200',
-  success: 'bg-green-100 text-green-800 border-green-200',
-  warning: 'bg-amber-100 text-amber-800 border-amber-200',
-  danger: 'bg-red-100 text-red-700 border-red-200',
-  info: 'bg-blue-100 text-blue-800 border-blue-200',
-  primary: 'bg-[#C9A962]/10 text-[#A8863B] border-[#C9A962]/30',
+  default: 'bg-[#F4F6F0] text-[#545D4B] border-[#E1E6DA]',
+  success: 'bg-[#EAF5EC] text-[#2E6B38] border-[#BDE3C3]',
+  warning: 'bg-[#FDF4E6] text-[#8E5238] border-[#F4DEBF]',
+  danger: 'bg-[#FBECEB] text-[#B9382F] border-[#F5C7C5]',
+  info: 'bg-[#EBF3F8] text-[#2C6280] border-[#C3DCE9]',
+  primary: 'bg-[#DCE5D0] text-[#525B38] border-[#CAD6B8]',
+  secondary: 'bg-[#F4E3D8] text-[#8E5238] border-[#E7D0C4]',
+  accent: 'bg-[#F6EFE5] text-[#AB8252] border-[#EBD8BD]',
 };
 
 const SIZE_STYLES: Record<BadgeSize, string> = {
@@ -48,12 +50,13 @@ export default function Badge({
           className={`w-1.5 h-1.5 rounded-full ${
             pulse ? 'animate-pulse' : ''
           } ${
-            variant === 'success' ? 'bg-green-500' :
-            variant === 'warning' ? 'bg-amber-500' :
-            variant === 'danger' ? 'bg-red-500' :
-            variant === 'info' ? 'bg-blue-500' :
-            variant === 'primary' ? 'bg-[#C9A962]' :
-            'bg-stone-500'
+            variant === 'success' ? 'bg-[#3A7D44]' :
+            variant === 'warning' ? 'bg-[#C47C1B]' :
+            variant === 'danger' ? 'bg-[#B9382F]' :
+            variant === 'info' ? 'bg-[#3B6E8C]' :
+            variant === 'primary' ? 'bg-[#525B38]' :
+            variant === 'secondary' ? 'bg-[#8E5238]' :
+            'bg-[#8A9380]'
           }`}
           aria-hidden="true"
         />

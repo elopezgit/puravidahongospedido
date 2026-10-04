@@ -1,4 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="20" fill="#0C0A09"/>
-  <text x="50" y="70" font-family="Georgia, 'Playfair Display', serif" font-weight="bold" font-size="56" text-anchor="middle" fill="#C9A962">A</text>
+  <rect width="100" height="100" rx="22" fill="#4F5635"/>
+  <text x="50" y="44" fill="#F4EFE6" font-family="'Cormorant Garamond', 'Playfair Display', serif" font-size="24" font-weight="600" letter-spacing="1" text-anchor="middle">PV</text>
+  <text x="50" y="70" fill="#D7DFCA" font-family="'Outfit', sans-serif" font-size="10" font-weight="600" letter-spacing="2" text-anchor="middle">HONGOS</text>
+  <circle cx="50" cy="82" r="2" fill="#D7DFCA"/>
 </svg>

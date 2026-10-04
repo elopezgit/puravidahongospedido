@@ -46,6 +46,20 @@ export default function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [pendingCount, setPendingCount] = useState(0);
+  const [empresaLogo, setEmpresaLogo] = useState<string | null>(null);
+
+  // ─── Logo del tenant (cacheado por slug) ───
+  useEffect(() => {
+    if (!empresaSlug) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const data = await getEmpresaData(empresaSlug);
+        if (!cancelled && data?.logo_url) setEmpresaLogo(data.logo_url);
+      } catch { /* si falla, se usa el fallback */ }
+    })();
+    return () => { cancelled = true; };
+  }, [empresaSlug]);
 
   // ─── URL Persistence: restore tab from localStorage ───
   const setActiveTab = useCallback((tab: TabId) => {
@@ -182,7 +196,7 @@ export default function AdminDashboard() {
       <div className="min-h-screen bg-gradient-to-br from-stone-900 via-slate-900 to-stone-950 flex items-center justify-center p-4">
         <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl w-full max-w-sm text-center">
           <div className="w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden border-2 border-[#C9A962]/30 shadow-[0_0_15px_rgba(201,169,98,0.2)]">
-            <img src="/img/logo/aventus_perfumeria.jpg" alt="Aventus Logo" className="w-full h-full object-cover" />
+            <img src={empresaLogo || '/img/logo/generico.svg'} alt="Logo de la empresa" className="w-full h-full object-contain" />
           </div>
           <h2 className="text-2xl font-black text-white mb-1">Acceso Restringido</h2>
           <p className="text-stone-400 text-sm mb-8">Administración de {empresaSlug}</p>
@@ -332,7 +346,7 @@ export default function AdminDashboard() {
               {(sidebarOpen || window.innerWidth < 1024) && <span>Cerrar Sesión</span>}
             </button>
             
-            <p className="text-[10px] text-stone-600 text-center">AVENTUS OS v1.0</p>
+            <p className="text-[10px] text-stone-600 text-center">PURAVIDA OS v1.0</p>
           </div>
         </aside>
 
@@ -630,7 +644,7 @@ function ConfigPanel({ empresaSlug }: { empresaSlug: string }) {
             phone: data.phone || '',
             instagram_url: data.instagram_url || '',
             maps_url: data.maps_url || '',
-            alias: data.alias || 'aventus.perfumeria',
+            alias: data.alias || data.slug || empresaSlug,
             cbu: data.cbu || '',
           });
         }

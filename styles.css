@@ -1,32 +1,32 @@
 :root {
-  --brand: #C9A84C;
-  /* Dorado AVENTUS */
-  --brand2: #1A1A1A;
-  /* Negro elegante */
-  --brand-dark: #0D0D0D;
-  /* Negro profundo */
-  --bg: #FAFAF7;
-  /* Blanco cálido de fondo */
+  --brand: #525B38;
+  /* Verde Oliva Pura Vida */
+  --brand2: #1D2218;
+  /* Carbón botánico */
+  --brand-dark: #141810;
+  /* Bosque noche */
+  --bg: #F8F6F1;
+  /* Lino marfil cálido */
   --surface: #FFFFFF;
   /* Tarjetas y paneles blancos */
-  --text: #1A1A1A;
-  /* Texto principal negro */
-  --text-light: #666666;
-  /* Texto secundario gris medio */
-  --border: #E5E0D5;
-  /* Bordes suaves tono arena */
-  --gold: #C9A84C;
-  /* Dorado AVENTUS */
-  --gold-dark: #8B7535;
-  /* Dorado oscuro */
+  --text: #1D2218;
+  /* Texto principal */
+  --text-light: #545D4B;
+  /* Texto secundario sage */
+  --border: #E1E6DA;
+  /* Bordes suaves tono sage pastel */
+  --gold: #C49A68;
+  /* Ámbar botánico */
+  --gold-dark: #8E5238;
+  /* Terracota */
   --green: #25D366;
   /* Verde WhatsApp */
-  --shadow-sm: 0 3px 8px rgba(26, 26, 26, 0.04);
-  --shadow-md: 0 8px 24px rgba(26, 26, 26, 0.08);
-  --shadow-lg: 0 16px 36px rgba(26, 26, 26, 0.12);
-  --shadow-brand: 0 8px 20px rgba(201, 168, 76, 0.22);
-  --row-light: #FAFAF7;
-  --row-dark: #F0EDE6;
+  --shadow-sm: 0 3px 8px rgba(29, 34, 24, 0.04);
+  --shadow-md: 0 8px 24px rgba(29, 34, 24, 0.07);
+  --shadow-lg: 0 16px 36px rgba(29, 34, 24, 0.10);
+  --shadow-brand: 0 8px 20px rgba(82, 91, 56, 0.20);
+  --row-light: #F8F6F1;
+  --row-dark: #EFECE4;
 }
 
 * {

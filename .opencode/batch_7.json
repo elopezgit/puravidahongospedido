@@ -1,0 +1,210 @@
+[
+  {
+    "id": "98a1a2ee-8c2a-4f23-9140-13367d9e0edb",
+    "code": "AVN-0327",
+    "name": "VANILLA FRAK",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Lattafa Give Me Gourmand Vanilla Freak es una fragancia femenina gourmand. Abre con cupcake; continúa con azúcar, glaseado, almendra y canela; y finaliza con manteca, vainilla y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "13b64a14-52f9-498e-9621-64f2609fe0dd",
+    "code": "AVN-0328",
+    "name": "Y ELIXIR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent Y Elixir es una fragancia masculina intensa, amaderada y especiada. Combina lavanda fresca y geranio con incienso y una base sensual de madera de oud, logrando un perfil profundo, elegante y duradero.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c7ea20b6-8b1d-4810-9d85-f47e52ae1969",
+    "code": "AVN-0329",
+    "name": "VALENTINO DONNA BORN IN ROMA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Donna Born in Roma Eau de Parfum es una fragancia femenina floral amaderada. Combina jazmín sambac y jazmín con vainilla Bourbon y un fondo amaderado, creando un perfil elegante, dulce, floral y contemporáneo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "912407f1-c408-4107-8b92-e05c9b980672",
+    "code": "AVN-0337",
+    "name": "CLOUD",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ariana Grande Cloud Eau de Parfum es una fragancia femenina floral gourmand. Combina lavanda, pera y bergamota con crema de coco, praliné y orquídea de vainilla, sobre una base de maderas y almizcle.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "1804e42c-9cbe-4d08-8106-8e50fe683f61",
+    "code": "AVN-0338",
+    "name": "FAME",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Fame Eau de Parfum es una fragancia femenina floral y frutal. Combina mango jugoso y bergamota con jazmín y un fondo cremoso de incienso, vainilla y sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8682c5b0-66ca-43ce-aa36-5c295853574a",
+    "code": "AVN-0339",
+    "name": "FLOWER",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Flower by Kenzo Eau de Parfum es una fragancia femenina floral empolvada. Combina rosa damascena y bayas rosas con almizcles blancos y vainilla, logrando un perfil floral, suave, elegante y envolvente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "4bd33a7c-d65e-4a9a-a3c8-f3e56ff3c280",
+    "code": "AVN-0340",
+    "name": "GOOD GIRLS BLUSH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera Good Girl Blush Eau de Parfum es una fragancia femenina floral y avainillada. Combina bergamota y mandarina con peonía, ylang-ylang y agua de rosas, sobre un fondo de vainilla y haba tonka.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5b8e12ec-b0b2-4406-ab38-55ca1aad6bb3",
+    "code": "AVN-0341",
+    "name": "J'ADORE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior J'adore Eau de Parfum es una fragancia femenina floral. Su composición combina ylang-ylang, rosa damascena y jazmín sambac y de Grasse, creando un bouquet luminoso, elegante y sofisticado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "07bd09e4-9527-40a1-89cb-dbd02edef6d3",
+    "code": "AVN-0342",
+    "name": "L'INTERDIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Givenchy L'Interdit Eau de Parfum es una fragancia femenina floral amaderada. Abre con bergamota y jengibre; continúa con flor de azahar, jazmín sambac y nardo; y finaliza con pachulí y vetiver.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "75cc730e-6776-4e37-896e-057c08cb9c04",
+    "code": "AVN-0343",
+    "name": "LA BOMBA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Carolina Herrera La Bomba es una fragancia femenina floral frutal. Combina pitahaya exótica con peonía roja y frangipani, sobre una base de vainilla, logrando un perfil luminoso, tropical, floral y sensual.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "c64ffe6b-51ee-4fa3-8a7d-709a75a02690",
+    "code": "AVN-0345",
+    "name": "LADY MILLION",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Lady Million Eau de Parfum es una fragancia femenina floral y amaderada. Combina frambuesa y cítricos con flor de azahar, jazmín y gardenia, sobre un fondo cálido de miel, pachulí y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "5f5c3ebd-1599-45d8-b22b-a090b0cc7668",
+    "code": "AVN-0346",
+    "name": "LIBRE",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Yves Saint Laurent Libre Eau de Parfum es una fragancia femenina floral aromática. Combina lavanda francesa y flor de azahar de Marruecos con vainilla y acordes ambarados, logrando un perfil floral, cálido y elegante.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "17432866-fa84-444e-8134-ee3e4d12ca16",
+    "code": "AVN-0348",
+    "name": "MISS DIOR",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Miss Dior Eau de Parfum es una fragancia femenina floral, avainillada y sensual. Combina absoluto de rosa centifolia con vainilla gourmand, haba tonka de matiz almendrado y un fondo cremoso de sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e5260f13-23c1-4d52-b4f6-8c1e414b212c",
+    "code": "AVN-0349",
+    "name": "MY WAY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Giorgio Armani My Way Eau de Parfum es una fragancia femenina floral. Combina bergamota y flor de azahar con tuberosa y jazmín, sobre un fondo cálido de vainilla, cedro y almizcle blanco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "29b84c5f-b291-41ba-95a1-12be69861824",
+    "code": "AVN-0350",
+    "name": "OLYMPEA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Olympéa Eau de Parfum es una fragancia femenina oriental floral. Combina jazmín acuático, mandarina verde y flor de jengibre con vainilla salada, sobre una base de madera de cachemira, ámbar gris y sándalo.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "616e8096-d4e9-4c32-95dd-b6643cbd9d44",
+    "code": "AVN-0351",
+    "name": "RALPH",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Ralph by Ralph Lauren Eau de Toilette es una fragancia femenina fresca, floral y frutal. Combina manzana verde, mandarina y hojas verdes con fresia, magnolia y flores blancas, sobre una base limpia y almizclada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "b9f716e2-8568-4c2e-b2e6-8e3ef2a3e209",
+    "code": "AVN-0352",
+    "name": "SCANDAL",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Jean Paul Gaultier Scandal Eau de Parfum es una fragancia femenina chipre gourmand. Combina gardenia con miel dulce y pachulí, creando un perfil floral, cálido, intenso y envolvente.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "ed301d42-76b8-4d48-a007-1c8fdb667d38",
+    "code": "AVN-0353",
+    "name": "TOY 2 BUBBLE GUM",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Moschino Toy 2 Bubble Gum Eau de Toilette es una fragancia femenina floral frutal con carácter dulce. Combina cítricos y frutas con un distintivo acorde de chicle, rosa, durazno, especias y un fondo amaderado y almizclado.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "31c51694-05a4-487b-8a12-1ea3af2bc4d6",
+    "code": "AVN-0357",
+    "name": "VALENTINO — UOMO BORN IN ROMA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Valentino Uomo Born in Roma Eau de Toilette es una fragancia masculina aromática y amaderada. Combina notas minerales y salvia con jengibre, vetiver y acordes amaderados, logrando un perfil moderno, elegante y fresco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "45525eb5-7a3d-40d6-a0c2-a995a78aa978",
+    "code": "AVN-0358",
+    "name": "CREED AVENTUS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Creed Aventus es una fragancia masculina frutal y amaderada. Combina bergamota, grosella negra, manzana y piña con notas aromáticas y florales, sobre una base de abedul, almizcle, musgo de roble y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e5f71298-5662-4252-8bd5-246b159a8e21",
+    "code": "AVN-0359",
+    "name": "EROS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Versace Eros es una fragancia masculina fresca, oriental y amaderada. Combina limón, mandarina, menta y manzana con geranio y salvia, sobre una base de cedro, vetiver, pachulí, sándalo y vainilla.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "42ee0370-637f-4aa5-816d-be11244f6ba3",
+    "code": "AVN-0360",
+    "name": "FAHRENHEIT",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Dior Fahrenheit Eau de Toilette es una fragancia masculina amaderada floral. Su firma combina notas cítricas y mandarina siciliana con violeta y un fondo característico de cuero y maderas.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "e6541f0f-fafb-47f3-a8cd-f9d7458d5a0b",
+    "code": "AVN-0361",
+    "name": "INVICTUS",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Eau de Toilette es una fragancia masculina fresca y amaderada. Combina acordes marinos y pomelo con hoja de laurel, sobre una base de madera de guayaco, pachulí, ámbar gris y acordes amaderados.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "3d714ef5-1d58-44df-bf9f-726b06ac02e2",
+    "code": "AVN-0362",
+    "name": "INVICTUS AQUA",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Aqua es una interpretación más fresca y acuática de Invictus. Combina cítricos y acordes marinos con hojas verdes y notas aromáticas, sobre una base amaderada y ambarada.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "8f1f94b7-5fdf-45a0-9b0b-57efff812505",
+    "code": "AVN-0363",
+    "name": "INVICTUS LEGEND",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Legend es una fragancia masculina aromática amaderada. Combina acordes marinos con pomelo, especias y hoja de laurel, sobre un fondo de ámbar rojo y madera de guayaco.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  },
+  {
+    "id": "703bde20-cd47-485b-b991-b316614247d2",
+    "code": "AVN-0364",
+    "name": "INVICTUS VICTORY",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQieVoMuTlKhmL7Ke4lZYC07zq6IEwnJGCbk5Hj_RpodQ&s=10",
+    "description": "Rabanne Invictus Victory Eau de Parfum Extrême es una fragancia masculina ambarada y especiada. Combina limón y pimienta rosa con lavanda e incienso, sobre una base cálida de vainilla, haba tonka y ámbar.",
+    "category_id": "6970475e-8e86-4b8f-91aa-0e0c06d32531"
+  }
+]

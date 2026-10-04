@@ -1,38 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #C9A962; /* Oro champagne AVENTUS */
-  --color-primary-hover: #A8863B;
-  --color-secondary: #7A5C9E; /* Amatista */
-  --color-surface: #FFFFFF;
-  --color-surface-card: #FFFFFF;
-  --color-background: #FBF8F3; /* Fondo marfil premium */
-  --shadow-luxury: 0 10px 40px -10px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);
-  --shadow-luxury-hover: 0 20px 50px -10px rgba(201, 169, 98, 0.15), 0 2px 5px rgba(0,0,0,0.04);
+  --color-olive-dark: #161C11;
+  --color-olive-deep: #1F2718;
+  --color-olive-main: #334026;
+  --color-olive-light: #52633E;
+  --color-olive-pastel: #7D8F63;
+  --color-sage-soft: #D3DECA;
+  --color-sage-light: #EBF2E5;
+  
+  --color-terracotta: #8E5238;
+  --color-terracotta-light: #A76547;
+  --color-terracotta-pastel: #F4E2D7;
+  
+  --color-sand: #C49A68;
+  --color-sand-light: #EAD8C1;
+  --color-parchment: #FAF8F3;
+  
+  --color-text-light: #F8F6F1;
+  --color-text-muted: #B8C4AC;
+  --color-text-dark: #182012;
 }
 
 @layer base {
   body {
-    @apply bg-[#FBF8F3] text-stone-900 font-sans antialiased selection:bg-[#C9A962]/25 selection:text-stone-900;
-    font-family: 'Outfit', sans-serif;
+    @apply bg-[#1D2417] text-[#F8F6F1] font-sans antialiased selection:bg-[#7D8F63]/40 selection:text-white;
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
     overscroll-behavior-y: none;
-    letter-spacing: -0.01em; /* Modern tight tracking */
+    letter-spacing: -0.01em;
+    background-color: #1D2417;
+    background-image: 
+      radial-gradient(ellipse 90% 60% at 50% -20%, rgba(106, 126, 84, 0.40), transparent 70%),
+      radial-gradient(ellipse 70% 50% at 100% 40%, rgba(142, 82, 56, 0.20), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 0% 70%, rgba(196, 154, 104, 0.18), transparent 70%),
+      radial-gradient(ellipse 80% 50% at 50% 100%, rgba(51, 64, 38, 0.45), transparent 75%);
+    background-attachment: fixed;
   }
   
   h1, h2, h3, h4, h5, h6, .font-display {
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 0.01em;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: 0.025em;
   }
 
   :focus-visible {
-    outline: 2px solid #C9A962;
+    outline: 2px solid #7D8F63;
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 10px;
   }
 
   html {
     scroll-behavior: smooth;
+    background-color: #1D2417;
   }
 }
 
@@ -45,23 +64,11 @@
     display: none;
   }
 
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
   .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A962]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#FBF8F3];
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7D8F63]/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#1D2417];
   }
 
-  /* Scrollbar personalizada */
+  /* Scrollbar de Seda Botánica */
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -70,32 +77,113 @@
     background: transparent;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #E5E5E5;
+    background: #52633E;
     border-radius: 9999px;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #C9A962;
+    background: #7D8F63;
   }
 
-  .glass-card {
-    @apply bg-white/80 backdrop-blur-md border border-white/60;
-    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.02);
-  }
-
-  /* Animaciones Premium */
-  .animate-fade-in {
-    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .animate-slide-up {
-    animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  }
+  /* ═══ BOTANICAL GLASSMORPHISM SUITE (ÉLITE & ARMONÍA) ═══ */
   
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  /* Cristal Lúcido (Header & Navbar) */
+  .glass-header {
+    background: rgba(26, 33, 20, 0.82);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(211, 222, 202, 0.18);
+    box-shadow: 0 10px 30px -10px rgba(8, 12, 6, 0.6);
   }
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+
+  /* Cristal Pergamino Marfil (Tarjetas de Productos - Luz y Calma) */
+  .glass-product-card {
+    background: linear-gradient(135deg, rgba(252, 250, 246, 0.95) 0%, rgba(245, 241, 233, 0.90) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #182012;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 
+      0 12px 28px -8px rgba(8, 12, 6, 0.35),
+      inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .glass-product-card:hover {
+    transform: translateY(-3px) scale-[1.01];
+    background: linear-gradient(135deg, #FFFFFF 0%, rgba(248, 245, 238, 0.96) 100%);
+    box-shadow: 
+      0 20px 40px -10px rgba(8, 12, 6, 0.50),
+      0 0 20px 2px rgba(125, 143, 99, 0.15),
+      inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+    border-color: #D3DECA;
+  }
+
+  /* Cristal Noche Verde Oliva (Paneles & Modales) */
+  .glass-olive-card {
+    background: linear-gradient(145deg, rgba(46, 58, 35, 0.80) 0%, rgba(27, 34, 21, 0.90) 100%);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(211, 222, 202, 0.22);
+    border-radius: 24px;
+    box-shadow: 
+      0 16px 36px -10px rgba(5, 8, 4, 0.6),
+      inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+  }
+
+  /* Filtro de Nitidez Ultra-HD / 8K para Goteros y Fotografías */
+  .ultra-crisp-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.16)) contrast(1.05) brightness(1.02);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+  }
+
+  .glass-product-card:hover .ultra-crisp-img {
+    transform: scale(1.06);
+    filter: drop-shadow(0 12px 22px rgba(125, 143, 99, 0.25)) contrast(1.07) brightness(1.03);
+  }
+
+  /* Píldora de Cristal Flotante */
+  .glass-pill {
+    background: rgba(46, 58, 35, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(211, 222, 202, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .glass-pill-active {
+    background: linear-gradient(135deg, #7D8F63 0%, #52633E 100%);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 
+      0 6px 18px rgba(82, 99, 62, 0.40),
+      inset 0 1px 1px rgba(255, 255, 255, 0.35);
+  }
+
+  /* Micro-animaciones Zen & Armonía */
+  .animate-zen-breathe {
+    animation: zenBreathe 6s ease-in-out infinite;
+  }
+  .animate-aurora-glow {
+    animation: auroraGlow 8s ease-in-out infinite;
+  }
+  .animate-spore-slow {
+    animation: sporeRiseZen 12s linear infinite;
+  }
+
+  @keyframes zenBreathe {
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50% { transform: scale(1.03); opacity: 1; }
+  }
+  @keyframes auroraGlow {
+    0%, 100% { opacity: 0.35; transform: rotate(0deg) scale(1); }
+    50% { opacity: 0.65; transform: rotate(3deg) scale(1.08); }
+  }
+  @keyframes sporeRiseZen {
+    0% { transform: translateY(15px) translateX(0px); opacity: 0; }
+    25% { opacity: 0.45; }
+    75% { opacity: 0.45; }
+    100% { transform: translateY(-70px) translateX(20px); opacity: 0; }
   }
 }

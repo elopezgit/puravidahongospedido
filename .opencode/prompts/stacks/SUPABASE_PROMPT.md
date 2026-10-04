@@ -1,5 +1,10 @@
 # Prompt Supabase
 
+> **Complementario (ADR-006)** — La referencia técnica oficial es la skill global `supabase` de
+> Supabase (`supabase/agent-skills`), más el MCP oficial `supabase` para operar sobre el proyecto
+> real. Este prompt fija las **reglas del proyecto**; la skill oficial resuelve el **cómo** técnico.
+> Ver `.opencode/agents/supabase-expert.md` y `docs/` para el reparto de responsabilidades.
+
 ## Stack
 - Frontend: Next.js 14+ (App Router) + TypeScript + Tailwind
 - Backend: Supabase (PostgreSQL + Auth + RLS + Edge Functions)
